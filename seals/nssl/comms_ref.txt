@@ -1,0 +1,75 @@
+// ST8's Comms Script - st8@q3f.org
+// 05/03/03 http://scripting.q3f.org
+// Reference Docs
+
+General Binds
+-------------
+KP Plus  "Affirmative!" 
+KP Minus "Negative!"    
+KP *     "Ignore Last Message!"
+KP Del   "Reporting In"
+KP Ins   "Report In"
+KP Slash "Team Select Menu"
+KP Enter "Change Comm Banks"
+Use KP 1-9 as described below
+
+General Bank
+============
+1. Enemy down! (Seals)
+   Got one!    (Tangos)
+2. Teammate down!
+   Comrade down!
+3. Grenade!
+   Take cover!
+4. Enemy spotted.
+   I can see the enemy.
+5. Fire in the hole!
+   Grenade thrown!
+6. ...ahhHHH!
+   ...ahhHHH!
+7. Hostage down!
+   Hostage dead.
+8. V.I.P. down!
+   The V.I.P. is dead.
+9. Let's lock'n'load!               
+   Let's destroy them, comrads!      
+
+Orders Bank
+===========
+1. Follow me!
+   Follow command!
+2. Cover Me!
+   I need covering fire!
+3. Taking fire, need assistance!
+   I'm under attack!
+4. Go! Go! Go!
+   Go! Go! Go!
+5. Regroup, team.
+   We must regroup.
+6. Check the surroundings!
+   Check the area, comrads!
+7. Take Cover!
+   Keep your heads down!
+8. Fallback.
+   Retreat! Retreat!
+9. Secure this location!
+   Guard this place!
+
+Objectives Bank
+===============
+1. What's the Objective status?
+   Objective status?
+2. Objective is safe.
+   Objective is safe.
+3. Objective is lost.
+   The Objective has been lost.
+4. Objective is in danger!
+   The Objective is in danger!
+5. Objective is at home.
+   The Objective is safe at home.
+6. I've got the explosives!
+   I've got the bomb!
+7. Explosives are in place!
+   Bomb is placed.
+8. I got a defuse-kit!
+   I can disarm the bomb!

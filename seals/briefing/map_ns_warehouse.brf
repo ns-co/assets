@@ -1,0 +1,56 @@
+[mapspecs]
+camouflage urban
+
+$enviroment
+{
+type rain
+basetimes 5 10
+timetomove 1 1
+gusttimes 0 3
+basevector 0 0
+gustvector 50 100
+weight 0.5 0.7
+impacteffects true true
+num_drops 600 1000
+height	50
+}
+[end]
+
+[radar] 
+B 1112 952 48
+B 1456 896 328
+E 1156 -3036 -160
+[end] 
+
+[seals]
+^4SEAL briefing: $EOL
+A big weapons deal has gone down in West Istanbul. 
+You are to infiltrate the warehouse in which the 
+weapons are currently stored. You arrive close to 
+the warehouse where you must head north and 
+eliminate all resistance and retrieve two vital 
+documents about the destination of the weapons. $EOL
+ $EOL
+ $EOL
+^4Mission ^4Summary: $EOL
+^4- ^4Retrieve ^4two ^4briefcases ^4by ^4bringing ^4them ^4to ^4your b^4oat. $EOL 
+[end]
+
+[tangos]
+^1Tango briefing: $EOL
+The great Hamamud sent us to Istanbul to acquire 
+a great number of very important weapons. The deal 
+was completed without any problems, but as we were 
+loading the weapons onto your tanker to smuggle them 
+to our HQ, the enemy strikes! Prevent them from 
+stealing the two suitcases containing important 
+documents. $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- ^1Protect ^1the ^1two ^1briefcases. $EOL 
+[end]
+
+$EOF
+
+

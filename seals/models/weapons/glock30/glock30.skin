@@ -1,0 +1,16 @@
+glock30, models/weapons/glock30/skin.tga 
+magside, models/weapons/glock30/skin.tga
+trigger, models/weapons/glock30/skin.tga
+sled, models/weapons/glock30/skin.tga
+cock, models/weapons/glock30/skin.tga
+mag, models/weapons/glock30/skin.tga
+glock30vweap, models/weapons/glock30/skin_vweap.tga 
+silencer, models/weapons/glock30/laser.tga 
+silencervweap, models/weapons/glock30/skin_vweap.tga 
+laser, models/weapons/glock30/laser.tga 
+laservweap, models/weapons/glock30/skin_vweap.tga 
+hands, models/weapons/hands/skin.tga
+tag_flash
+tag_flash2
+tag_weapon
+tag_ejection

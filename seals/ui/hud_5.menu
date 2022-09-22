@@ -1,0 +1,30 @@
+#include "ui/menudef.h"
+
+// Heads Up Display 5 - NO HUD
+
+{
+assetGlobalDef 
+	{	
+	cursor "ui/assets/ns_cursor"			
+	gradientBar "ui/assets/gradientbar2.tga"	
+
+    	fadeClamp 1.0					
+	fadeCycle 1					
+	fadeAmount 0.1					
+
+	shadowX  5					
+	shadowY  5					
+	shadowColor 0.1 0.1 0.1 0.25			
+
+    	font "fonts/font" 16				
+    	smallFont "fonts/smallfont" 12			
+    	bigFont "fonts/bigfont" 20	
+
+	sealscolor 0.3 0.3 1 1
+	tangoscolor 1 0.1 0.1 1
+	noteamcolor 1 1 1 1		
+	}
+ 
+}
+
+

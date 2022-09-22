@@ -1,0 +1,57 @@
+[mapspecs]
+camouflage urban
+
+
+missioninfo 
+{
+	blowup
+}
+
+$enviroment
+{
+type rain
+basetimes 5 10
+timetomove 1 1
+gusttimes 0 3
+basevector 0 0
+gustvector 50 100
+weight 0.5 0.7
+impacteffects true true
+num_drops 1000 1500
+height	50
+}
+
+[end]
+
+[seals] 
+^4SEAL briefing: $EOL
+Your team is tasked with protecting and assuring safe transport of a classified heavy weapons system and it's remote control 
+systems being shipped by rail across Europe for testing. Your most experienced officer will carry the control mechanism in sealed 
+briefcase that is an asset of vital and highly vulnerable nature as it also includes our remote encryption key telemetry for protecting battlefield 
+transmissions from electronic counter-measures. $EOL 
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Retrieve the briefcases ore $EOL
+^4  secure the train. $EOL 
+[end] 
+
+[tangos] 
+^1Tango Briefing: $EOL 
+The United States is messing around in Europe again... This time they're ostensibly bringing an advanced weapons system here for testing so 
+they won't break their own treaties and laws by testing it on home soil. Our intelligence confirms that the weapon may be nuclear powered, is unstable 
+as are the individuals running this Black-Op under guise of a 'test' which in fact appears to be a move for a covert action to destabilize the region during this 
+decisive political summit. Destroy the train and weapon system and capture it's control mechanism at all cost so we can expose this farce. $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Protect the briefcases $EOL
+^1   ore blowup the train. $EOL 
+[end] 
+
+[radar]
+X -102.125114 -53.192401 85.125000
+E -597.710449 570.744934 42.125000
+B 848.730468 -882.213562 50.125000
+[end]
+$EOF

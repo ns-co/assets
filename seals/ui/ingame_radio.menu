@@ -1,0 +1,429 @@
+#include "ui/menudef.h"
+
+{
+\\ SETUP MENU \\
+
+menuDef {
+    	name "ingame_radio"
+    	visible 0
+    	fullscreen 0
+	outOfBoundsClick
+    	rect 185 45 270 230
+	focusColor 1 0 0 1
+	disableColor .5 .5 .5 1
+	onopen { show grpPersonal ; hide grpTeam ; hide grpMission }
+
+
+itemDef {
+     	name window
+    	rect 0 0 270 230
+	style 1
+	border 1
+	bordercolor 1 1 1 .25
+	backcolor .1 .1 .37 1
+	visible 1
+	decoration
+	background "ui/assets/ns_ingame_back.tga"
+    	}
+
+
+// 	BUTTONS	//
+itemDef {
+	name button_personal
+	text "Personal"
+	textscale .25
+	group grpbutton
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+//	background "ui/assets/button_back.tga"
+	rect 10 10 70 20
+	type 1
+	textalign 1
+	textalignx 33
+	textaligny 15
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 hide grpTeam ; hide grpMission ; show grpPersonal }
+	mouseEnter { setitemcolor button_personal backcolor .75 .75 .75 0.5 }
+      	mouseExit { setitemcolor button_personal backcolor .1 .2 .6 0.5 }
+	}
+itemDef {
+	name button_team
+	text "Team"
+	textscale .25
+	group grpbutton
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+//	background "ui/assets/button_back.tga"
+	rect 100 10 70 20
+	type 1
+	textalign 1
+	textalignx 33
+	textaligny 15
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 show grpTeam ; hide grpMission ; hide grpPersonal }
+	mouseEnter { setitemcolor button_team backcolor .75 .75 .75 0.5 }
+      	mouseExit { setitemcolor button_team backcolor .1 .2 .6 0.5 }
+	}
+itemDef {
+	name button_mission
+	text "Mission"
+	textscale .25
+	group grpbutton
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+//	background "ui/assets/button_back.tga"
+	rect 190 10 70 20
+	type 1
+	textalign 1
+	textalignx 33
+	textaligny 15
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 hide grpTeam ; show grpMission ; hide grpPersonal }
+	mouseEnter { setitemcolor button_mission backcolor .75 .75 .75 0.5 }
+      	mouseExit { setitemcolor button_mission backcolor .1 .2 .6 0.5 }
+	}
+
+
+// grpPersonal
+
+itemDef {
+	name Affirmative
+	group grpPersonal
+	text "Affirmative"
+	textscale .25
+    	rect 0 50 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio affirmative" ; uiScript closeingame }
+}
+
+itemDef {
+	name negative
+	group grpPersonal
+	text "Negative"
+	textscale .25
+    	rect 0 70 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio negative" ; uiScript closeingame }
+}
+
+itemDef {
+	name followme
+	group grpPersonal
+	text "Follow Me"
+	textscale .25
+    	rect 0 90 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio followme" ; uiScript closeingame }
+}
+
+itemDef {
+	name coverme
+	group grpPersonal
+	text "Cover Me"
+	textscale .25
+    	rect 0 110 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio coverme" ; uiScript closeingame }
+}
+
+itemDef {
+	name takefire
+	group grpPersonal
+	text "Taking Fire"
+	textscale .25
+    	rect 0 130 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio takefire" ; uiScript closeingame }
+}
+
+itemDef {
+	name enemyspotted
+	group grpPersonal
+	text "Enemy Spotted"
+	textscale .25
+    	rect 0 150 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio espotted" ; uiScript closeingame }
+}
+
+itemDef {
+	name reportin
+	group grpPersonal
+	text "Reporting In"
+	textscale .25
+    	rect 0 170 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio reportingin" ; uiScript closeingame }
+}
+
+
+// grpTeam
+
+itemDef {
+	name go
+	group grpTeam
+	text "Go!"
+	textscale .25
+    	rect 0 50 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio gogo" ; uiScript closeingame }
+}
+
+itemDef {
+	name regroup
+	group grpTeam
+	text "Regroup!"
+	textscale .25
+    	rect 0 70 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio regroup" ; uiScript closeingame }
+}
+
+itemDef {
+	name checkthesurroundings
+	group grpTeam
+	text "Check the Surroundings!"
+	textscale .25
+    	rect 0 90 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio check" ; uiScript closeingame }
+}
+
+itemDef {
+	name takecover
+	group grpTeam
+	text "Take Cover"
+	textscale .25
+    	rect 0 110 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio takecover" ; uiScript closeingame }
+}
+
+itemDef {
+	name fallback
+	group grpTeam
+	text "Fall Back!"
+	textscale .25
+    	rect 0 130 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio retreat" ; uiScript closeingame }
+}
+
+itemDef {
+	name teamreportin
+	group grpTeam
+	text "Team, Report In!"
+	textscale .25
+    	rect 0 150 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio reportin" ; uiScript closeingame }
+}
+
+itemDef {
+	name securethislocation
+	group grpTeam
+	text "Secure This Location!"
+	textscale .25
+    	rect 0 170 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio guard" ; uiScript closeingame }
+}
+
+itemDef {
+	name locknload
+	group grpTeam
+	text "Lock and Load!"
+	textscale .25
+    	rect 0 190 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio locknload" ; uiScript closeingame }
+}
+
+
+
+// grpMission
+
+itemDef {
+	name ojectivestatus
+	group grpMission
+	text "Objective Status?"
+	textscale .25
+    	rect 0 50 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio objstatus" ; uiScript closeingame }
+}
+
+itemDef {
+	name objectivesafe
+	group grpMission
+	text "Objective Safe!"
+	textscale .25
+    	rect 0 70 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio objsafe" ; uiScript closeingame }
+}
+
+itemDef {
+	name objectivelost
+	group grpMission
+	text "Objective Lost!"
+	textscale .25
+    	rect 0 90 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio objlost" ; uiScript closeingame }
+}
+
+itemDef {
+	name objectivedanger
+	group grpMission
+	text "Objective is in Danger!"
+	textscale .25
+    	rect 0 110 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio objdanger" ; uiScript closeingame }
+}
+
+itemDef {
+	name objectivehome
+	group grpMission
+	text "Objective is at home!"
+	textscale .25
+    	rect 0 130 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio objhome" ; uiScript closeingame }
+}
+
+itemDef {
+	name Igotbomb
+	group grpMission
+	text "I got the Explosives!"
+	textscale .25
+    	rect 0 150 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio bgot" ; uiScript closeingame }
+}
+
+itemDef {
+	name Bombplaced
+	group grpMission
+	text "The Bomb is Placed!"
+	textscale .25
+    	rect 0 170 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio bplaced" ; uiScript closeingame }
+}
+
+itemDef {
+	name BombDisarm
+	group grpMission
+	text "I got the Toolkit!"
+	textscale .25
+    	rect 0 190 270 20
+	type 1
+	textalign 1
+	textalignx 145
+	textaligny 16
+	forecolor 1 1 1 1
+	action { exec "radio bdisarm" ; uiScript closeingame }
+}
+}

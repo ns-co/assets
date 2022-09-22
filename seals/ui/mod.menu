@@ -1,0 +1,160 @@
+#include "ui/menudef.h"
+
+{
+  menuDef {
+    	name "mod"
+    	visible 0
+    	fullscreen 1
+    	rect 0 0 640 480
+	background "ui/assets/ns_menuback-world-blur"	// worldmap
+	focusColor 1 0 0 1	
+    	style 1
+	onEsc { play "ui/assets/menu_no.wav" ;  close mod ; open main }
+	onOpen { 
+//			transition mods1     284 239 89 97  80 128 235 256  20 10 ;
+			uiScript loadMods ; hide grpmessage }
+
+// logo
+ 
+itemDef {
+      	name logo_mods
+	rect 80 128 160 60 
+	textalign 1
+	textalignx 80
+	textaligny 40
+	textstyle 3
+      	textscale 0.75
+	text "Mods"
+	forecolor  1 1 1 1
+	decoration 
+      	visible 1
+	decoration  	  
+    	}
+
+// cinematic
+
+itemDef {
+	name modlist
+      	rect 260 128 300 240
+	type ITEM_TYPE_LISTBOX
+	style WINDOW_STYLE_FILLED
+	elementwidth 280
+	elementheight 16
+	textscale .25
+	elementtype LISTBOX_TEXT
+	feeder FEEDER_MODS
+	textalign 3
+	textaligny 12
+	border 1
+	bordercolor .5 .5 .5 .5
+	forecolor 1 1 1 1
+	backcolor .0 .1 .1 .125
+	outlinecolor 1 1 1 .25
+	visible 1
+	doubleClick { uiScript RunMod }
+	mouseEnter { show message_list ; setitemcolor modlist bordercolor 1 0 0 1 } 
+	mouseExit { hide message_list ; setitemcolor modlist bordercolor .5 .5 .5 .5 } 
+  	}
+
+itemDef {
+	name mappreview
+      	style 5
+	cinematic "mpintro.roq"
+	rect 80 192 160 120
+	backcolor 1 1 1 .25
+	border 1
+	bordersize 1
+	bordercolor .5 .5 .5 .5
+	decoration
+	visible 1
+	}
+
+
+itemDef {
+      	name back_n_quit_button
+	type ITEM_TYPE_BUTTON
+      	rect 40 424 560 28
+
+	mouseEnter { show message_back }
+	mouseExit { hide message_back }
+	action { play "ui/assets/menu_no.wav" ; close mod ; open main }
+
+      	visible 1
+	}
+
+// MESSAGES
+
+itemDef {
+      	name message_back
+	group grpmessage
+      	text "Click to return to the main menu"
+      	style 1
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+
+itemDef {
+      	name message_play
+	group grpmessage
+      	text "Click to run the selected modification"
+      	style 1
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+itemDef {
+      	name message_list
+	group grpmessage
+      	text "Select the modification you want to run. Doubleclick starts the selection"
+      	style 1
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+
+
+// Overlay blend Schtuff
+
+itemDef {
+      	name static
+	style 1
+      	background "ui/assets/ns_static.tga"
+      	rect 0 0 640 480
+      	visible 1 
+	decoration
+    	}
+
+itemDef {
+      	name metal
+	style 1
+      	background "ui/assets/ns_menuback-main.tga"
+      	rect 0 0 640 480
+      	visible 1 
+	decoration
+    	}
+
+
+
+}
+}
+}
+}

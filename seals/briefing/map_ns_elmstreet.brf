@@ -1,0 +1,46 @@
+[mapspecs]
+camouflage urban
+[end]
+
+[radar] 
+X -442.188598 -131.772994 242.125000
+B -332.272583 -782.227844 -18.875000
+B 151.904144 -1397.874389 242.125000
+X 313.883728 -1105.262207 242.125000
+E 799.499877 1158.683837 -13.875000
+[end] 
+
+[seals]
+^4SEAL Briefing: $EOL 
+Two Briefcases with vital information about biological
+experiments are hidden in a factory complex in 
+elm street / London. $EOL
+Your job is to infiltrate the building and retrieve 
+the information at all costs. $EOL 
+Be warned, there may be multiple hostiles guarding 
+the briefcases. $EOL 
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Capture the two briefcases and bring ^4them back to the extraction ^4zone. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+The two Briefcases you recently aquired contain classified 
+information about the biological weapons stolen from
+American military. You have gathered at your hideout within
+east London where you are determining what actions to take
+regarding the new information when suddenly 
+you're alarmed by gunshots. $EOL 
+The damned Americans knew about the hideout! They are coming 
+to get the suitcases. You have to fight them off and defend the 
+important information! $EOL 
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Prevent that the SEALs steal the ^1briefcases. $EOL 
+[end]
+
+$EOF
+

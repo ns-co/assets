@@ -1,0 +1,16 @@
+m4-1, models/weapons/m4/skin1.tga 
+handle, models/weapons/m4/skin1.tga 
+trigger, models/weapons/m4/skin1.tga 
+mag, models/weapons/m4/skin1.tga 
+m4-2, models/weapons/m4/skin2.tga 
+flashhider, models/weapons/m4/silencer.tga
+SuppressorBaffle models/weapons/m4/silencer.tga
+m203, models/weapons/m4/m203.tga  
+m203rel, models/weapons/m4/m203.tga 
+m203gren, models/weapons/m4/m203gren.tga 
+scope, models/weapons/m4/scope.tga 
+scope2, models/weapons/m4/skin1.tga 
+bayonet, models/weapons/m4/scope.tga 
+hands, models/weapons/hands/skin.tga
+tag_flash
+tag_weapon

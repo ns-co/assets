@@ -1,0 +1,11 @@
+mac10,models/weapons/mac10/skin.tga
+handle,models/weapons/mac10/skin2.tga
+mag,models/weapons/mac10/skin2.tga
+trigger,models/weapons/mac10/skin.tga
+cock,models/weapons/mac10/skin.tga
+laser,models/weapons/mac10/equip.tga
+surpressor,models/weapons/mac10/equip.tga
+mac10vweap,models/weapons/mac10/skin_vweap.tga
+laservweap,models/weapons/mac10/skin_vweap.tga
+surpressorvweap,models/weapons/mac10/skin_vweap.tga
+hands,models/weapons/hands/skin_t.tga

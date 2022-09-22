@@ -1,0 +1,30 @@
+Name of the Map		: ns_canyon
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Black Bird'
+
+------------------------------------------------------------
+
+Type of Map		: Campain ('Operation Rattelsnake')
+Missionobjective	: Assault
+Number of Players	: 2-16
+
+------------------------------------------------------------
+
+Short description	: - desert
+			  - day
+			  - long range		
+			  - the assaultfield is in the 
+				  middle of the big 
+				  battelfield
+			  - very easy to understand
+
+------------------------------------------------------------
+
+Additional notices	: - my first outdoor map with q3a 
+				  engine
+
+------------------------------------------------------------
+
+Special thanks to	: - Graphtalica for their cool 
+				  outdoor textures
+			

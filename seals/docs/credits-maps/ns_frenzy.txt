@@ -1,0 +1,25 @@
+Operation: Frenzy
+ns_frenzy
+
+Author: Marcus 'ogun' Jonsson
+E-mail: m.jonsson85@spray.se
+ICQ: 79050523
+
+Tango mission: 	Kill all enemies		
+SEAL mission: 	Kill all enemies
+
+--- Notes from the author
+	This map is primarily designed for the Squad Assault gamemode. It's the first primarily made for this gamemode, so it's pretty much a testmap.
+	If you would think some parts of this map are made of simpler mapping techniques, it's because it was rushed in the last phase of development.
+
+--- Misc stuff
+	Build time: ~3 months
+	Compile time (external lightmaps, 8 bounces etc, p4 1.3 ghz, 384 rdram): ~15000 secs I think
+
+Thanks to:
+Democritus for scripting, textures, models etc
+ydnar for scripting etc
+hoak for the heli sound etc
+My computer for crashing the windows HDD instead of the one with my maps on
+Krischan 'GrimReaper' Makowka for the oak model
+Anders 'Beardmonkey' Kjellstrom for the models

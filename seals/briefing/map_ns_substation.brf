@@ -1,0 +1,47 @@
+[mapspecs]
+camouflage urban
+[end]
+
+[radar]
+B -584.869201 32.619068 132.272430
+B 199.394775 486.526702 303.162170
+E 1740.198608 761.343750 680.761169
+E -1892.306030 -1267.385742 671.090515
+[end]
+
+[seals] 
+^4SEAL briefing: $EOL
+The eh-ab-jakar terrorist group stole the secret 
+plans of our new technology. $EOL 
+The documents are stored in two briefcases, as 
+far as our sources can tell one of them is located 
+at the upper railways and the other briefcase should 
+be located near the main station. $EOL
+You will be sent into the target area to prevent 
+the delivery and get the two briefcases to your 
+extraction point. $EOL 
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Retrieve two briefcases and $EOL
+^4  bring them to the extraction point. $EOL 
+[end] 
+
+[tangos] 
+^1Tango Briefing: $EOL 
+Our spy has returned with the vital information 
+we need but unfortunately he did not arrive alone. $EOL 
+We do not know who tracked him, but it seems 
+like it's one of those captialist murder commandos. 
+We have deployed the briefcases at two different 
+places: One at the upper railway and the other one 
+at the lower main station. $EOL 
+Protect them with your life! $EOL 
+Yalla. Yalla. $EOL 
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Protect the two $EOL
+^1   briefcases. $EOL 
+[end] 
+$EOF

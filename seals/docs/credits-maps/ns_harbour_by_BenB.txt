@@ -1,0 +1,39 @@
+Name of the Map		: ns_harbour
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Black Cat'
+
+------------------------------------------------------------
+
+Type of Map		: Campain ('Operation Rattelsnake')
+Missionobjective	: VIP-S
+Number of Players	: 7-16
+
+------------------------------------------------------------
+
+Short description	: - urban
+			  - night
+			  - some CQB & medium range		
+			  - the VIP starts at the side of 
+				  the office, which is 
+				  inside a decayed, gloomy 
+				  harbour/ghetto part of 
+				  Western Istabul
+			  - easy to understand
+
+------------------------------------------------------------
+
+Additional notices	: - the first really playabel 
+				  version was finished after 
+				  four days
+
+------------------------------------------------------------
+
+Special thanks to	: - Graphtalica for their cool 
+				  urban textures
+			  - Golgotha for their cool urban 
+				  textures
+			  - Parasie for their cool urban 
+				  textures
+			  - Rungy for his cool urban 
+				  textures
+			  

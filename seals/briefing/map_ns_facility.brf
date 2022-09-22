@@ -1,0 +1,48 @@
+[mapspecs]
+camouflage desert
+
+missioninfo 
+{
+	blowup
+}
+
+[end]
+
+[radar] 
+X 0 -2360 -512 
+X 8 2160 -480 
+[end]
+
+[seals]
+^4SEAL Briefing: $EOL 
+The location of the decayed toxic gas facility is a 
+hindrance. As we can't risk a bombing of the underground 
+facility you will have to infiltrate the installation and 
+neutralize it's capability to produce weapons. $EOL 
+Attach a bomb to either the big green tank containing 
+harmless chemicals or to the energy generator. Disarming 
+one of those targets will render the facility useless. $EOL
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- ^4Place ^4a ^4bomb ^4at ^4the ^4green ^4tanks ^4or ^4at ^4the ^4energy ^4generator. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+As part of the guard personell in the toxic gas facility you 
+have waited for days and finally the time has come. The enemy 
+is here. This is your chance to prove yourself. $EOL 
+Prevent them from damaging the toxic gas facility and 
+potentially gaining a significant advantage in the war. 
+They can not get close to the weak spots of the installation, 
+the big green tank and the energy generator. $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL 
+^1- ^1Prevent ^1that ^1the ^1SEALs ^1bomb ^1the ^1green ^1tanks ^1or ^1at ^1the ^1energy ^1generator. $EOL 
+[end] 
+
+$EOF
+
+

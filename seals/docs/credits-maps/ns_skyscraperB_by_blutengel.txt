@@ -1,0 +1,22 @@
+Name of the Map		: ns_skyscraper_B
+Leveldesigner		: Blutengel (blutengel@retaliation.de)
+Operation 		: 'Payback'
+
+------------------------------------------------------------
+
+Type of Map		: Single Operation
+Missionobjective	: Bomb
+Number of Players	: 4-16
+
+------------------------------------------------------------
+
+Short description	: - skyscraper
+ - urban
+ - medium range
+ - three levels reachable
+
+
+-----------------------------------------------------------
+
+
+Special thanks to	: hagenisse, b00b, doubles, mr-oizo, democritus, schakal

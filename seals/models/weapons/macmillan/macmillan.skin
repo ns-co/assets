@@ -1,0 +1,10 @@
+body,models/weapons/macmillan/skin.tga
+mag,models/weapons/macmillan/skin.tga
+trigger,models/weapons/macmillan/skin.tga
+carabine,models/weapons/macmillan/carabine.tga
+front,models/weapons/macmillan/nocull.tga
+scope,models/weapons/macmillan/scope.tga
+hands,models/weapons/hands/skin.tga
+tag_flash
+tag_weapon
+tag_ejection

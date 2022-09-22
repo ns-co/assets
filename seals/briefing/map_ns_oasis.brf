@@ -1,0 +1,56 @@
+[mapspecs]
+camouflage desert
+
+missioninfo 
+{
+assaultfield assaultfield assaultfield 
+}
+
+[end]
+
+[radar] 
+A 1600 1056 256
+A 2720 1568 160
+A 1920 -192 144
+
+[end] 
+
+[seals]
+^4SEAL Briefing: $EOL
+You received new information of a meeting between 
+the Egyptian terrorists and a few guerrilas who 
+want to join the organization. We have reason to 
+believe that they are expecting a shipment of weapons 
+from a nearby freighter. You are going to be there 
+instead of the freighter crew to intercept the 
+terrorists. $EOL
+You have to gain control of the rest area in the front 
+of the building, the restaurant, and the office. $EOL  
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Get control of the front of the ^4building. $EOL 
+^4- Get control of the restaurant. $EOL 
+^4- Get control of the white office. $EOL
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL
+We are meeting with some guerrilas sympathetic to our 
+situation who want to join our holy brotherhood, and 
+perhaps help us transport the new weapons from the 
+freighter. You are going to meet them at the oasis. 
+We always have need for loyal, fierce warriors. Upon 
+arriving there you realize something is wrong when you 
+don't receive the secret meeting signal. $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Prevent that the SEALs get control of ^1the front of the building. $EOL 
+^1- Prevent that the SEALs get control of ^1the restaurant. $EOL 
+^1- Prevent that the SEALs get control of ^1the white office. $EOL
+[end]
+
+$EOF
+
+

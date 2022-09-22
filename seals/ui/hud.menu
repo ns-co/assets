@@ -1,0 +1,64 @@
+#include "ui/menudef.h"
+
+// Heads Up Display 5 - NO HUD
+
+{
+assetGlobalDef 
+	{	
+	cursor "ui/assets/ns_cursor"			
+	gradientBar "ui/assets/gradientbar2.tga"	
+
+    	fadeClamp 1.0					
+	fadeCycle 1					
+	fadeAmount 0.1					
+
+	shadowX  5					
+	shadowY  5					
+	shadowColor 0.1 0.1 0.1 0.25			
+
+    	font "fonts/font" 16				
+    	smallFont "fonts/smallfont" 12			
+    	bigFont "fonts/bigfont" 20	
+
+	sealscolor 0.3 0.3 1 1
+	tangoscolor 1 0.1 0.1 1
+	noteamcolor 1 1 1 1		
+	}
+
+// 	- TARGET NAME -	//
+
+menuDef 
+	{
+    	name "Targetedname"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+	rect 0 0 640 480
+	
+	itemDef
+		{
+		name "tragetedname"
+		rect 160 280 320 20
+		style WINDOW_STYLE_FILLED
+		textalign 1
+		textalignx 160
+		textaligny 16
+		textstyle 4
+		type 1
+		textscale .3
+		ownerdraw CG_PLAYER_ENEMY
+
+		forecolor 1 1 1 1
+
+		visible 1
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+
+		decoration
+		}
+	}
+}
+ 
+}
+
+
+

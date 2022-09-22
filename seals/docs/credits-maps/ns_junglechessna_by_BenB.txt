@@ -1,0 +1,36 @@
+Name of the Map		: ns_junglechessna
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Lightning Strikes'
+
+------------------------------------------------------------
+
+Type of Map		: Singel Operation
+Missionobjective	: -
+Number of Players	: 2-14
+
+------------------------------------------------------------
+
+Short description	: - jungle
+			  - day
+			  - medium range & long range		
+			  - this map is experimental
+			  - easy to understand
+
+------------------------------------------------------------
+
+Additional notices	: - this map was planed for a coming 
+				  missionobjective but it 
+				  already made so much fun 
+				  that we decided to include 
+				  in b1
+			  - the layout of the map is very 
+				  experimental, because i 
+				  decided to include more 
+				  trees and gamepay elements 
+				  instead of jungle details
+
+------------------------------------------------------------
+
+Special thanks to	: - Graphtalica for their cool 
+				  outdoor textures
+			  

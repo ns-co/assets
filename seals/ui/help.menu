@@ -1,0 +1,1157 @@
+#include "ui/menudef.h"
+
+{
+  menuDef {
+    name "help"
+    visible 0
+    fullscreen 1
+    rect 0 0 640 480
+	background "ui/assets/ns_menuback-world-blur"	// worldmap
+	focusColor 1 0 0 1	
+    style 1
+	onEsc { play "ui/assets/menu_no.wav" ; close help ; open main }
+
+itemDef {
+	name headline
+	style 0 
+	rect 0 120 640 20
+	textalign 1
+	textalignx 320
+	textaligny 16
+   	textscale .333
+	textstyle 4
+  	text "Navy Seals: Covert Operations - Help"
+	forecolor 1 1 1 1
+	decoration 
+	visible 1
+	}
+
+
+// 				PAGE 1
+//		-----------------------
+
+itemDef {
+	name page1
+ 	group grptext
+	text " Navy SEALS: Covert Operations is not a difficult game to understand and play but it is different from what you may know from other fps realism shooters. With an emphasis on realism and player configuration NS-CO offers depth and realistic skill/class like variation that you won't find anywhere else. \n\n We recommend everyone reads the NS-CO Manual, but realize you are anxious to play so we've compiled the essentials you need to understand and know for basic effectiveness in this Quick Start Guide."	
+ 	rect 70 150 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 12
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 1
+	decoration
+	}
+itemDef {
+	name page1
+ 	group grptext
+	text "Introduction"
+ 	rect 160 345 320 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 160
+	textaligny 12
+	textscale .22
+	forecolor .75 .75 .75 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page1_next
+ 	group grptext
+	text "Next Page"	
+ 	rect 500 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 2
+	textalignx 70
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 1
+
+	action { hide grptext ; setfocus page2_next ;
+			 show page2 ; show page2_next ; show page2_prev }
+	}
+
+
+// 				PAGE 2
+//		-----------------------
+
+itemDef {
+	name page2
+ 	group grptext
+	text " TASS or Ability System is the core element to NS-CO player configuration. Through TASS you configure your attributes and skills; different abilities give you skill in certain areas at the expense of others that are required to access and effectively use specific weapons, weapon attachments and equipment. You get a starting number of experience points (often abbreviated XP), and additional points are awarded for kills and achieving objectives at the end of each round. \n All players also get experience points for time in-game so game-play won't get imbalanced. If a game gets out of hand and sould get lamed or become imbalanced TASS will award extra points to the suffering team; the successful team and players will always lead in experience points by some small margin however."	
+ 	rect 70 150 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 12
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page2
+ 	group grptext
+	text "Abilities - Page 1"
+ 	rect 160 345 320 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 160
+	textaligny 12
+	textscale .22
+	forecolor .75 .75 .75 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page2_prev
+ 	group grptext
+	text "Previous Page"
+ 	rect 70 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 0
+	textalignx 0
+	textaligny 12
+	textscale .22
+	forecolor 1 1 1 1
+	textstyle 4
+  
+	visible 0
+
+	action { hide grptext ; setfocus page1_prev ;
+			 show page1 ; show page1_next ; show page1_prev }
+			
+	}
+itemDef {
+	name page2_next
+ 	group grptext
+	text "Next Page"	
+ 	rect 500 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 2
+	textalignx 70
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ; setfocus page3_next ;
+			 show page3 ; show page3_next ; show page3_prev }
+	}
+
+
+// 				PAGE 3
+//		-----------------------
+
+itemDef {
+	name page3
+ 	group grptext
+	text "TASS abilities and their effects include: "	
+ 	rect 70 150 500 12
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 0
+	textalignx 0
+	textaligny 12
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page3
+ 	group grptext
+	text " Accuracy effects your weapon control accuracy when moving and jumping."	
+ 	rect 70 175 500 30
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page3
+ 	group grptext
+	text " Strength effects your ability to control recoil and grenade throw range."	
+ 	rect 70 200 500 30
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page3
+ 	group grptext
+	text " Stealth effects how much noise you make while moving."	
+ 	rect 70 225 500 30
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page3
+ 	group grptext
+	text " Stamina adjusts stamina and toughness, more stamina lets you sprint longer, recover faster and sustain more injury."	
+ 	rect 70 250 500 30
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page3
+ 	group grptext
+	text " Technical adjusts your skill in handling grenades, bomb defuse and bandage times."	
+ 	rect 70 285 500 30
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page3
+ 	group grptext
+	text "Abilities - Page 2"
+ 	rect 160 345 320 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 160
+	textaligny 12
+	textscale .22
+	forecolor .75 .75 .75 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page3_prev
+ 	group grptext
+	text "Previous Page"
+ 	rect 70 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 0
+	textalignx 0
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ;	setfocus page2_prev ;
+			 show page2 ; show page2_next ; show page2_prev }
+	}
+itemDef {
+	name page3_next
+ 	group grptext
+	text "Next Page"
+ 	rect 500 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 2
+	textalignx 70
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ; setfocus page4_next ;
+			 show page4 ; show page4_next ; show page4_prev }
+	}
+
+
+// 				PAGE 4
+//		-----------------------
+
+itemDef {
+	name page4
+ 	group grptext
+	text " At the start of the game you must distribute your Experience Points (XP) to be effective; choose carefully! Starting points are limited by the server Administrator and at the beginning of a game you may feel very limited in certain abilities. Most players initially choose to put the bulk of their starting points in one area that best suits how they like to play. \n\n If there are specific weapons and attachments you want to use, select them in he weapons load-out to see the point requirements for those you are interested in (be sure you re-select the weapons and attachments you have enough points for or you will be loaded with game defaults in the next round)."	
+ 	rect 70 150 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 12
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page4
+ 	group grptext
+	text "Abilities - Page 3"
+ 	rect 160 345 320 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 160
+	textaligny 12
+	textscale .22
+	forecolor .75 .75 .75 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page4_prev
+ 	group grptext
+	text "Previous Page"
+ 	rect 70 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 0
+	textalignx 0
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ;	setfocus page3_prev ;
+			 show page3 ; show page3_next ; show page3_prev }
+	}
+itemDef {
+	name page4_next
+ 	group grptext
+	text "Next Page"
+ 	rect 500 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 2
+	textalignx 70
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ; setfocus page5_next ;
+			 show page5 ; show page5_next ; show page5_prev }
+	}
+
+// 				PAGE 5
+//		-----------------------
+
+itemDef {
+	name page5
+ 	group grptext
+	text " NS-CO rolls with variations on five basic mission scenarios, all must be completed within a time limit and move with the pace and pressure of real surgical SEAL and Tango covert operations."	
+ 	rect 70 150 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 12
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page5
+ 	group grptext
+	text " Bomb Defuse (BOMB): \nOne team has the mission to place explosives in one of several strategic locations. The opposing team must either prevent the explosives from being placed or defuse them once placed. NS-CO has very realistic bomb defusing tools, you may use the defusing tool and your skill to trace correct wires to cut, but this takes time and lots of it if you lack sufficient Technical skill. You may also choose to guess and cut wires before they are traced, but with unfortunate consequences for your team if you guess wrong."	
+ 	rect 70 200 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page5
+ 	group grptext
+	text "Missions - Page 1"
+ 	rect 160 345 320 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 160
+	textaligny 12
+	textscale .22
+	forecolor .75 .75 .75 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page5_prev
+ 	group grptext
+	text "Previous Page"
+ 	rect 70 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 0
+	textalignx 0
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ; setfocus page4_prev ;
+			 show page4 ; show page4_next ; show page4_prev }
+	}
+itemDef {
+	name page5_next
+ 	group grptext
+	text "Next Page"
+ 	rect 500 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 2
+	textalignx 70
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ; setfocus page6_next ;
+			 show page6 ; show page6_next ; show page6_prev }
+	}
+
+// 				PAGE 6
+//		-----------------------
+
+
+itemDef {
+	name page6
+ 	group grptext
+	text " VIP Secure (VIP-S): \nOne team has the mission of VIP protection for the duration of the round, the opposing team must assassinate the VIP; like all NS-CO and real SEAL missions you are under the pressure of time."	
+ 	rect 70 150 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page6
+ 	group grptext
+	text " VIP Rescue (VIP-R): \nOne team has to escort the VIP to one or more extraction points."	
+ 	rect 70 220 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page6
+ 	group grptext
+	text " Information Retrieval (INFO): \nOne team must recover one or more document cases to one or more extraction points, the other team must prevent the case from being retrieved. Only the team attempting the recovery can move the case."	
+ 	rect 70 260 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page6
+ 	group grptext
+	text "Missions - Page 2"
+ 	rect 160 345 320 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 160
+	textaligny 12
+	textscale .22
+	forecolor .75 .75 .75 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page6_prev
+ 	group grptext
+	text "Previous Page"
+ 	rect 70 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 0
+	textalignx 0
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ; setfocus page5_prev ;
+			 show page5 ; show page5_next ; show page5_prev }
+	}
+itemDef {
+	name page6_next
+ 	group grptext
+	text "Next Page"
+ 	rect 500 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 2
+	textalignx 70
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ; setfocus page7_next ;
+			 show page7 ; show page7_next ; show page7_prev }
+	}
+
+// 				PAGE 7
+//		-----------------------
+
+
+itemDef {
+	name page7
+ 	group grptext
+	text " Assault (ASSAULT): \nTeams must control one or more areas of a map preventing members of the opposing team from entering for a set amount of time. The timers start as soon as one team enters the area, but will reset as soon as an opposing team member enters the area. All areas must be captured for one team to win."	
+ 	rect 70 150 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page7
+ 	group grptext
+	text " Combined Missions (COMPLEX): \nIn some cases missions are combined for a more complex setting. An example of a combined VIP-S & INFO map is Neighborhood, where the Tango team has a VIP and document case, and the VIP can both move and hide the case; The SEAL Team must assassinate the VIP and recover the case to their extraction point."	
+ 	rect 70 232 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page7
+ 	group grptext
+	text "Missions - Page 3"
+ 	rect 160 345 320 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 160
+	textaligny 12
+	textscale .22
+	forecolor .75 .75 .75 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page7_prev
+ 	group grptext
+	text "Previous Page"
+ 	rect 70 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 0
+	textalignx 0
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ; setfocus page6_prev ;
+			 show page6 ; show page6_next ; show page6_prev }
+	}
+itemDef {
+	name page7_next
+ 	group grptext
+	text "Next Page"
+ 	rect 500 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 2
+	textalignx 70
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ; setfocus page8_next ;
+			 show page8 ; show page8_next ; show page8_prev }
+	}
+
+
+
+
+// 				PAGE 8
+//		-----------------------
+
+
+itemDef {
+	name page8
+ 	group grptext
+	text " Move and maneuver as you would in a real live fire situation. \nNS-CO weapon performance is very much in scale with reality; getting hit is traumatic and quickly lethal; avoid it! NS-CO's realistic scale weapons and movement make aimed single fire the most effective means for dispatching the opposition; spray & pray and full flow supression tactics work realistically but are realistically less effective."	
+ 	rect 70 150 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page8
+ 	group grptext
+	text " Don't B-Line! \nThe shortest rout from A to B in NS-CO is not a straight line, it's the path that gets you there alive. The effective use of cover is vital for your survival."	
+ 	rect 70 235 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page8
+ 	group grptext
+	text " Use stealth... \n...appropriate camouflage, terrain, and slow careful movement; don't contrast yourself against the sky or other large high contrast surfaces making a conspicuous target."	
+ 	rect 70 290 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page8
+ 	group grptext
+	text "Tactics - Page 1"
+ 	rect 160 345 320 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 160
+	textaligny 12
+	textscale .22
+	forecolor .75 .75 .75 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page8_prev
+ 	group grptext
+	text "Previous Page"
+ 	rect 70 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 0
+	textalignx 0
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ; setfocus page7_prev ;
+			 show page7 ; show page7_next ; show page7_prev }
+	}
+itemDef {
+	name page8_next
+ 	group grptext
+	text "Next Page"
+ 	rect 500 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 2
+	textalignx 70
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ; setfocus page9_next ;
+			 show page9 ; show page9_next ; show page9_prev }
+	}
+
+
+// 				PAGE 9
+//		-----------------------
+
+
+itemDef {
+	name page9
+ 	group grptext
+	text " Listen. \nNS-CO has very realistic surface, distance and directional sound, betraying your and enemy positions. Move carefully, if you hear enemy in your area, walk and silently stalk them, approach all corners, barriers and doors with extreme caution."	
+ 	rect 70 150 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page9
+ 	group grptext
+	text " Use tactics appropriate to your abilities; \nIf you focus experience on weapon control through Accuracy and Strength at the expense of Speed you should play more defensively. Speed and Stealth can make you an powerful raider but you need to be close and use surprise to successfully engage enemy. Other combinations and concentrations enable similar tactical advantages that you should apply while yielding to your limitations."	
+ 	rect 70 210 500 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 0
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 1
+  
+	visible 0
+	decoration
+	}
+
+itemDef {
+	name page9
+ 	group grptext
+	text "Tactics - Page 2"
+ 	rect 160 345 320 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 160
+	textaligny 12
+	textscale .22
+	forecolor .75 .75 .75 1
+  
+	visible 0
+	decoration
+	}
+itemDef {
+	name page9_prev
+ 	group grptext
+	text "Previous Page"
+ 	rect 70 345 70 20
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 0
+	textalignx 0
+	textaligny 12
+	textscale .22
+	textstyle 4
+	forecolor 1 1 1 1
+  
+	visible 0
+
+	action { hide grptext ; setfocus page8_prev ;
+			 show page8 ; show page8_next ; show page8_prev }
+	}
+
+// 				 MENU
+//		-----------------------
+
+itemDef {
+	name introduction 
+	text "Introduction"
+	type 1
+	textscale .25
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+	rect 136 364 80 16
+	textalign 1
+	textalignx 39
+	textaligny 13
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; hide grptext ; 
+			 show page1 ; show page1_next ; show page1_prev }
+	mouseEnter { setitemcolor introduction backcolor .75 .75 .75 0.5 ;
+			show message_introduction } 
+	mouseExit { setitemcolor introduction backcolor .1 .2 .6 0.5 ;
+			hide message_introduction } 		
+	}
+	
+itemDef {
+	name abilities
+	text "Abilities"
+	type 1
+	textscale .25
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+	rect 232 364 80 16
+	textalign 1
+	textalignx 39
+	textaligny 13
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; hide grptext ; 
+			 show page2 ; show page2_next ; show page2_prev }
+	mouseEnter { setitemcolor abilities backcolor .75 .75 .75 0.5 ;
+			show message_abilities } 
+	mouseExit { setitemcolor abilities backcolor .1 .2 .6 0.5 ;
+			hide message_abilities } 
+	}
+
+itemDef {
+	name missions
+	text "Missions"
+	type 1
+	textscale .25
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+	rect 328 364 80 16
+	textalign 1
+	textalignx 39
+	textaligny 13
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; hide grptext ; 
+			 show page5 ; show page5_next ; show page5_prev }
+	mouseEnter { setitemcolor missions backcolor .75 .75 .75 0.5 ;
+			show message_missions } 
+	mouseExit { setitemcolor missions backcolor .1 .2 .6 0.5 ;
+			hide message_missions } 		
+	}
+
+itemDef {
+	name tactics
+	text "Tactics"
+	type 1
+	textscale .25
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+	rect 424 364 80 16
+	textalign 1
+	textalignx 39
+	textaligny 13
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; hide grptext ; 
+			 show page8 ; show page8_next ; show page8_prev }
+	mouseEnter { setitemcolor tactics backcolor .75 .75 .75 0.5 ;
+			show message_tactics } 
+	mouseExit { setitemcolor tactics backcolor .1 .2 .6 0.5 ;
+			hide message_tactics } 		
+	}
+
+itemDef {
+   	name back_n_quit_button
+	type ITEM_TYPE_BUTTON
+   	rect 40 424 560 28
+
+	mouseEnter { show message_back }
+	mouseExit { hide message_back }
+	action { play "ui/assets/menu_no.wav" ; close help ; open main }
+
+   	visible 1
+	}
+
+// MESSAGES
+
+itemDef {
+   	name message_back
+	group grpmessage
+	text "Click to return to the main menu"
+	style 1
+	rect 40 424 560 28
+	textalign 1
+	textaligny 20
+	textalignx 280 
+	textscale .25
+	textstyle 2 
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+	}
+
+itemDef {
+   	name message_introduction
+	group grpmessage
+	text "Click to view the introduction to this help guide"
+	style 1
+	rect 40 424 560 28
+	textalign 1
+	textaligny 20
+	textalignx 280 
+	textscale .25
+	textstyle 2 
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+	}
+
+itemDef {
+   	name message_abilities
+	group grpmessage
+	text "Click to display a short text on the TASS ability system"
+	style 1
+	rect 40 424 560 28
+	textalign 1
+	textaligny 20
+	textalignx 280 
+	textscale .25
+	textstyle 2 
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+	}
+
+itemDef {
+   	name message_missions
+	group grpmessage
+	text "Click to display some info about the mission objectives"
+	style 1
+	rect 40 424 560 28
+	textalign 1
+	textaligny 20
+	textalignx 280 
+	textscale .25
+	textstyle 2 
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+	}
+
+itemDef {
+   	name message_tactics
+	group grpmessage
+	text "Click to show a list of basic tactics"
+	style 1
+	rect 40 424 560 28
+	textalign 1
+	textaligny 20
+	textalignx 280 
+	textscale .25
+	textstyle 2 
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+	}
+
+
+// OVERLAY STUFF
+
+itemDef {
+	name static
+	style 1
+	background "ui/assets/ns_static.tga"
+	rect 0 0 640 480
+	visible 1 
+	decoration
+	}
+
+itemDef {
+	name metal
+	style 1
+	background "ui/assets/ns_menuback-main.tga"
+	rect 0 0 640 480
+	visible 1 
+	decoration
+	}
+
+
+}
+}
+}
+}

@@ -1,0 +1,114 @@
+BODY
+{
+	font: 10pt courier new;
+	color: #000000;
+	background-color: #666666;
+}
+
+P
+{
+	font: 10pt courier new;
+	color: #000000;
+	margin: 0pt;
+	padding-bottom: 0em; 
+}
+P.medium
+{
+	font: 9pt courier new;
+	padding-bottom: 1em; 
+	line-height: 130%;
+	text-align: justify;
+}
+P.mediumbold
+{
+	font: 9pt courier new;
+	padding-bottom: 1em; 
+	font-weight: bold;
+	line-height: 130%;
+}
+P.small
+{
+	font: 7pt courier new;
+}
+
+P.headline
+{
+	font: 10pt courier new;
+	color: #000000;
+	padding-bottom: 0em; 
+	text-align: center;
+	line-height: 150%;
+}
+P.headlinebig
+{
+	font: 20pt courier new;
+	color: #000000;
+	padding-top: 0em; 
+	padding-bottom: 0.5em; 
+	font-weight: bold;
+	text-align: center;
+}
+
+A
+{
+	text-decoration: none;
+	text-transform: none; 
+	font-weight: bold;
+}
+a:hover 
+{  
+	text-decoration: none;
+	font-weight: bold;
+	color: #3060FF;
+}
+
+hr
+{
+	margin: 0pt 0pt 0pt;
+	padding-top: 0em; 
+	padding-bottom: 0em; 
+}
+
+UL
+{
+	font: 9pt courier new;
+	padding-top: 0em;
+	margin: 0pt 25pt 10pt;
+	text-align: left;
+}
+
+LI
+{
+	font: 9pt courier new;
+	margin: 0pt;
+	color: #000000;
+	padding-bottom: 1pt;
+	text-align: left;
+}
+
+BLOCKQUOTE
+{
+	font: 10pt courier new;
+	margin: 0pt 25pt 0pt;
+	color: #000000;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: left;
+}
+
+TD
+{
+	font: 10pt courier new;
+	color: #000000;
+}
+
+img
+{
+	border: none
+}
+
+img.border
+{
+	border: 1;
+	bordercolor: #ffffff;
+}

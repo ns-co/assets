@@ -1,0 +1,43 @@
+[mapspecs]
+camouflage urban
+[end]
+
+[radar]
+B 448 502 442
+B 1145 -638 442
+E 613 -1836 234
+E 286 -1185 42
+[end]
+
+
+[seals]
+^4SEAL Briefing: $EOL 
+Several extremists are planning an assault on
+London Tower to steal the crown jewels. We located one
+hiding place of the extremists in a mansion near liverpool.
+Your job is to infiltrate the castle and steal the
+assault plans. $EOL
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- ^4Get ^4the ^4documents ^4from ^4conference ^4room. $EOL 
+^4- ^4Get ^4the ^4documents ^4from ^4robing ^4room. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+Our contacts in London reported that the Seals located our
+hideout. You all know that the plans for the assault on
+London Tower are located in the conference room and the
+library. Do not let the Seals get these documents! Our
+comrads in London will start the assault in 3 hours and
+if the Seals know about the plan, the assault will fail! $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- ^1Protect ^1the ^1documents ^1in ^1the ^1robing ^1room. $EOL 
+^1- ^1Protect ^1the ^1documents ^1in ^1the ^1conference ^1room. $EOL 
+[end]
+
+$EOF
+

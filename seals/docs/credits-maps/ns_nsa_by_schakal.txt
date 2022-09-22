@@ -1,0 +1,19 @@
+Name of the Map		: ns_nsa
+Leveldesigner		: Schakal (schakal@schakalweb.de)
+Operation 		: 'Pay Day'
+
+------------------------------------------------------------
+
+Type of Map		: Singel Operation
+Missionobjective	: Assaultfield
+Number of Players	: 8-16
+
+------------------------------------------------------------
+
+Short description	: - indoor
+
+
+-----------------------------------------------------------
+
+
+Special thanks to	: Wetatron for the briefing

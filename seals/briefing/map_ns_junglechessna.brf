@@ -1,0 +1,40 @@
+[mapspecs]
+camouflage jungle
+
+missioninfo 
+{
+	blowup
+}
+
+[end]
+
+[radar] 
+X 420 1680 32 
+X -1296 1104 136 
+[end] 
+
+[seals]
+^4Seal Briefing: $EOL 
+Satelite pictures show us that the drug lords use this small 
+airfield in the jungle to bring their drugs across the frontier. 
+Your mission is to blow up their plane or the tanks which they 
+use to refuel. $EOL
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Place a bomb at the fuel-tanks or at ^4the airplane. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+Your boss ordered you to this small airfield in the jungle. Its 
+your job to protect the tanks and the airplane until it is repaired. $EOL 
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Prevent that the SEALs bomb the ^1fuel-tanks or the airplane. $EOL 
+[end]
+
+$EOF
+
+

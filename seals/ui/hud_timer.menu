@@ -1,0 +1,600 @@
+#include "ui/menudef.h"
+
+// 	- TIMER -	//
+
+menuDef 
+	{
+    	name "Timers"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+	rect 516 2 120 34
+	
+	// 	- Roundtime
+
+	itemDef
+		{
+     		name "Roundtimer background"
+		rect 0 0 120 34
+		border 1
+		bordercolor .6 .6 .6 1
+		backcolor .6 .6 .6 .25
+		style 1
+		visible 1
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef {
+		name "Roundtimer Timer"
+		rect 0 2 120 34
+    		visible 1	
+		textscale .3
+		decoration
+		ownerdraw CG_TIMER_WORLD
+		}
+
+	itemDef {
+		name "Roundtimer Clock"
+		rect 88 2 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_clock.tga"
+
+		cvarTest "ui_roundtimerworld"
+		showCvar { "1" }
+
+		decoration
+		}
+
+	itemDef {
+		name "Roundtimer VIP"
+		rect 88 2 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_vip.tga"
+
+		cvarTest "mi_viptime"
+		showCvar { "1" }
+
+		decoration
+		}
+
+	itemDef {
+		name "Roundtimer VIP I AM"
+		rect 88 2 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_vip.tga"
+
+		cvarTest "ui_isvip"
+		showCvar { "1" }
+
+		teamcolor
+		decoration
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+		
+	// 	- Bombtime
+	
+	itemDef
+		{
+     		name "Bombtime background"
+		rect -122 0 120 34
+		border 1
+		bordercolor .6 .6 .6 1
+		backcolor .6 .6 .6 .25
+		style 1
+		visible 1
+
+		decoration
+		teamcolor
+
+		cvarTest "ui_bombtimer"
+		showCvar { "1" }
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef {
+		name "Bombtime Timer"
+		rect -122 2 120 34
+    		visible 1	
+		textscale .3
+		decoration
+		ownerdraw CG_TIMER_BOMB
+		}
+
+	itemDef {
+		name "Bombtime NOBOMB"
+		rect -34 2 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/bomb_empty.tga"
+
+		cvarTest "MI_blowup"
+		showCvar { "1" }
+
+		decoration
+		}
+
+	itemDef {
+		name "Bombtime NOBOMB CLOSE I AM"
+		rect -34 2 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/bomb_empty.tga"
+
+		cvarTest "ui_bombstate"
+		showCvar { "1" }
+
+		teamcolor
+		decoration
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef {
+		name "Bombtime BOMB"
+		rect -34 2 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/bomb_tango.tga"
+
+		cvarTest "ui_bombtimer"
+		showCvar { "1" }
+
+		decoration
+		}
+
+	// 	- Assaultfield 1
+
+	itemDef
+		{
+     		name "Assaultfield1 Background"
+		rect 0 36 120 34
+		border 1
+		bordercolor .6 .6 .6 1
+		backcolor .6 .6 .6 .25
+		style 1
+		visible 1
+		decoration
+		teamcolor
+		cvarTest "ui_assaulttimer1"
+		hideCvar { "0" ; "2" }
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef {
+		name "Assaultfield1 Timer"
+		rect 0 38 120 34
+    		visible 1	
+		textscale .3
+		decoration
+		ownerdraw CG_TIMER_ASSAULT1
+		}
+
+	itemDef {
+		name "Assaultfield1 Icon"
+		rect 88 37 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_assault_01.tga"
+
+		cvarTest "MI_assaultfield"
+		showCvar { "1" ; "2" ; "3" ; "4" }
+
+		decoration
+		}
+
+	itemDef {
+		name "Assaultfield1 CLAIMED Icon"
+		rect 88 37 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_assault_claimed.tga"
+
+		cvarTest "ui_assaulttimer1"
+		showCvar { "2" }
+
+		decoration
+		}
+
+	itemDef {
+		name "Assaultfield1 ACTIVE Icon"
+		rect 88 37 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_vip.tga"
+
+		cvarTest "ui_assaulttimer1"
+		hideCvar { "2" ; "0" }
+
+		decoration
+		}
+
+	// 	- Assaultfield 2
+
+	itemDef
+		{
+     		name "Assaultfield2 Background"
+		rect 0 70 120 34
+		border 1
+		bordercolor .6 .6 .6 1
+		backcolor .6 .6 .6 .25
+		style 1
+		visible 1
+		decoration
+		teamcolor
+		cvarTest "ui_assaulttimer2"
+		hideCvar { "0" ; "2" }
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef {
+		name "Assaultfield2 Timer"
+		rect 0 72 120 34
+    		visible 1	
+		textscale .3
+		decoration
+		ownerdraw CG_TIMER_ASSAULT2
+		}
+
+	itemDef {
+		name "Assaultfield2 Icon"
+		rect 88 72 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_assault_02.tga"
+
+		cvarTest "MI_assaultfield"
+		showCvar { "2" ; "3" ; "4" }
+
+		decoration
+		}
+
+	itemDef {
+		name "Assaultfield2 CLAIMED Icon"
+		rect 88 72 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_assault_claimed.tga"
+
+		cvarTest "ui_assaulttimer2"
+		showCvar { "2" }
+
+		decoration
+		}
+
+	itemDef {
+		name "Assaultfield2 ACTIVE Icon"
+		rect 88 72 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_vip.tga"
+
+		cvarTest "ui_assaulttimer2"
+		hideCvar { "2" ; "0" }
+
+		decoration
+		}
+
+	// 	- Assaultfield 3
+
+	itemDef
+		{
+     		name "Assaultfield3 Background"
+		rect 0 104 120 34
+		border 1
+		bordercolor .6 .6 .6 1
+		backcolor .6 .6 .6 .25
+		style 1
+		visible 1
+		decoration
+		teamcolor
+		cvarTest "ui_assaulttimer3"
+		hideCvar { "0" ; "2" }
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef {
+		name "Assaultfield3 Timer"
+		rect 0 106 120 34
+    		visible 1	
+		textscale .3
+		decoration
+		ownerdraw CG_TIMER_ASSAULT3
+		}
+
+	itemDef {
+		name "Assaultfield3 Icon"
+		rect 88 106 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_assault_03.tga"
+
+		cvarTest "MI_assaultfield"
+		showCvar { "3" ; "4" }
+
+		decoration
+		}
+
+	itemDef {
+		name "Assaultfield3 CLAIMED Icon"
+		rect 88 106 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_assault_claimed.tga"
+
+		cvarTest "ui_assaulttimer3"
+		showCvar { "2" }
+
+		decoration
+		}
+
+	itemDef {
+		name "Assaultfield3 ACTIVE Icon"
+		rect 88 106 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_vip.tga"
+
+		cvarTest "ui_assaulttimer3"
+		hideCvar { "2" ; "0" }
+
+		decoration
+		}
+
+	// 	- Assaultfield 4
+
+	itemDef
+		{
+     		name "Assaultfield4 Background"
+		rect 0 138 120 34
+		border 1
+		bordercolor .6 .6 .6 1
+		backcolor .6 .6 .6 .25
+		style 1
+		visible 1
+		decoration
+		teamcolor
+		cvarTest "ui_assaulttimer4"
+		hideCvar { "0" ; "2" }
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef {
+		name "Assaultfield4 Timer"
+		rect 0 140 120 34
+    		visible 1	
+		textscale .3
+		decoration
+		ownerdraw CG_TIMER_ASSAULT4
+		}
+
+	itemDef {
+		name "Assaultfield4 Icon"
+		rect 88 140 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_assault_04.tga"
+
+		cvarTest "MI_assaultfield"
+		showCvar { "4" }
+
+		decoration
+		}
+
+	itemDef {
+		name "Assaultfield4 CLAIMED Icon"
+		rect 88 140 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_assault_claimed.tga"
+
+		cvarTest "ui_assaulttimer4"
+		showCvar { "2" }
+
+		decoration
+		}
+
+	itemDef {
+		name "Assaultfield4 ACTIVE Icon"
+		rect 88 140 32 32
+    		visible 1	
+
+		style 1
+		backcolor 1 1 1 1
+
+		background "gfx/2d/hud/icons/timer_vip.tga"
+
+		cvarTest "ui_assaulttimer4"
+		hideCvar { "2" ; "0" }
+
+		decoration
+		}
+
+	// 	- Assaultfield Status
+
+	itemDef
+		{
+		name "Assaultfield Status EMPTY"
+		rect -34 38 32 32
+
+		background "gfx/2d/hud/icons/assault_empty.tga"
+		backcolor 1 1 1 1
+
+		style 1
+		visible 1
+		decoration
+ 
+		cvarTest "ui_assaultstate"
+		showCvar { "1" ; "2" }
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef
+		{
+		name "Assaultfield Status ACTIVE"
+		rect -34 38 32 32
+
+		background "gfx/2d/hud/icons/timer_vip.tga"
+		backcolor 1 1 1 1
+
+		style 1
+		visible 1
+		decoration
+ 
+		cvarTest "ui_assaultstate"
+		showCvar { "1" }
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef
+		{
+		name "Assaultfield Status BLOCKED"
+		rect -34 38 32 32
+
+		background "gfx/2d/hud/icons/assault_blocked.tga"
+		backcolor 1 1 1 1
+
+		style 1
+		visible 1
+		decoration
+
+		cvarTest "ui_assaultstate"
+		showCvar { "2" }
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+	}
+
+// 	- PLAYER GOT status
+
+menuDef 
+	{
+    	name "Igot"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+	rect 2 240 32 66
+	
+
+	itemDef
+		{
+		name "playergot bomb"
+		rect 0 0 32 32
+
+		background "gfx/2d/hud/icons/bomb_tango.tga"
+		backcolor 1 1 1 1
+
+		style 1
+		visible 1
+		decoration
+		teamcolor 
+
+		cvarTest "ui_gotbomb"
+		showCvar { "1" }
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef
+		{
+		name "playergot Tools"
+		rect 0 0 32 32
+
+		background "gfx/2d/hud/icons/toolkit.tga"
+		backcolor 1 1 1 1
+
+		style 1
+		visible 1
+		decoration
+		teamcolor 
+
+		cvarTest "ui_gottoolkit"
+		showCvar { "1" }
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef
+		{
+		name "playergot Briefcase"
+		rect 0 34 32 32
+
+		background "gfx/2d/hud/icons/briefcase_icon.tga"
+		backcolor 1 1 1 1
+
+		style 1
+		visible 1
+		decoration
+		teamcolor 
+
+		cvarTest "ui_gotbriefcase"
+		showCvar { "1" }
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+	}
+
+
+}

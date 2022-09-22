@@ -1,0 +1,27 @@
+Name of the Map		: ns_riverbridge
+Leveldesigner		: BenB (benb@benb-design.net)
+Operation 		: 'Cold as Ice'
+
+------------------------------------------------------------
+
+Type of Map		: Single Operation
+Missionobjective	: BOMB
+Number of Players	: 4-32
+
+------------------------------------------------------------
+
+Short description	: - snow
+			  - evening
+			  - long range/medium range		
+			  - SEALs have to bomb one of the 
+				two bridges
+			  - very easy to understand
+
+------------------------------------------------------------
+
+Additional notices	: - my first snow map for NSQ3
+
+------------------------------------------------------------
+
+Special thanks to	: - demo/cyte for the nice trees
+			

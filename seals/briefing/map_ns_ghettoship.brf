@@ -1,0 +1,51 @@
+[mapspecs]
+camouflage urban
+
+viptype diplomat
+
+missioninfo
+{
+ viptime
+}
+
+[end]
+
+[radar] 
+V 1064 1632 -112 
+V -444 3600 -40 
+[end] 
+
+[seals]
+^4SEAL Briefing: $EOL 
+Someone attacked our convoy with the important VIP. All 
+jeeps are destroyed and we had to fall back. $EOL 
+Now you and the VIP have to fight your way out to the 
+harbour on your own. Be careful as there still are gang 
+members on the streets. The city is big, dark and dangerous 
+and if the VIP fails to reach one of the two ships waiting
+for us in the harbor, then all of your comrades died for 
+nothing! $EOL
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- ^4Protect ^4the ^4VIP. $EOL 
+^4- ^4The ^4VIP ^4has ^4to ^4reach ^4one ^4of ^4the ^4two ^4ships. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+Taha! These stupid Americans had no chance! $EOL 
+We stopped their convoy and now they are trying to reach the 
+harbour without any support at all! And with that fat wanker 
+trailing behind them they are way too slow. And we know this 
+city! They have absolutely no chance to make it to the harbour
+alive. Now get out there and kill that damned traitor. $EOL
+ $EOL
+ $EOL
+^1Mission ^1Summary: $EOL
+^1- ^1Neutralize ^1the ^1VIP. $EOL 
+[end]
+
+$EOF
+
+

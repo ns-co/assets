@@ -1,0 +1,361 @@
+#include "ui/menudef.h"
+
+{
+\\ QUIT CREDIT \\
+
+  menuDef {
+    	name "quitCredit"
+    	visible 0
+    	fullscreen 1
+    	rect 0 0 640 480
+	background "ui/assets/ns_menuback-world-blur"	// worldmap
+	focusColor 1 0 0 1
+    	style 1
+
+	onEsc { play "ui/assets/menu_yes.wav" ; close quitcredit ; open main }
+	onOpen { show grpcredit ; 
+		 setfocus click1 ;
+		 hide grpother ;
+		 hide grpmessage ;
+		 show click1 ; 
+		 hide click2 ;
+		 show clicktocontinue ;
+		 hide clicktoquit ;
+		 fadein grpcredit ; 
+		 show message_copyright }
+
+itemDef {
+	name creditz
+	style 0 
+	rect 0 120 640 20
+	textalign 1
+	textalignx 320
+	textaligny 16
+      	textscale .333
+	textstyle 4
+	text "Navy Seals: Covert Operations - Credits"
+	forecolor 1 1 1 1
+	decoration 
+	visible 1
+	}
+
+
+// grpcredit
+ 
+itemDef {
+	name teammirage
+	group grpcredit
+	style 0 
+	rect 0 150 640 20
+	textalign 1
+	textalignx 320
+	textaligny 10
+      	textscale .275
+	textstyle 4
+	text "Team Mirage is:"
+	forecolor 0.8 0.8 1 1
+	decoration 
+	visible 0
+	}
+itemDef {
+	name defconx
+	group grpcredit
+	style 0 
+	rect 0 165 640 20
+	textalign 1
+	textalignx 320
+	textaligny 10
+	textscale .25
+	textstyle 0
+	text "Manfred 'Defcon-X' Nerurkar - Coder and Project Leader"
+	forecolor  1 1 1 1
+	decoration 
+	visible 0
+	}
+itemDef {
+	name democritus
+	group grpcredit
+	style 0 
+	rect 0 180 640 20
+	textalign 1
+	textalignx 320
+	textaligny 10
+	textscale .25
+	textstyle 0
+	text "Martin 'Democritus' Nerurkar - Lead Artist and Webmaster"
+	forecolor  1 1 1 1
+	decoration 
+	visible 0
+	}
+
+itemDef {
+	name ogun
+	group grpcredit
+	style 0 
+	rect 0 195 640 20
+	textalign 1
+	textalignx 320
+	textaligny 10
+    textscale .25
+	textstyle 0
+	text "Marcus 'Ogun' Johnsson - Lead Mapper"
+	forecolor  1 1 1 1
+	decoration 
+	visible 0
+	}
+
+
+itemDef {
+	name cyte
+	group grpcredit
+	style 0 
+	rect 0 210 640 20
+	textalign 1
+	textalignx 320
+	textaligny 10
+	textscale .25
+	textstyle 0
+	text "Phillipp 'Cyte' von Preuschen - Modeller and Skinner"
+	forecolor  1 1 1 1
+	decoration 
+	visible 0
+	}
+
+itemDef {
+	name scrutch
+	group grpcredit
+	style 0 
+	rect 0 225 640 20
+	textalign 2
+	textalign 1
+	textalignx 320
+	textaligny 10
+	textscale .25
+	textstyle 0
+	text "Gregor 'Scrutch' Kopka - Modeller, Skinner and Animator"
+	forecolor  1 1 1 1
+	decoration 
+	visible 0
+	}
+
+itemDef {
+	name schakal
+	group grpcredit
+	style 0 
+	rect 0 240 640 20
+	textalign 1
+	textalignx 320
+	textaligny 10
+	textscale .25
+	textstyle 0
+	text "Andreas 'Schakal' Schult - Mapper"
+	forecolor 1 1 1 1
+	decoration 
+	visible 0
+	}
+
+itemDef {
+	name rattler
+	group grpcredit
+	style 0 
+	rect 0 255 640 20
+	textalign 1
+	textalignx 320
+	textaligny 10
+	textscale .25
+	textstyle 0
+	text "Chris 'Rattler' Tkach - Modeller"
+	forecolor 1 1 1 1
+	decoration 
+	visible 0
+	}
+
+itemDef {
+	name pred
+	group grpcredit
+	style 0 
+	rect 0 270 640 20
+	textalign 1
+	textalignx 320
+	textaligny 10
+	textscale .25
+	textstyle 0
+	text "Chris 'PrED' Rhodes - Modeller and Skinner"
+	forecolor 1 1 1 1
+	decoration 
+	visible 0
+	}
+
+
+itemDef {
+      	name clicktocontinue
+      	text "Click to Proceed"
+      	style 1
+      	rect 40 360 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+
+// othercredit 
+
+ itemDef {
+	name specialthanks
+	group grpother 
+	style 0 
+	rect 0 150 640 20
+	textalign 1
+	textalignx 320
+	textaligny 10
+      	textscale .275
+	textstyle 4
+	text "Special Thanks to:"
+	forecolor 0.8 0.8 1 1
+	decoration 
+	visible 0
+	}
+
+itemDef {
+	name specialthx
+	group grpother 
+	style 0 
+	rect 0 170 640 10
+	textalign 0
+	textalignx 70
+	textaligny 8
+	textscale .25
+	textstyle 0
+	forecolor  1 1 1 1
+	decoration 
+	visible 0
+
+	wrapped
+
+	text "Zachary Quarles (Changeling Soundstudios) for the Tango Sounds.\r"
+		 "Christian 'Xian' Antkow (Id Software) for the Seal and Commentary Radio sounds.\r"
+		 "BenB, hoak, RaZor, real_man, Zingerman, LopLy, Kravit, Mindmaker, and Ramza for their help.\r"
+		 "PeaceMaker, the team-mirage's inofficial bitch and biggest fan.\r"
+		 "Graphtallica, Golgotha, TheMonk, Badmeat and Ydnar for their great textures.\r"
+		 "The 'Dev. Group' for the great Navy Seals 1 & 2.\r"
+		 "id software for Quake 3: Arena and their support.\r"
+		 "gamigo.de for the gaming server and ftp space.\r"
+		 "The Q3F crew for their atmospheric base code.\r"
+		 "All Testers and Veterans for their help and assistance in testing NS-CO.\r"
+		 "...and everyone else that helped during the development of this mod.\r"
+	}
+
+itemDef {
+      	name clicktoquit
+      	text "Click to Quit"
+      	style 1
+      	rect 40 360 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+
+
+// overlay blend stuff
+
+itemDef {
+      	name click1
+	type ITEM_TYPE_BUTTON
+	style 0
+      	rect 0 0 640 420
+      	visible 1 
+	action { play "ui/assets/menu_yes.wav" ; hide click1 ; hide grpcredit ; 
+			hide clicktocontinue ; show clicktoquit ;
+			show click2 ; setfocus click2 ; fadein grpother }
+    	}
+
+itemDef {
+      	name click2
+	type ITEM_TYPE_BUTTON
+	style 0
+      	rect 0 0 640 420
+      	visible 0 
+	action { close quitCredit ; uiScript "quit" }
+    	}
+
+
+
+
+itemDef {
+      	name back_n_quit_button
+	type ITEM_TYPE_BUTTON
+      	rect 40 424 560 28
+
+	mouseEnter { hide message_copyright ; show message_back }
+	mouseExit { show message_copyright ; hide message_back }
+	action  { play "ui/assets/menu_yes.wav" ;
+		close quitcredit ; open main }
+      	visible 1
+	}
+
+// MESSAGES
+
+itemDef {
+      	name message_back
+	group grpmessage
+      	text "Click to return to the main menu"
+      	style 1
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+
+itemDef {
+      	name message_copyright
+	group grpmessage
+      	text "Navy Seals: Covert Operations - Copyright 2001 by [team mirage]"
+      	style 1
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+
+// overlay blend stuff
+
+itemDef {
+      	name static
+	style 1
+      	background "ui/assets/ns_static.tga"
+      	rect 0 0 640 480
+      	visible 1 
+	decoration
+    	}
+
+itemDef {
+      	name metal
+	style 1
+      	background "ui/assets/ns_menuback-main.tga"
+      	rect 0 0 640 480
+      	visible 1 
+	decoration
+    	}
+}
+
+}
+}

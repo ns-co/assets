@@ -1,0 +1,31 @@
+// 
+// 	This file defines the NS-CO bots. 
+//
+//	Custom files have to use the .bot extension
+//
+//	Sniper, Storm & Sarge created with BotStudio	
+//
+
+{
+name		Sarge
+model		sarge
+aifile		bots/sarge_c.c
+}
+
+{
+name		Sniper
+model		s_medium
+aifile		bots/sniper_c.c
+}
+
+{
+name		Storm
+model		s_medium
+aifile		bots/storm_c.c
+}
+
+{
+name		Support
+model		t_medium
+aifile		bots/support_c.c
+}

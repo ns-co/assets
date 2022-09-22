@@ -1,0 +1,74 @@
+Name of the Map		: ns_ghettoship
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Black Sunday'
+
+------------------------------------------------------------
+
+Type of Map		: Single Operation
+Missionobjective	: VIP-R
+Number of Players	: 6-16
+
+------------------------------------------------------------
+
+Short description	: - urban
+			  - night
+			  - some CQB & medium range & long 
+				range		
+			  - the VIP has to reach on of two 
+				ships in the harbour
+			  - hard to understand, very big
+
+------------------------------------------------------------
+
+Additional notices	: - alpha !!
+
+------------------------------------------------------------
+
+Special thanks to	: - Graphtalica for their cool 
+				  urban textures
+			  - Golgotha for their cool urban 
+				  textures
+			  - Parasie for their cool urban 
+				  textures
+			  - Rungy for his cool urban 
+				  textures
+			  
+------------------------------------------------------------
+
+General hints and tactics for the map:
+
+- learn the map, especially all the special ways and 
+	different possibilitys
+
+- there are three main ways: middle, left, right, use them 
+	for team communication
+
+- VIP: always use a different, never use the same way 
+	again. so the tangos have to roam and normaly u 
+	only met small groups of them
+
+- VIP: never run away, never go on ur own, stay with 
+	the seals
+
+- Tango: u have to say the members which way u take 
+	at the beginning of a round, if u have trouble 
+	or u die the other members know where they come
+
+- Tango: try to hide until u can see the VIP, the best 
+	is if u can come from behind (high spe and ste)
+
+- SEALs: always watch ur back, as soon as u stop too 
+	long a tango can already be in ur back and kill 
+	a lot of ppl. one guy should do this all the time
+
+- SEALs: use fast silent scouts to look which way is save
+
+- SEALs: the VIP says the way at the binngong of the 
+	round, the VIP should not only run behind the 
+	rushing SEALs
+
+- SEALs: as soon as u kill a tango u have to hurry 
+	because then they know where u are, perhaps go 
+	back fast and try a complete different way 
+
+- seach the chrome waterpipe ;)

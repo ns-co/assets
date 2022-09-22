@@ -1,0 +1,19 @@
+Name of the Map		: ns_fogassault
+Leveldesigner		: Schakal (schakal@schakalweb.de)
+Operation 		: 'Crying Freeman'
+
+------------------------------------------------------------
+
+Type of Map		: Singel Operation
+Missionobjective	: VIP Rescue
+Number of Players	: 8-16
+
+------------------------------------------------------------
+
+Short description	: - fog	
+			  - medium range
+
+
+-----------------------------------------------------------
+
+

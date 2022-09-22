@@ -1,0 +1,53 @@
+[mapspecs]
+camouflage urban
+
+missioninfo 
+{
+assaultfield assaultfield assaultfield 
+}
+
+[end]
+
+[radar] 
+A 672 0 192
+A 784 432 -384
+A 672 -576 -656
+[end] 
+
+[seals]
+^4SEAL Briefing: $EOL 
+Due to your failure, the weapons were loaded onto an old 
+freighter with an unknown destination. Luckily we have 
+located the freighter using satellite reconnaissance. A 
+helicopter drops you off at the back of the ship. $EOL 
+You have to gain control of the bridge, the weapon storage 
+area (middle deck of cargo room in the front of the ship), 
+and the machine room for 15 seconds each. $EOL
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Get control of the bridge for ^415 ^4seconds $EOL 
+^4- Get control of the weapon storage for ^415 ^4seconds $EOL 
+^4- Get control of the machine room for ^415 ^4seconds $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+You're on the freighter with the weapons on your way to 
+the camp when suddenly a helicopter approaches the tanker. $EOL 
+ALARM! $EOL 
+They have found us! You must prevent the intruders from gaining 
+control of the bridge, the weapon storage area (middle deck of cargo 
+room in the front of the ship), and the machine room for 15 seconds
+each. $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Prevent that the SEALs get control of ^1the bridge for 15 seconds $EOL 
+^1- Prevent that the SEALs get control of ^1the weapon storage for 15 seconds $EOL 
+^1- Prevent that the SEALs get control of ^1the machine room for 15 seconds $EOL 
+[end]
+
+$EOF
+
+

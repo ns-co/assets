@@ -1,0 +1,123 @@
+#include "ui/menudef.h"
+
+
+{
+\\ INGAME_LEAVE MENU \\
+
+  menuDef {
+    	name "ingame_bots"
+    	visible 0
+    	fullScreen 0
+	outOfBoundsClick			
+    	rect 224 30 192 123
+	disableColor  .5 .5 .5 1 
+	focusColor 1 0 0 1
+
+itemDef {
+	name window
+	rect 10 15 172 108
+	style 1
+	backcolor .1 .1 .37 1
+	border 1
+	bordercolor 1 1 1 .25
+	visible 1
+	decoration
+	background "ui/assets/ns_ingame_back.tga"
+	}
+
+itemDef {
+      	name gametypefield
+	style 0
+	text "Name:"	
+ 	ownerdraw UI_BOTNAME
+      	rect 0 20 128 20 
+      	textalign ITEM_ALIGN_RIGHT		
+      	textalignx 86
+      	textaligny 18    
+	textscale .25     
+      	forecolor 1 1 1 1
+      	border 0
+      	bordercolor 0 0 0 0
+      	visible 1 
+    	}
+
+itemDef {
+      	name gametypefield
+      	style 0
+	text "Team:"	
+	ownerdraw UI_REDBLUE
+      	rect 0 40 128 20 
+      	textalign ITEM_ALIGN_RIGHT		
+      	textalignx 86
+      	textaligny 18    
+	textscale .25
+	cvarTest "g_gametype"
+	disableCvar { "0" }     
+      	forecolor 1 1 1 1
+      	border 0
+      	bordercolor 0 0 0 0
+      	visible 1 
+    	}
+
+itemDef {
+      	name gametypefield
+      	style 0	
+	text "Skill:"
+ 	ownerdraw UI_BOTSKILL
+      	rect 0 60 128 20 
+      	textalign ITEM_ALIGN_RIGHT		
+      	textalignx 86
+      	textaligny 18    
+	textscale .25     
+      	forecolor 1 1 1 1
+      	border 0
+	bordercolor 0 0 0 0
+	visible 1 
+    	}
+
+
+itemDef {
+     	name addbot
+     	text "Add Bot"
+     	rect 24 95 64 20
+	type 1  
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+     	textalign 1	
+     	textalignx 32
+    	textaligny 16
+	textscale .25
+      	forecolor  1 1 1 1
+	backcolor .1 .2 .6 0.5 
+      	visible 1 
+	action { play "ui/assets/menu_yes.wav" ;
+		uiScript addBot ; uiScript closeingame }
+	mouseEnter { setitemcolor addbot backcolor .75 .75 .75 0.5 } 
+	mouseExit { setitemcolor addbot	backcolor .1 .2 .6 0.5 } 	
+    	}
+
+itemDef {
+      	name kickall 
+      	text "Kick All"
+      	rect 103 95 64 20
+	type 1
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+      	textalign 1	
+     	textalignx 32
+    	textaligny 16
+	textscale .25
+      	forecolor  1 1 1 1
+	backcolor .1 .2 .6 0.5 
+      	visible 1 
+	action { play "ui/assets/menu_yes.wav" ; 
+		 exec "kick allbots" ; uiScript closeingame  }
+	mouseEnter { setitemcolor kickall backcolor .75 .75 .75 0.5 } 
+	mouseExit { setitemcolor kickall backcolor .1 .2 .6 0.5 } 	
+    	}
+	
+}
+
+}

@@ -1,0 +1,402 @@
+#include "ui/menudef.h"
+
+
+{
+\\ INGAME_JOIN MENU \\
+
+  menuDef {
+    	name "ingame_char_sidearm_tangos"
+    	visible 0
+    	fullScreen 0
+	outOfBoundsClick			
+    	rect 64 48 512 352
+	focusColor 1 0 0 1
+    	border 0
+	popup
+	onOpen { hide GrpSelected_info ; show wp_none_info }
+	onEsc { Close ingame_char_sidearm_tangos ; 
+		open ingame_char }
+	onClose { uiScript removeSecondaryWeaponItems }
+
+
+// MAIN WINDOW
+
+itemDef {
+     	name window
+	style WINDOW_STYLE_FILLED
+    	rect -1 -1 512 352
+	backcolor .1 .1 .37 1
+      	visible 1 
+	border 1
+	bordercolor 1 1 1 .125
+     	decoration
+	background "ui/assets/ns_ingame_back.tga"
+    	}
+
+itemDef {
+     	name windowlines
+	style WINDOW_STYLE_FILLED
+    	rect 0 0 512 352
+ 	backcolor 1 1 1 1
+	background "ui/assets/ns_char_lines2.tga"
+      	visible 1
+     	decoration
+    	}
+
+
+// LEFT SIDE
+
+itemDef {
+     	name weapon
+	style 0
+    	rect 16 16 192 16
+
+	text "Sidearm"	
+
+	textalign 0
+	textalignx 8
+	textaligny 11
+	textscale .3
+
+	forecolor 1 1 1 1
+      	visible 1 
+     	decoration
+    	}
+
+itemDef {
+     	name wp_p_1
+	group GrpSelect
+	style 1
+    	rect 32 56 176 16
+
+	text "Glock 26"	
+
+	ownerdraw CG_TEXT_PICKUP
+	ownerParam WP_GLOCK
+
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .25
+
+	forecolor 1 1 1 1
+      	visible 1 
+
+	mouseEnter { setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { setcolor backcolor 0 0 0 0 }	
+
+	action { uiScript "setSecondaryWeapon" ;
+		 play "ui/assets/menu_yes.wav" ; 
+		 hide GrpSelected_info ; show wp_p_1_info }
+    	}
+
+itemDef {
+     	name wp_p_2
+	group GrpSelect
+	style 1
+    	rect 32 88 176 16
+
+	text "Smith & Wesson 40t"	
+
+	ownerdraw CG_TEXT_PICKUP
+	ownerParam WP_SW40T
+
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .25
+
+	forecolor 1 1 1 1
+      	visible 1 
+
+	mouseEnter { setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { setcolor backcolor 0 0 0 0 }	
+
+	action { uiScript "setSecondaryWeapon" ;
+		 play "ui/assets/menu_yes.wav" ; 
+		 hide GrpSelected_info ; show wp_p_2_info }
+    	}
+
+itemDef {
+     	name wp_p_3
+	group GrpSelect
+	style 1
+    	rect 32 120 176 16
+
+	text "IMI Desert Eagle"	
+
+	ownerdraw CG_TEXT_PICKUP
+	ownerParam WP_DEAGLE
+
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .25
+
+	forecolor 1 1 1 1
+      	visible 1 
+
+	mouseEnter { setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { setcolor backcolor 0 0 0 0 }	
+
+	action { uiScript "setSecondaryWeapon" ;
+		 play "ui/assets/menu_yes.wav" ; 
+		 hide GrpSelected_info ; show wp_p_3_info }
+    	}
+
+itemDef {
+     	name but_more
+	text "No More Weapons"	
+		decoration
+     	rect 32 310 128 20   
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 64
+	textaligny 15
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+
+	border 1
+	bordercolor 1 1 1 .25
+
+      	visible 1 
+
+	action { close ingame_char_sidearm ;
+		 open ingame_char }
+
+	mouseEnter { setitemcolor but_more backcolor .75 .75 .75 1 }
+      	mouseExit { setitemcolor but_more backcolor .1 .2 .6 .5 }
+    	}
+
+
+// RIGHT SIDE
+
+itemDef {
+     	name weapon
+     	rect 224 48 256 160
+	type 1
+	style WINDOW_STYLE_FILLED
+	backcolor .1 .1 .3 1
+	border 1
+	bordercolor 1 1 1 .25
+       	visible 1 
+	decoration
+    	}
+
+itemDef {
+     	name wp_none_info
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	type 1
+	style WINDOW_STYLE_FILLED
+	backcolor .1 .1 .3 1
+	border 1
+	bordercolor 1 1 1 .25
+       	visible 1 
+	decoration
+    	}
+
+// wp_p_1
+
+itemDef {
+     	name wp_p_1_info 
+	group GrpSelected_info 
+	text "Superlative 'Glock' design in a compact, lightweight, low recoil 9mm model."	
+     	rect 213 64 236 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 20
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 1
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_p_1_info 
+	group GrpSelected_info 
+	text "[ requirements : none ]"	
+     	rect 213 204 256 16
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 2
+	textalignx 252
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 .5
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_p_1_info 
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	style 3
+	type 1
+
+	background "ui/assets/icons/glock26"
+	backcolor 1 1 1 1
+	border 1
+	bordercolor 1 1 1 .25
+  
+      	visible 1
+	decoration
+    	}
+
+// wp_p_2
+
+itemDef {
+     	name wp_p_2_info 
+	group GrpSelected_info 
+	text "A standard .40 pistol from Smith & Wesson."	
+     	rect 213 64 236 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 20
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 1
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_p_2_info 
+	group GrpSelected_info 
+	text "[ requirements : none ]"	
+     	rect 213 204 256 16
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 2
+	textalignx 252
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 .5
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_p_2_info 
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	style 3
+	type 1
+
+	background "ui/assets/icons/sw40t"
+	backcolor 1 1 1 1
+	border 1
+	bordercolor 1 1 1 .25
+  
+      	visible 1
+	decoration
+    	}
+
+// wp_p_3
+
+itemDef {
+     	name wp_p_3_info 
+	group GrpSelected_info 
+	text "A freak of a weapon and arguably the most powerful handgun in the world."	
+     	rect 213 64 236 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 20
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 1
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_p_3_info 
+	group GrpSelected_info 
+	text "[ requirements : str 4+ ]"	
+     	rect 213 204 256 16
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 2
+	textalignx 252
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 .5
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_p_3_info 
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	style 3
+	type 1
+
+	background "ui/assets/icons/deagle"
+	backcolor 1 1 1 1
+	border 1
+	bordercolor 1 1 1 .25
+  
+      	visible 1
+	decoration
+    	}
+
+// button accept
+
+itemDef {
+     	name but_accept
+	text "Accept"	
+     	rect 352 310 128 20   
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 64
+	textaligny 15
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+
+	border 1
+	bordercolor 1 1 1 .25
+
+      	visible 1 
+
+	action { close ingame_char_sidearm_tangos ;
+		 open ingame_char }
+
+	mouseEnter { setitemcolor but_accept backcolor .75 .75 .75 1 }
+      	mouseExit { setitemcolor but_accept backcolor .1 .2 .6 .5 }
+    	}
+
+
+
+}
+
+}

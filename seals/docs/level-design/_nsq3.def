@@ -1,0 +1,230 @@
+// this is the Navy Seals: Covert Operations (www.ns-co.net) entity file. 
+// it has been created by Manfred 'defcon-x' Nerurkar
+// last addition changes at:
+// 24.06.2002 ~ added target_print
+// 12.06.2002 ~ updated the entire file, and removed old/useless entities
+
+/*QUAKED target_modifyxp (1 0 0) (-8 -8 -8) (8 8 8) STAMINA SPEED ACCURACY STEALTH TECHNICAL STRENGTH
+this entity is only avaiable in training mode (g_gametype 0)
+
+"setlevel" sets level of the selected abilities of the activator to a number
+*/
+
+/*QUAKED target_print (1 0 0) (-8 -8 -8) (8 8 8) SEALS_ONLY TANGO_ONLY PRIVATE
+"message"	text to print
+If "private", only the activator gets the message.  
+If no checks, all clients get the message. You can also send the messages only to a specific team.
+*/
+
+/*QUAKED target_particle (1 0 0) (-8 -8 -8) (8 8 8) DIRT GLASS SAND SPARKS METALSPARKS SMOKE STARTOFF
+"random"		randomizes amount of particles it spawns (full numbers).
+"randomdir"		randomizes velocity of each particle ( x/y NOT Z(up) ) (full numbers).
+"velocity"		velocity (full numbers).
+"particles"		amount of particles randomized by 'random' key (full numbers).
+"size"			size modifier (only for smoke) (full numbers).
+"dlight"		add a dynamic light (0=none)-(255=biggest dlight) (full numbers).
+"wait"			fire particles every X milliseconds.
+"stop"			it stops spawning particles X milliseconds after it's been targeted.
+
+It will spawn X particles( and a random amount between 0 and 'random' key ) every X seconds.
+Can be targeted to be toggled on/off. 
+To set the type of particles spawned use the SPAWNFLAGS.
+*/
+
+/*QUAKED func_wall (0 .5 .8) ? TRIGGER_SPAWN TOGGLE START_ON
+This is just a solid wall if not inhibited
+
+TRIGGER_SPAWN	the wall will not be present until triggered
+				it will then blink in to existance; it will
+				kill anything that was in it's way
+
+TOGGLE			only valid for TRIGGER_SPAWN walls
+				this allows the wall to be turned on and off
+
+START_ON		only valid for TRIGGER_SPAWN walls
+				the wall will initially be present
+
+"model2"	.md3 model to also draw
+"color"		constantLight color
+"light"		constantLight radius
+*/ 
+
+/*QUAKED trigger_assaultfield (.5 .5 .5) 
+Any entity that touches this will activate an assault field.
+When it leaves it , it disables it. ( for this player )
+
+"team"			team  0 seals, 1 tangos
+"time"			time a player has to be in the field until he triggeres it
+"target"		target to trigger when he spawned 
+"all"			execute the teamtarget when all fields for the team got triggered
+
+*/
+	
+ 
+/*QUAKED info_vip_rescue (1 0 0) (-8 -8 -8) (8 8 8)
+If V.I.P. of the given team (0/1) is reaching this.
+
+"radius"		default 50 ( whole numbers only )
+"team"			team  0 seals, 1 tangos 
+"bconly"		only allow the vip to exit with the briefcase in his hand
+"target"		target to trigger when he reached the extraction point
+*/ 
+
+/*QUAKED info_vip_spawn (1 0 0) (-8 -8 -8) (8 8 8)
+Spawnpoint for a vip (if multiple - it will randomly choose one) 
+You might use the target-key for elevators to move down, or trains
+to move, when the V.I.P. spawns..
+
+"team"			team  0 seals, 1 tangos
+"target"		target to trigger when he spawned
+"stayalive"		vip has to stay X seconds alive
+"givebc"		give the vip a briefcase which he can't drop
+*/
+
+/*QUAKED info_bomb_disarm (1 0 0) (-8 -8 -8) (8 8 8)
+If player standing in radius from origin of ent
+he is able to arm a bomb.
+The team the bomb_disarm entity is related to will get the bomb at the
+beginning of the round. You can have bombs for both teams, or multiple
+bomb_disarm spots, but if there are more then one for a team. Then all 
+but the first should have the optional flag.
+You can set the time the bomb takes until it explodes by using the time key.
+
+"radius"		default 50 ( whole numbers only )
+"team"			team  0 seals, 1 tangos, 2 all
+"optional"		if set it will it will add one "done mission" to the seals
+				but when it's spawned it will not add one to "num missions".
+				so atleast there must be one mission.. and the second bomb can be optional.
+"time"			the bomb will take X seconds until it explodes.
+*/
+
+/*QUAKED trigger_explosion (1 0 0) (-8 -8 -8) (8 8 8)
+As soon as it gets triggered an explosion will be shown
+and dmg will be infliced within dmg_rad.
+If wait (in seconds) is set . it will trigger every X seconds
+
+"dmg"			default 5 ( whole numbers only )
+"radius"		default 50 ( whole numbers only )
+"wait"          default 0 ( no loop , only trigger )
+"delay"			default 0 ( delay when triggered in sec - only when wait=0)
+"targetname"	targetname _must_be_set_ if no wait
+
+*/ 
+
+/*QUAKED func_explosive (.5 .5 .5) ? IS_WOOD IS_METAL IS_STONE UNBREAKABLE
+ 
+If targetname set, it will not be destroyable
+To make it spawn an explosive let it trigger a trigger_explosive
+default is: glass
+
+"target"	Target to trigger when destroyed
+"targetname"	If set not destroyable
+"health"	Health value
+"hits"		how many hits it can suffer until it breaks. (default: 4)
+"nomark"	No mark will be spawned when it suffers a hit. 
+"model2"	.md3 model to draw instead of brush but clip against the brush
+*/ 
+
+/*QUAKED func_door_rotating (0 .5 .8) ? X Y STARTOPEN
+TOGGLE		wait in both the start and end states for a trigger event.
+START_OPEN	the door to moves to its destination when spawned, and operate in reverse.  It is used to temporarily or permanently close off an area when triggered (not useful for touch or takedamage doors).
+NOMONSTER	monsters will not trigger this door
+
+"model2"	.md3 model to also draw
+"angle"		determines the opening direction
+"targetname" if set, no touch field will be spawned and a remote button or trigger field activates the door.
+"speed"		movement speed (100 default)
+"wait"		wait before returning (3 default, -1 = never return)
+"distance"	lip remaining at end of move (8 default)
+"dmg"		damage to inflict when blocked (2 default)
+"color"		constantLight color
+"light"		constantLight radius
+"health"	if set, the door must be shot open
+*/
+
+/*QUAKED team_seal_player (1 0 0) (-16 -16 -16) (16 16 32)
+Only in Teamplay games.  SEAL players spawn here at game start.
+*/ 
+
+/*QUAKED team_tango_player (0 0 1) (-16 -16 -16) (16 16 32)
+Only in Teamplay games.  Tango players spawn here at game start.
+*/
+ 
+/*QUAKED  trigger_missionobjective (1 0 0) (-8 -8 -8) (8 8 8)
+"team"			0 = seals / 1 = tangos
+"optional"		it won't add one new mission objective, but it will mark one as completed when triggered.
+"targetname"	when triggered, one mission objective for the team is marked as completed.
+
+use this entity if you want to create your own type of mission. for example you could create
+a mission where the tangos have to destroy a func_explosive in order to win.
+to do this you have to target this entity using your func_explosive and set team to 1.
+you can use as much of these as you need
+*/ 
+
+/*QUAKED misc_flare (0.3 0.1 0.6) (-8 -8 -8) (8 8 8) 
+this adds a lensflare effect to the renderlist.
+
+"size"		flaresize
+"r"			red intesity (0 - 100 default: 100 )
+"g"			green intesity ( 0 - 100 default: 100 )
+"b"			blue intesity ( 0 - 100 default: 100 )
+"corona"	show corona (1=default)
+*/ 
+
+/*QUAKED trigger_counter (0.3 0.1 0.6) (-8 -8 -8) (8 8 8) START_ON
+Repeatedly fires its targets.
+Can be turned on or off by using.
+
+"wait"			base time between triggering all targets, default is 1 
+"loop"			(0) no loop, (1) always loop
+"targetname"	can be targeted to be turned off
+*/  
+
+/*QUAKED team_briefcase (1 0 0) (-16 -16 -16) (16 16 16)
+intelligence to capture for the seals team
+
+you can put multiple entities of this type into one map.
+*/
+
+/*QUAKED team_briefcase_return (1 0 0) (-16 -16 -16) (16 16 16)
+this is the extraction point for the seals if they're carrying the briefcase.
+
+you can put multiple entities of this type into one map.
+*/
+ 
+/*QUAKED misc_doorlock (0.3 0.1 0.6) (-2 -1 -2) (2 1 2) 
+Can lock doors. target a door and it won't be able to get opened unless
+you shoot the lock.
+
+"target"		target (should be a door) 
+*/
+
+/*QUAKED team_briefcase2 (1 0 0) (-16 -16 -16) (16 16 16)
+intelligence to capture for the seals team
+this is entity is using a slightly different model.
+
+you can put multiple entities of this type into one map.
+*/
+
+/*QUAKED trigger_hurt (.5 .5 .5) ? START_OFF TOGGABLE SILENT NO_PROTECTION SLOW
+Any entity that touches this will be hurt.
+It does dmg points of damage each server frame
+Targeting the trigger will toggle its on / off state.
+
+SILENT			supresses playing the sound
+SLOW			changes the damage rate to once per second
+NO_PROTECTION	*nothing* stops the damage
+START_OFF		starts deactivated
+TOGGABLE		it can be triggered on / off
+
+"dmg"			default 5 (whole numbers only) 
+*/
+
+/*QUAKED target_location (0 0.5 0) (-8 -8 -8) (8 8 8)
+Set "message" to the name of this location.
+Set "count" to 0-7 for color.
+0:white 1:red 2:green 3:yellow 4:blue 5:cyan 6:magenta 7:white
+
+Closest target_location in sight used for the location, if none
+in sight, closest in distance.
+*/ 

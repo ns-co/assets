@@ -1,0 +1,46 @@
+[mapspecs]
+camouflage desert
+viptype arab  
+
+missioninfo 
+{
+	viptime 
+}
+
+[end]
+
+
+[seals]
+^4SEAL Briefing: $EOL 
+The spiritual leader of the tangos is hiding in 
+the mountains. The interrogation of the surviving 
+tangos from the last mission has proven successful 
+and led to the location of his compound. $EOL 
+You have been assigned the hard task of entering 
+the compound and eliminating the leader. With his 
+death the conflict will end immediately. $EOL
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Neutralize the VIP. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+Thanks to an early warning from a loyal scout you 
+and the leader were able to escape to a secret mountain 
+hideout at Alamut known as the eagle's nest. Here you 
+should be safe.  $EOL 
+At least thats what you thought. Some of the brothers 
+must have been weak and tipped off the Americans to your 
+location. They are coming for the leader! But this time 
+you are strong. This time the Americans will suffer defeat! $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Protect the VIP. $EOL 
+[end]
+
+$EOF
+
+

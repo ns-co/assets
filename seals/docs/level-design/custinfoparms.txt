@@ -1,0 +1,16 @@
+//
+// NAVY SEALS: COVERT OPERATIONS
+//Custom Infoparms File
+//
+// Custom Contentsflags
+{
+}
+// Custom Surfaceflags
+{
+woodensteps 0x100000
+dirtsteps 0x200000
+snowsteps 0x400000
+sandsteps 0x800000
+glasssteps 0x1000000
+softsteps 0x2000000
+}

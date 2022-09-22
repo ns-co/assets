@@ -1,0 +1,10 @@
+tag_head,
+tag_torso,
+tag_weapon,
+tag_vitem2,
+u_arml,models/players/vip_male/undercover_legs.tga
+u_armr,models/players/vip_male/undercover_legs.tga
+u_handl,models/players/vip_male/undercover_chest.tga
+u_handr,models/players/vip_male/undercover_chest.tga
+u_detail,models/players/vip_male/undercover_legs.tga
+u_chest,models/players/vip_male/undercover_chest.tga

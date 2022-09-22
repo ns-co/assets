@@ -1,0 +1,5 @@
+plugs,models/weapons/c4/skin.tga
+detonator,models/weapons/c4/skin.tga
+digits_fx,models/weapons/c4/skin_fx.tga
+c4,models/weapons/c4/skin_c4.tga
+hands,models/weapons/hands/skin_t.tga

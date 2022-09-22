@@ -1,0 +1,44 @@
+[mapspecs]
+camouflage desert
+
+missioninfo 
+{
+assaultfield 
+}
+
+[end]
+
+[radar] 
+A -608 1376 -328
+[end] 
+
+[seals]
+^4SEAL Briefing: $EOL 
+You have intercepted the tangos before they were 
+able to reach their secret hideout. Satellite images 
+have shown us a way through the mountains of Lybia 
+that they are likely to use. $EOL 
+You need to prevent them from gaining control of 
+the middle of the canyon. $EOL  
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Prevent ^4that ^4the ^4tangos ^4gain ^4control ^4of ^4the ^4canyon ^4center ^4for ^415 ^4seconds. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+You have been sent as scouts through a hidden mountain 
+passage to reinforce the guards at the hideout. Suddenly 
+you're ambushed by the enemy!. $EOL 
+You need to hold the middle of the canyon for 15 seconds 
+so you can call for help. $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Gain control of the canyon ^1center ^1for ^115 seconds. $EOL 
+[end]
+
+$EOF
+
+

@@ -1,0 +1,39 @@
+Name of the Map		: ns_neighbourhood
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Neighbourly Help'
+
+------------------------------------------------------------
+
+Type of Map		: Singel Operation
+Missionobjective	: VIP-S & CTB
+Number of Players	: 5-16
+
+------------------------------------------------------------
+
+Short description	: - urban
+			  - day
+			  - CQB & medium range		
+			  - the VIP & Briefcase are in the 
+				  big white house at the top 
+				  of the small hill, around 
+				  are many nice, green 
+				  backyards
+			  - normal to understand
+
+------------------------------------------------------------
+
+Additional notices	: - the first version was only for 8 
+				  players, then i increase 
+				  the seize for 16 players
+
+------------------------------------------------------------
+
+Special thanks to	: - Graphtalica for their cool 
+				  urban textures
+			  - Golgotha for their cool urban 
+				  textures
+			  - Parasie for their cool urban 
+				  textures
+			  - Rungy for his cool urban 
+				  textures
+			  - Capt Iglo for his bugreports

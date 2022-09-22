@@ -1,0 +1,125 @@
+#include "ui/menudef.h"
+
+{
+
+\\ MISC POPUP MENU \\
+
+menuDef {
+	name "misc_popmenu"
+    	visible 0
+    	fullscreen 0
+    	//rect 217 200 210 85
+	rect 204 186 256 128
+	focusColor 1 0 0 1
+    	style 1
+    	border 1
+	popup
+	onESC { close misc_popmenu ; open main }
+
+
+
+itemDef {
+	name window
+	rect 0 0 256 128
+	style 3
+	background "ui/assets/ns_popup.tga"
+	visible 1
+	decoration
+	}
+
+itemDef {
+	name windowexit
+	text "x"
+	rect 220 20 15 15
+	type 1
+	style WINDOW_STYLE_FILLED
+	textalign 1
+	textalignx 6
+	textaligny 13
+	textscale .35
+	forecolor 1 1 1 1
+	backcolor .1 .1 .37 0.5
+	border 1
+	bordercolor 1 1 1 .25
+	action { close misc_popmenu ; open main }
+	mouseEnter { setitemcolor windowexit backcolor .1 .2 .6 0.5 } 
+	mouseExit { setitemcolor windowexit backcolor .1 .1 .37 0.5 } 	
+	visible 1	
+	}
+
+
+
+	// QUIT	//
+
+itemDef {
+	name confirm
+	text "Miscellaneous Options"
+	style 0
+	textscale .3 
+	textstyle 3
+	rect 0 32 128 20
+	textalign 1
+	textalignx 128
+	textaligny 2
+	decoration
+	forecolor 1 1 1 1
+	visible 1
+	}
+
+
+itemDef {
+	name modifications
+	text "Mods"
+	type 1
+	textscale .25
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+//	background "ui/assets/button_back.tga"
+	rect 32 56 64 32
+	textalign 1
+	textalignx 31
+	textaligny 21
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	visible 1
+	action { play "sound/misc/nomenu.wav"; 
+	close main ;
+	close misc_popmenu ; 
+	open mod  }
+	mouseEnter { setitemcolor modifications backcolor .75 .75 .75 0.5 } 
+	mouseExit { setitemcolor modifications backcolor .1 .2 .6 0.5 } 		
+	}
+	
+
+
+itemDef {
+	name credits
+	text "Credits"
+	type 1
+	textscale .25
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+//	background "ui/assets/button_back.tga"
+	rect 160 56 64 32
+	textalign 1
+	textalignx 31
+	textaligny 21
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	visible 1
+	action { play "sound/misc/nomenu.wav" ; 
+	close misc_popmenu ; 
+	close main ;
+	open credit}
+	mouseEnter { setitemcolor credits backcolor .75 .75 .75 0.5 } 
+	mouseExit { setitemcolor credits backcolor .1 .2 .6 0.5 } 		
+	}
+
+}
+
+
+}
+
+

@@ -1,0 +1,1014 @@
+#include "ui/menudef.h"
+
+
+{
+\\ INGAME_JOIN MENU \\
+
+  menuDef {
+    	name "ingame_char_primary_seals"
+    	visible 0
+    	fullScreen 0
+	outOfBoundsClick			
+    	rect 64 48 512 352
+	focusColor 1 0 0 1
+    	border 0	
+	popup
+	onOpen { hide GrpSelected_info ; show wp_none_info ;
+			 show GrpSelect ; hide GrpSelect2 }
+	onEsc { Close ingame_char_primary_seals ; 
+		open ingame_char }
+	onClose { uiScript removePrimaryWeaponItems ;
+			 exec "nssl if ( inven_primary == 23 && inven_ammo_primary != 0 ) { set inven_saved_primary $inven_ammo_primary # set inven_ammo_primary 1 }";
+			 exec "nssl if ( inven_saved_primary != 0 && inven_primary != 23 ) then { set inven_ammo_primary $inven_saved_primary # set inven_saved_primary 0 }" }
+
+// MAIN WINDOW
+
+itemDef {
+     	name window
+	style WINDOW_STYLE_FILLED
+    	rect -1 -1 512 352
+	backcolor .1 .1 .37 1
+      	visible 1 
+	border 1
+	bordercolor 1 1 1 .125
+     	decoration
+	background "ui/assets/ns_ingame_back.tga"
+    	}
+
+itemDef {
+     	name windowlines
+	style WINDOW_STYLE_FILLED
+    	rect 0 0 512 352
+ 	backcolor 1 1 1 1
+	background "ui/assets/ns_char_lines2.tga"
+      	visible 1
+     	decoration
+    	}
+
+// LEFT SIDE
+
+itemDef {
+     	name weapon
+	style 0
+    	rect 16 16 192 16
+
+	text "Primary Weapon"	
+
+	textalign 0
+	textalignx 8
+	textaligny 11
+	textscale .3
+
+	forecolor 1 1 1 1
+      	visible 1 
+     	decoration
+    	}
+
+/* WEAPONS - PAGE 1 */
+
+itemDef {
+     	name wp_smg_2
+	group GrpSelect
+	style 1
+    	rect 32 56 176 16
+
+	text "Heckler & Koch PDW"	
+
+	ownerdraw CG_TEXT_PICKUP
+	ownerParam WP_PDW
+
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .25
+
+	forecolor 1 1 1 1
+      	visible 1 
+
+	mouseEnter { setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { setcolor backcolor 0 0 0 0 }	
+
+	action { uiScript "setPrimaryWeapon" ;
+		 play "ui/assets/menu_yes.wav" ; 
+		 hide GrpSelected_info ; show wp_smg_2_info }
+    	}
+
+itemDef {
+     	name wp_smg_3
+	group GrpSelect
+	style 1
+    	rect 32 88 176 16
+
+	text "Heckler & Koch Mp5"	
+
+	ownerdraw CG_TEXT_PICKUP
+	ownerParam WP_MP5
+
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .25
+
+	forecolor 1 1 1 1
+      	visible 1 
+
+	mouseEnter { setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { setcolor backcolor 0 0 0 0 }	
+
+	action { uiScript "setPrimaryWeapon" ;
+		 play "ui/assets/menu_yes.wav" ; 
+		 hide GrpSelected_info ; show wp_smg_3_info }
+    	}
+
+itemDef {
+     	name WP_AR_1
+	group GrpSelect
+	style 1
+    	rect 32 120 176 16
+
+	text "Colt M4"	
+
+	ownerdraw CG_TEXT_PICKUP
+	ownerParam WP_M4
+
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .25
+
+	forecolor 1 1 1 1
+      	visible 1 
+
+	mouseEnter { setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { setcolor backcolor 0 0 0 0 }	
+
+	action { uiScript "setPrimaryWeapon" ;
+		 play "ui/assets/menu_yes.wav" ; 
+		 hide GrpSelected_info ; show wp_ar_1_info }
+    	}
+
+itemDef {
+     	name WP_SR_2
+	group GrpSelect
+	style 1
+    	rect 32 152 176 16
+
+	text "Heckler & Koch PSG-1"	
+
+	ownerdraw CG_TEXT_PICKUP
+	ownerParam WP_PSG1
+
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .25
+
+	forecolor 1 1 1 1
+      	visible 1 
+
+	mouseEnter { setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { setcolor backcolor 0 0 0 0 }	
+
+	action { uiScript "setPrimaryWeapon" ;
+		 play "ui/assets/menu_yes.wav" ; 
+		 hide GrpSelected_info ; show wp_sr_2_info }
+    	}
+
+itemDef {
+     	name WP_SR_3
+	group GrpSelect
+	style 1
+    	rect 32 184 176 16
+
+	text "MacMillan .50cal"	
+
+	ownerdraw CG_TEXT_PICKUP
+	ownerParam WP_MACMILLAN
+
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .25
+
+	forecolor 1 1 1 1
+      	visible 1 
+
+	mouseEnter { setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { setcolor backcolor 0 0 0 0 }	
+
+	action { uiScript "setPrimaryWeapon" ;
+		 play "ui/assets/menu_yes.wav" ; 
+		 hide GrpSelected_info ; show wp_sr_3_info }
+    	}
+
+itemDef {
+     	name WP_SG_1	
+	group GrpSelect
+	style 1
+    	rect 32 216 176 16
+
+	text "Remington 870"	
+
+	ownerdraw CG_TEXT_PICKUP
+	ownerParam WP_870
+
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .25
+
+	forecolor 1 1 1 1
+      	visible 1 
+
+	mouseEnter { setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { setcolor backcolor 0 0 0 0 }	
+
+	action { uiScript "setPrimaryWeapon" ;
+		 play "ui/assets/menu_yes.wav" ; 
+		 hide GrpSelected_info ; show wp_sg_1_info }
+    	}
+
+itemDef {
+     	name WP_SG_2	
+	group GrpSelect
+	style 1
+    	rect 32 248 176 16
+
+	text "Franchi Spas 15"	
+
+	ownerdraw CG_TEXT_PICKUP
+	ownerParam WP_SPAS15
+
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .25
+
+	forecolor 1 1 1 1
+      	visible 1 
+
+	mouseEnter { setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { setcolor backcolor 0 0 0 0 }	
+
+	action { uiScript "setPrimaryWeapon" ;
+		 play "ui/assets/menu_yes.wav" ; 
+		 hide GrpSelected_info ; show wp_sg_2_info }
+    	}
+
+itemDef {
+     	name WP_BR_1	
+	group GrpSelect
+	style 1
+    	rect 32 280 176 16
+
+	text "Colt M14"	
+
+	ownerdraw CG_TEXT_PICKUP
+	ownerParam WP_M14		
+
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .25
+
+	forecolor 1 1 1 1
+      	visible 1 
+
+	mouseEnter { setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { setcolor backcolor 0 0 0 0 }	
+
+	action { uiScript "setPrimaryWeapon" ;
+		 play "ui/assets/menu_yes.wav" ; 
+		 hide GrpSelected_info ; show wp_br_1_info }
+    	}
+itemDef {
+     	name but_more	
+	group GrpSelect
+	text "Weapons Page 2"	
+
+     	rect 32 310 128 20   
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 64
+	textaligny 15
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+
+	border 1
+	bordercolor 1 1 1 .25
+
+    visible 1 
+
+	action { hide GrpSelect ; show GrpSelect2 ; setfocus but_more2 }
+
+	mouseEnter { setitemcolor but_more backcolor .75 .75 .75 1 }
+      	mouseExit { setitemcolor but_more backcolor .1 .2 .6 .5 }
+    	}
+
+/* WEAPONS - PAGE 2 */
+
+
+
+itemDef {
+     	name WP_MG_1
+	group GrpSelect2
+	style 1
+    	rect 32 56 176 16
+
+	text "FN M249 Minimi Para"		
+
+	ownerdraw CG_TEXT_PICKUP
+	ownerParam WP_M249	
+
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .25
+
+	forecolor 1 1 1 1
+      	visible 1 
+
+	mouseEnter { setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { setcolor backcolor 0 0 0 0 }	
+
+	action { uiScript "setPrimaryWeapon" ;
+		 play "ui/assets/menu_yes.wav" ; 
+		 hide GrpSelected_info ; show wp_mg_1_info }
+    	}
+
+itemDef {
+     	name WP_SR_1
+	group GrpSelect2
+	style 1
+    	rect 32 88 176 16
+
+	text "Heckler & Koch Sl8 sd"	
+
+	ownerdraw CG_TEXT_PICKUP
+	ownerParam WP_SL8SD
+
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .25
+
+	forecolor 1 1 1 1
+      	visible 1 
+
+	mouseEnter { setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { setcolor backcolor 0 0 0 0 }	
+
+	action { uiScript "setPrimaryWeapon" ;
+		 play "ui/assets/menu_yes.wav" ; 
+		 hide GrpSelected_info ; show wp_sr_1_info }
+    	}
+itemDef {
+     	name but_more2
+	group GrpSelect2
+	text "Weapons Page 1"	
+
+     	rect 32 310 128 20   
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 64
+	textaligny 15
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+
+	border 1
+	bordercolor 1 1 1 .25
+
+    visible 1 
+
+	action { hide GrpSelect2 ; show GrpSelect ; setfocus but_more }
+
+	mouseEnter { setitemcolor but_more2 backcolor .75 .75 .75 1 }
+      	mouseExit { setitemcolor but_more2 backcolor .1 .2 .6 .5 }
+    	}
+
+// RIGHT SIDE
+
+itemDef {
+     	name weapon
+     	rect 224 48 256 160
+	type 1
+	style WINDOW_STYLE_FILLED
+	backcolor .1 .1 .3 1
+	border 1
+	bordercolor 1 1 1 .25
+       	visible 1 
+	decoration
+    	}
+
+itemDef {
+     	name wp_none_info
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	type 1
+	style WINDOW_STYLE_FILLED
+	backcolor .1 .1 .3 1
+	border 1
+	bordercolor 1 1 1 .25
+       	visible 1 
+	decoration
+    	}
+
+// wp_smg_2
+
+itemDef {
+     	name wp_smg_2_info 
+	group GrpSelected_info 
+	text "Arguably one of the most modern submachineguns in the world firing high velocity 4.6mm rounds at a very high rate of fire. "	
+     	rect 213 64 236 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 20
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 1
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_smg_2_info 
+	group GrpSelected_info 
+	text "[ requirements : acc 5+ & str 4+ ]"	
+     	rect 213 204 256 16
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 2
+	textalignx 252
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 .5
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_smg_2_info 
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	style 3
+	type 1
+
+	background "ui/assets/icons/pdw"
+	backcolor 1 1 1 1
+	border 1
+	bordercolor 1 1 1 .25
+  
+      	visible 1
+	decoration
+    	}
+
+// wp_smg_3
+
+itemDef {
+     	name wp_smg_3_info 
+	group GrpSelected_info 
+	text "This is a special SPECWAR contract version of the MP5 made expressly for the U.S. Navy. it has a simplified ruggedised mechanism and no select-fire (burst) mode. "	
+     	rect 213 64 236 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 20
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 1
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_smg_3_info 
+	group GrpSelected_info 
+	text "[ requirements : none ]"	
+     	rect 213 204 256 16
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 2
+	textalignx 252
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 .5
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_smg_3_info 
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	style 3
+	type 1
+
+	background "ui/assets/icons/mp5"
+	backcolor 1 1 1 1
+	border 1
+	bordercolor 1 1 1 .25
+  
+      	visible 1
+	decoration
+    	}
+
+// wp_ar_1
+
+itemDef {
+     	name wp_ar_1_info 
+	group GrpSelected_info 
+	text "Carbine version of Colt M16A2 AR capable of full-auto fire."	
+     	rect 213 64 236 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 20
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 1
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_ar_1_info 
+	group GrpSelected_info 
+	text "[ requirements : none ]"	
+     	rect 213 204 256 16
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 2
+	textalignx 252
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 .5
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_ar_1_info 
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	style 3
+	type 1
+
+	background "ui/assets/icons/m4"
+	backcolor 1 1 1 1
+	border 1
+	bordercolor 1 1 1 .25
+  
+      	visible 1
+	decoration
+    	}
+
+// wp_sr_1
+
+itemDef {
+     	name wp_sr_1_info 
+	group GrpSelected_info 
+	text "Silenced Light Tactical Semi-Automatic Special Purpose Sniper Rifle equipped with a 2x/4x scope. In a class of it's own the SL8-1SD offers low felt recoil and incredible stealth."
+     	rect 213 64 236 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 20
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 1
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_sr_1_info 
+	group GrpSelected_info 
+	text "[ requirements : acc 6+ & stl 6+ ]"	
+     	rect 213 204 256 16
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 2
+	textalignx 252
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 .5
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_sr_1_info 
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	style 3
+	type 1
+
+	background "ui/assets/icons/sl8sd"
+	backcolor 1 1 1 1
+	border 1
+	bordercolor 1 1 1 .25
+  
+      	visible 1
+	decoration
+    	}
+
+// wp_sr_2
+
+itemDef {
+     	name wp_sr_2_info 
+	group GrpSelected_info 
+	text "Probably the most expensive 7.62mm sniper rifle in the world; derived from the G3 the PSG-1 is one of the most refined weapons of its class. Equipped with a 2x/4x scope."	
+     	rect 213 64 236 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 20
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 1
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_sr_2_info 
+	group GrpSelected_info 
+	text "[ requirements : acc 7+ ]"	
+     	rect 213 204 256 16
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 2
+	textalignx 252
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 .5
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_sr_2_info 
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	style 3
+	type 1
+
+	background "ui/assets/icons/psg-1"
+	backcolor 1 1 1 1
+	border 1
+	bordercolor 1 1 1 .25
+  
+      	visible 1
+	decoration
+    	}
+
+// wp_sr_3
+
+itemDef {
+     	name wp_sr_3_info 
+	group GrpSelected_info 
+	text "By special SPECWAR contract with custom McMillan furniture designed for Navy SEAL/s. It comes equipped with a 2x/4x scope."	
+     	rect 213 64 236 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 20
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 1
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_sr_3_info 
+	group GrpSelected_info 
+	text "[ requirements : acc 9+ & str 5+ ]"	
+     	rect 213 204 256 16
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 2
+	textalignx 252
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 .5
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_sr_3_info 
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	style 3
+	type 1
+
+	background "ui/assets/icons/macmillan"
+	backcolor 1 1 1 1
+	border 1
+	bordercolor 1 1 1 .25
+  
+      	visible 1
+	decoration
+    	}
+
+// wp_sg_1
+
+itemDef {
+     	name wp_sg_1_info 
+	group GrpSelected_info 
+	text "Standard issue shotgun of the Marine Corps and Navy with a wood furniture."	
+     	rect 213 64 236 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 20
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 1
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_sg_1_info 
+	group GrpSelected_info 
+	text "[ requirements : none ]"	
+     	rect 213 204 256 16
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 2
+	textalignx 252
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 .5
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_sg_1_info 
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	style 3
+	type 1
+
+	background "ui/assets/icons/870"
+	backcolor 1 1 1 1
+	border 1
+	bordercolor 1 1 1 .25
+  
+      	visible 1
+	decoration
+    	}
+
+// wp_sg_1
+
+itemDef {
+     	name wp_sg_2_info 
+	group GrpSelected_info 
+	text "Successor of the SPAS 12, the SPAS 15 is a shotgun configured for assault with automatic feed and manual jam clearing pump action. "	
+     	rect 213 64 236 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 20
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 1
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_sg_2_info 
+	group GrpSelected_info 
+	text "[ requirements : str 5+ ]"	
+     	rect 213 204 256 16
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 2
+	textalignx 252
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 .5
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_sg_2_info 
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	style 3
+	type 1
+
+	background "ui/assets/icons/spas15"
+	backcolor 1 1 1 1
+	border 1
+	bordercolor 1 1 1 .25
+  
+      	visible 1
+	decoration
+    	}
+
+// wp_br_1
+
+itemDef {
+     	name wp_br_1_info 
+	group GrpSelected_info 
+	text "The worlds fist Medium Battle Rifle; a derivative of the M1 Garand. The Springfield Armory M14 fires the powerful 7.62mm NATO round, high recoil makes the M-14's full-auto mode an iffy propositon."	
+     	rect 213 64 236 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 20
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 1
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_br_1_info 
+	group GrpSelected_info 
+	text "[ requirements : str 6+ ]"	
+     	rect 213 204 256 16
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 2
+	textalignx 252
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 .5
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_br_1_info 
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	style 3
+	type 1
+
+	background "ui/assets/icons/m14"
+	backcolor 1 1 1 1
+	border 1
+	bordercolor 1 1 1 .25
+  
+      	visible 1
+	decoration
+    	}
+
+// wp_mg_1
+
+itemDef {
+     	name wp_mg_1_info 
+	group GrpSelected_info 
+	text "A short version of the ubiquitous FN M249; capabale of devastating sustained long range fire with less strength then its full sized sibling. "	
+     	rect 213 64 236 140
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 0
+	textalignx 20
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 1
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_mg_1_info 
+	group GrpSelected_info 
+	text "[ requirements : str 4+ & sta 5+ ]"	
+     	rect 213 204 256 16
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	autowrapped
+	textalign 2
+	textalignx 252
+	textaligny 0
+	textscale .22
+	forecolor 1 1 1 .5
+  
+      	visible 1
+	decoration
+    	}
+
+itemDef {
+     	name wp_mg_1_info 
+	group GrpSelected_info 
+     	rect 224 224 256 80
+	style 3
+	type 1
+
+	background "ui/assets/icons/m249"
+	backcolor 1 1 1 1
+	border 1
+	bordercolor 1 1 1 .25
+  
+      	visible 1
+	decoration
+    	}
+
+// button accept
+
+itemDef {
+     	name but_accept
+	text "Accept"	
+     	rect 352 310 128 20   
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	textalign 1
+	textalignx 64
+	textaligny 15
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+
+	border 1
+	bordercolor 1 1 1 .25
+
+      	visible 1 
+
+	action { close ingame_char_primary_seals ;
+		 open ingame_char }
+
+	mouseEnter { setitemcolor but_accept backcolor .75 .75 .75 1 }
+      	mouseExit { setitemcolor but_accept backcolor .1 .2 .6 .5 }
+    	}
+
+
+
+}
+
+}

@@ -1,0 +1,52 @@
+[mapspecs]
+camouflage urban
+	
+missioninfo 
+{
+	blowup
+}
+
+$enviroment
+{
+type rain
+basetimes 5 10
+timetomove 1 1
+gusttimes 0 3
+basevector 0 0
+gustvector 50 100
+weight 0.5 0.7
+impacteffects true true
+num_drops 600 1000
+height	50
+}
+
+[end]
+
+[seals]
+^4Operation Quixotic: $EOL
+$EOL
+Intelligence sources with a high degree of reliability confer that the Tangos are going to transact a trade for a critical controller sub-system for a plutonium trigger. $EOL
+The controller mechanism was tracked to your present destination; the west coast of St.Petersburg, Russia. Your mission is to recover the controller mechanism intact. SPECWAR has received authorization to use lethal force and is tasked to eliminate any and all individuals associated with the transaction of the device. 
+$EOL
+$EOL
+^4Mission Summary: $EOL
+^4 - Recover the briefcase containing the ^4controller mechanism $EOL
+^4 - Prevent the tangos from bombing the ^4boat
+[end]
+
+[tangos]
+^1Tango briefing: $EOL
+$EOL
+Our Officers have arranged a strategically critical technology trade with a private American firm for a key weapons sub-system. Due to the high profile of the company involved and the "merchandise" itself, it is highly likely that the security of the transaction has been compromised. Your mission is to defend the equipment until our agent arrives, if any Americans should land on our island you must prevent their escape as their military presence here is a break with international law that will offer us strategically valuable prisoners. 
+$EOL
+$EOL
+^1Mission Summary: $EOL
+^1 - Bomb the Navy SEALs' boat $EOL
+^1 - Prevent the SEALs from recovering the ^1briefcase
+[end]
+
+[radar]
+X 1051 -680 32
+B -1860 604 49
+[end]
+$EOF

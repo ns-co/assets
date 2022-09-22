@@ -1,0 +1,8 @@
+deagle, models/weapons/deagle/skin_gold.tga 
+trigger, models/weapons/deagle/skin_gold.tga
+sled, models/weapons/deagle/skin_gold.tga  
+mag, models/weapons/deagle/skin_gold.tga 
+hands, models/weapons/hands/skin_v.tga
+tag_flash
+tag_weapon
+tag_ejection

@@ -1,0 +1,39 @@
+[mapspecs]
+camouflage urban
+viptype general 
+
+missioninfo 
+{
+viptime blowup
+}
+
+[end]
+
+[seals]
+^4SEAL Briefing: $EOL
+The base of Iwan Crachners terror cell is in an old warehouse. Many attacks have been planned there. An informant gave us the tip they where supplied with tools to develop biological weapons. You're squad has to get active again! 
+
+ $EOL  
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Kill Iwan Crachner. $EOL 
+^4- bomb the box . $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL
+Our primary nest has been revealed by a weak comrade and it's too late to get our new equipment to a safe place. We can start producing biological weapons soon. Do whatever you can to keep the mission a success!
+ $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- protect Iwan. $EOL 
+^1- secure the case for the ^1Chemicals. $EOL 
+
+[end]
+
+[radar]
+X 179.693893 -1.996333 231.527832
+[end]
+$EOF

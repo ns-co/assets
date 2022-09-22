@@ -1,0 +1,26 @@
+Name of the Map		: ns_castle
+Leveldesigner		: mIc (blutengel@retaliation.de)
+Operation 		: 'Badass'
+
+------------------------------------------------------------
+
+Type of Map		: Campain ('Operation Badass')
+Missionobjective	: VIP-S
+Number of Players	: 7-16
+
+------------------------------------------------------------
+
+Short description	: - urban / desert
+			  - night
+			  - some CQB & some medium range & long 
+				  range		
+			  - the VIP starts in one of the 
+				buildings 
+			  - a little bit difficult to 
+				understand
+
+------------------------------------------------------------
+
+Additional notices	: 
+
+------------------------------------------------------------

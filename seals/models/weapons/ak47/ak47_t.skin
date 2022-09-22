@@ -1,0 +1,11 @@
+ak47,models/weapons/ak47/skin.tga
+cock,models/weapons/ak47/skin.tga
+trigger,models/weapons/ak47/skin.tga
+mag,models/weapons/ak47/skin.tga
+bayonet,models/weapons/ak47/bg15.tga
+bg15,models/weapons/ak47/bg15.tga
+bg15gren,models/weapons/ak47/bg15.tga
+scope,models/weapons/ak47/scope.tga
+lenses,models/weapons/ak47/scope-fx.tga
+hands,models/weapons/hands/skin_t.tga
+flashhider, models/weapons/ak47/silencer.tga

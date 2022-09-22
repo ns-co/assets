@@ -1,0 +1,11 @@
+trigger, models/weapons/psg-1/skin.tga 
+psg-1, models/weapons/psg-1/skin.tga 
+cock, models/weapons/psg-1/skin.tga 
+mag, models/weapons/psg-1/skin.tga 
+psg-1b, models/weapons/psg-1/skin_vweap.tga 
+scope, models/weapons/psg-1/skin2.tga 
+lenses, models/weapons/psg-1/scope.tga 
+hands, models/weapons/hands/skin_t.tga
+tag_flash
+tag_weapon
+tag_ejection

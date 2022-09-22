@@ -1,0 +1,46 @@
+[mapspecs]
+camouflage urban
+
+missioninfo 
+{
+	blowup
+}
+
+[end]
+
+[radar]
+X 84.116516 1430.159790 -197.871810
+X -1217.772827 1162.125244 -77.875000
+[end]
+
+[seals]
+^4SEAL Briefing: $EOL 
+The tangos have an old submarine inside a 
+converted shelter. The submarine is a threat
+to the security of our country. $EOL 
+Tonight you have to infiltrate the complex
+and destroy either the fuel-pumping station 
+or the submarine itself. $EOL
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Place a bomb at the fuel-pumping $EOL
+^4  station or at the submarine. $EOL 
+
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+One of our security cameras has picked up a strange person
+close to the complex hiding the submarine. $EOL 
+Act carefully and guard the submarine and the pumping station 
+with your life. $EOL 
+ $EOL
+ $EOL
+^1Mission Summary: $EOL 
+^1- Prevent that the SEALs bomb $EOL
+^1  the fuel-pumping station or $EOL 
+^1  at the submarine. $EOL
+[end]
+
+$EOF

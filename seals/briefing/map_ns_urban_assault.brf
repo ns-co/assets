@@ -1,0 +1,47 @@
+[mapspecs]
+camouflage urban
+
+viptype diplomat
+missioninfo 
+{
+	viptime 
+}
+
+$enviroment
+{
+type rain
+basetimes 5 10
+timetomove 1 1
+gusttimes 0 3
+basevector 0 0
+gustvector 50 100
+weight 0.5 0.7
+impacteffects true true
+num_drops 600 1000
+height	50
+}
+
+[end]
+
+[seals]
+^4SEAL briefing: $EOL
+$EOL
+We have received information from reliable internals about the well known Balisani making a weapon deal in the outskirts of Los Angeles. You are now responsible for the assassination of Balisani. Making a silent approach is essential for keeping our arrival unexpected, so he won't escape. 
+$EOL
+$EOL
+^4Mission Summary: $EOL
+^4- Make sure the VIP doesn't make it to $EOL ^4the elevator
+[end]
+
+[tangos]
+^1Tango briefing: $EOL
+$EOL
+You have been sent to the suburban areas of Los Angeles to make sure an important weapon deal goes as planned. Scouts have reported a hostile elite force approaching. Now we must act fast. You will guard Balisani with your life and escort him to the elevator leading to the secret criminal underground network. $EOL
+$EOL
+^1Mission Summary: $EOL
+^1- Escort the VIP to the elevator
+[end]
+
+$EOF
+
+

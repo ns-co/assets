@@ -1,0 +1,434 @@
+<html>
+
+<head>
+<title>Navy Seals: Covert Operations - NSSL Guide</title>
+<LINK rel="stylesheet" href="pages/global_nssl.css" type="text/css">
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+</head> 
+
+<body bgcolor="#666666" text="#000000" 
+		link="#000000" vlink="#000000" alink="#000000" 
+		background="pages/images/background_concrete.gif"
+		MARGINWIDTH="20" LEFTMARGIN="20" MARGINHEIGHT="20" TOPMARGIN="20">
+
+<center> 
+
+<table border="0" cellpadding="0" cellspacing="0" width="80%" height="100%"
+		align="center" bordercolor="#000000" bordercolordark="#000000" bordercolorlight="#000000">
+
+	<tr>
+		<td width="100%" valign="top" align="left" background="pages/images/background.gif"> 
+
+			<table width="100%" border="0" cellpadding="5" cellspacing="5">
+				<tr>
+					<td background="pages/images/background_bar.gif"><p><b> Navy Seals: Covert Operations - NSSL Guide </b></p>
+					</td>
+				</tr>
+
+				<tr>
+					<td align="center" valign="middle">				
+						<table width="" border="0" background="pages/images/background_dark.gif" cellpadding="3" cellspacing="3">
+							<tr>
+								<td bgcolor="#000000" align="center" valign="middle">
+									<img src="pages/images/main_nssl.jpg" width="700" height="300" align="middle">
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+				<tr>
+					<td background="pages/images/background_bar.gif"><p><b> Introduction</b></p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+
+
+
+<p class="medium">
+
+This guide is intended to familiarize you with nssl and is not a definitive guide on every possible use, nor does it list every command.<br>
+<br>
+This guide will continually evolve and can always be found on the ns:co website ( <a href=http://www.ns-co.net>http://www.ns-co.net</a> ) <br>
+
+<br>
+
+N.S.S.L. is a very power scripting language. 
+In this document, I will describe what N.S.S.L. is and how to use it. 
+In short N.S.S.L. Is a scripting language that greatly expands upon basic Q3 scripting. 
+You can do things in N.S.S.L. that would either require extensive scripts or just plain would not be possible. <br>
+Let’s get started shall we?<br>
+
+<br>
+
+I shall be using different fonts and colors throughout this document to let you know when I’m posting actual code, pseudo code, and an English expression of what that code actually does.<br>
+<br>
+Terminology you will be hearing in this document: <br>
+cvar = client variable = a variable set by the client. IE: name, kind of weapon, amount of ammo, etc.<br>
+</P>
+
+
+
+<p class="medium">
+Text like this is general information
+</P>
+
+<P class="code">This text is NSSL script</P>
+<br>
+<P class="dumb">This text is psuedo code, what is effectivley a "dumbed down"
+version of NSSL</P>
+
+
+				<tr>
+					<td background="pages/images/background_bar.gif"><p><b> Lesson 1.</b> Basic command list and syntax.</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+
+
+<p class="medium">
+All N.S.S.L. scripts and commands <font COLOR="#ff6600"><u><b>MUST</b></u></font> start with one of these: 
+<font COLOR="#ff0000">Clientscript</font>, <font COLOR="#ff0000">CS</font>, or <font COLOR="#ff0000">NSSL</font>. <br>
+
+These commands tell NS:CO that the following code is N.S.S.L.<br>
+
+<dir>
+  <dir>
+    <p>Examples:<br>
+    <P class="code">CS {Function} variable {action # action} </p>
+    <P class="code">Clientscript {Function} variable {action # action} </p>
+    <P class="code">NSSL {Function} variable {action # action} </p>
+  </dir>
+</dir>
+
+Note: The Pound Character ( # ) is used when using multiple commands, since we cannot use the 'semi-colon' for malicious reasons. <br>
+<br>
+These are the functions that can be used in N.S.S.L. : <br>
+
+<dir> <i>if usage:</i> 
+ <dir>
+ <P class="code">if &lt;CVAR&gt; ==,!=,&lt;&gt;=, &lt;VALUE/STRING&gt; then { &lt;CMD&gt; } else { &lt;CMD&gt; } </P>
+ </dir>
+</dir>
+
+<dir> <i>switch usage:</i>
+ <dir>
+  <P class="code">switch &lt;CVAR&gt; &lt;STRING/VALUE&gt; { &lt;CMD&gt; } &lt;STRING/VALUE&gt; { &lt;CMD&gt; } else { &lt;CMD&gt; } </p> 
+ </dir>
+</dir>
+
+<dir> <i>while usage: </i>
+ <dir>
+  <P class="code">while &lt;CVAR&gt; ==,!=,&lt;&gt;= &lt;VALUE&gt; then { &lt;CMD&gt; } </p>
+ </dir>
+</dir>
+
+<dir> <i>modify usage: </i>
+ <dir>
+  <P class="code">modify &lt;CVAR&gt; &lt;+VALUE/-VALUE/STRING&gt; </p> 
+ </dir>
+</dir>
+
+<dir> <i>copy usage:</i>
+ <dir>
+  <P class="code">copy &lt;CVAR IN&gt; &lt;CVAR OUT&gt; </p>
+ </dir>
+</dir>
+
+<dir> <i>exec usage:</i>
+ <dir>
+  <P class="code">exec {&lt;cmd&gt;} </p>
+ </dir>
+</dir>
+
+There are more functions included in NSSL, but for the sake of brevity and to not confuse new users and inexperienced scripters, they have been omited from this document, an advanced scripting guide will be written to include these commands at a later date.<br>
+</P>
+
+
+				<tr>
+					<td background="pages/images/background_bar.gif"><p><b>Lesson 2.</b> {IF Then Else statements}</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+
+<p class="medium">
+Ahh, the most used and useful function in N.S.S.L. the if statement is used to compare a variable to a value and if it matches execute a command, it can also execute a command if it Does NOT match the value aswell. <br>
+
+<br>
+Example:
+    <P class="code">CS if name == “Eggy!” then { say Yup, I’m Eggy!} else { say I’m NOT Eggy!}</p>
+    <P class="dumb">See if name is Eggy!, if yes, then say “Yup, I’m Eggy!”, if name is not Eggy! Then say “I’m NOT Eggy!”</p>
+
+Note: you do not need to include the else operator if you don’t want to do something if the action is false. <br>
+<br>
+When using an If statement, you can use the following operators <br>
+
+<dir>
+ <dir>
+  <b>==</b> same as (you can use a string OR value to compare to) <br>
+  <b>!= </b>not the same as ( string/value ) <br>
+  <b>&gt;=</b> bigger or the same as ( value ) <br>
+  <b>&lt;= </b>smaller or the same as ( value ) <br>
+  <b>&lt;</b> smaller then ( value ) <br>
+  <b>&gt;</b> bigger then ( value ) <br>
+ </dir>
+</dir>
+</P>
+
+
+				<tr>
+					<td background="pages/images/background_bar.gif"><p><b>Lesson 3.</b> {Switch functions}</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+
+<p class="medium">
+My favorite function in N.S.S.L. is Switch. It can be used to evaluate a cvar and do commands based on the cvars values. <br>
+
+<P class="code">SWITCH &lt;VARIABLE&gt; &lt;string/VALUE&gt; { &lt;COMMAND&gt; } &lt;string/VALUE&gt; { &lt;COMMAND&gt; } ELSE { &lt;COMMAND&gt; }</p>
+
+Example:
+ <P class="code">CS switch ui_team 1 { say I’m a Seal } 2 { say I’m a Tango }else { say I’m a Spectator }</p>
+ <P class="dumb">if ui_team = 1 say I’m a Seal, if it = 2 say I’m a Tango, and if it doesn’t equal either say I’m a Spectator.</p>
+
+Switch is very powerful and can be used to do different functions based on the values of a var, it can even do something if the state of a cvar is undeterminable. <br>
+</P>
+
+
+				<tr>
+					<td background="pages/images/background_bar.gif"><p><b>Lesson 4.</b> {Executing a command}</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+
+<p class="medium">
+Exec is used to “execute” a statement or command. If you want to do something from inside the N.S.S.L. environment, without having to do something with it, you use the exec operator. <br>
+<br>
+Example:
+<dir>
+ <P class="code">CS exec { vstr blind }</p>
+</dir>
+
+This is a fairly straight forward command, so I will let you experiment with it. <br>
+</P>
+
+
+				<tr>
+					<td background="pages/images/background_bar.gif"><p><b>Lesson 5.</b> {While Loops}</b></p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+
+
+<p class="medium">
+Yes, I’m finally getting to while loops. I know a lot of you have been waiting for this, so without further ado: <br>
+While is used to execute a value as soon as a cvar is equal to the control value. It can be used to check health, ammo, etc and execute a command as soon as it reaches true and can be made to either cycle infinitely or for a set period of time. <br>
+
+<P class="code">CS WHILE &lt;VARIABLE&gt; (OPERATOR) &lt;string/VALUE&gt; { &lt;COMMAND&gt; } &lt;SLEEP&gt; &lt;AGE&gt; </p>
+
+Example:
+<dir>
+ <P class="code">CS while *health &lt;= 5 { say_team I’m DEAD watch your back } 250 -1</p>
+ <P class="dumb">as long as health is greater than or equal to 5 do nothing, as soon as it drops to 5 or less say_team im dead. Do this  every 250ms (1/4 of a second) forever.</p>
+</dir>
+
+You notice the 250 -1 at the end, the 250 represents how often. This number is to be in milliseconds. The -1 is the age, or how long does this statement last, you can use any value (represents each time it *Loops*) or -1 for infinite. <br>
+</P>
+
+
+
+				<tr>
+					<td background="pages/images/background_bar.gif"><p><b>Lesson 6.</b> {Modify a Variable}</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+
+<p class="medium">
+Now to speak a little on Modify, it can be used to either add or substract a value to a value, or add a string to the end of a string. <br>
+<br>
+Example:
+<dir>
+    {String} <br>
+    <P class="code">CS modify name “ likes donuts” </font>&lt;- notice the space after “ </p>
+    <P class="dumb">add “likes donuts to the end of name, so that name equals “Defcon-x likes donuts”</p>
+    <br>
+    {Value} <br>
+    <P class="code">CS modify killcount +1</p>
+    <P class="dumb">adds 1 to the var killcount (before you think about cheating this is NOT a real var &lt;G&gt;)</p>
+</dir>
+</p>
+
+				<tr>
+					<td background="pages/images/background_bar.gif"><p><b>Lesson 7.</b> {Copying a var}</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+
+<p class="medium">
+Copy is used to copy the contents of a var to another var, while not as useful as some of the other feature of N.S.S.L. there are times when it is very handy, especially when working with *special system* vars that can’t be directly modified. <br>
+<br>
+
+Example: 
+<dir>
+ <P class="code">CS copy *health health_var</p>
+ <P class="dumb">copies the contents of *heatlh to health_var</p>
+</dir>
+</p>
+
+				<tr>
+					<td background="pages/images/background_bar.gif"><p><b>Special Vars:</b></p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+
+<p class="medium">
+There are some special cvars we can use in N.S.S.L. such as health and weapon. Defcon-x has been gracious enough to give us access to a few cgame vars. Here are the list of available cgame vars and their syntax / use. You can only use these vars inside N.S.S.L. and they MUST have the * (asterisk) infront of the var name. The * denotes that this is a cgame var and not a normal cvar. You CANNOT modify the contents of a cgame var. <br>
+<dir>
+  <dir>
+    *Health = Health remaining in points. <br>
+    *Stamina = Stamina remaining in points <br>
+    *Weapon = Current weapon selected <br>
+    *Rounds = number of bullets left in current weapon <br>
+    *Clips = number of clips available for current weapon <br>
+  </dir>
+</dir>
+
+<br>
+
+You can use cvars in a say statement now in 1.5, anytime you want to tell someone (or yourself) the contents of a cvar, just add a $ infront of the var and place inside an nsecho, say, or say_team. <br>
+
+<br>
+Example:
+<dir>
+ <P class="code">CS exec { say $ui_mapname is the current map }</p>
+ <P class="dumb">say ns_snowcamp is the current map</p>
+</dir>
+
+This feature is only available inside the N.S.S.L. environment. <br>
+</p>
+
+				<tr>
+					<td background="pages/images/background_bar.gif"><p><b>Reference:</b></p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+
+<p class="medium">
+
+These are the currently available CVARS for use in NSSL with NS:CO Beta-1.9 <br>
+
+<center>
+<table BORDER="0" CELLSPACING="2" WIDTH="481">
+  <tr>
+    <td WIDTH="28%" valign="top">
+	<font COLOR="#ff0000">
+	<b>
+	*health<br>
+	*stamina<br>
+	*weapon<br>
+	*rounds<br>
+	*clips<br>
+	char_stamina<br>
+	char_stealth<br>
+	char_speed<br>
+	char_accuracy<br>
+	char_technical<br>
+	char_strength<br>
+	char_xp<br>
+	ui_sealplayers<br>
+	ui_tangoplayers<br>
+	ui_players<br>
+	ui_sealpoints<br>
+	ui_tangopoints<br>
+	ui_team<br>
+	ui_assaultstate<br>
+	ui_bombstate<br>
+	ui_gotbomb<br>
+	ui_isvip<br>
+	ui_gotbriefcase<br>
+	mi_viprescue<br>
+	mi_viptime<br>
+	mi_blowup<br>
+	mi_assaultfield<br>
+	</b>
+	</font>
+    </td>
+    <td WIDTH="72%" valign="top">
+	<font COLOR="#1e90ff">
+	Displays current health level <br>
+	Displays current stamina level <br>
+	Displays current weapon <br>
+	Displays number of bullets remaining <br>
+	Displays number of clips remaining <br>
+	Displays current stamina xp <br>
+	Displays current stealth xp <br>
+	Displays current speed xp <br>
+	Displays current accuracy xp <br>
+	Displays current technical xp <br>
+	Displays current strength xp <br>
+	Current xp available <br>
+	Players on seals team <br>
+	Players on tango team <br>
+	Total number of players in game <br>
+	# of points the seal team has <br>
+	# of points the tango team has <br>
+	Team you are currently on <br>
+	Player in assault field? <br>
+	Player in bomb field? <br>
+	Player got bomb (0/1) <br>
+	Player is vip (0/1) <br>
+	Player got briefcase (0/1) <br>
+	ViP rescue <br>
+	ViP on time <br>
+	Bomb spot in the map <br>
+	# of Assault fields <br>
+	</font>
+    </td>
+  </tr>
+</table>
+</center>
+</p>
+
+
+					</td>
+				</tr>
+			</table>
+
+		</td>
+	</tr>
+	<tr height="20">
+		<td background="pages/images/background_bar.gif" align="right" height="20"> 
+		
+			<p class="small">[ <a href="http://www.ns-co.net" target="_blank">www.ns-co.net</a>
+							 | <a href="http://www.team-mirage.net" target="_blank">www.team-mirage.net</a>
+							 | Written by Gate. Based on a documennt by Defcon-X and Eggy 
+						 	 | Designed by <a href="http://www.dcs-designs.de" target="_blank">Democritus</a>
+							 ] &nbsp;</p>
+
+		</td>
+	</tr>
+</table>
+
+
+</body>
+</HTML>

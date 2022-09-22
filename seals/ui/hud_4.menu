@@ -1,0 +1,371 @@
+#include "ui/menudef.h"
+
+// Heads Up Display 4 - Metal
+
+{
+assetGlobalDef 
+	{	
+	cursor "ui/assets/ns_cursor"			
+	gradientBar "ui/assets/gradientbar2.tga"	
+
+    	fadeClamp 1.0					
+	fadeCycle 1					
+	fadeAmount 0.1					
+
+	shadowX  5					
+	shadowY  5					
+	shadowColor 0.1 0.1 0.1 0.25			
+
+    	font "fonts/font" 16				
+    	smallFont "fonts/smallfont" 12			
+    	bigFont "fonts/bigfont" 20	
+
+	sealscolor 0.3 0.3 1 1
+	tangoscolor 1 0.1 0.1 1
+	noteamcolor 1 1 1 1
+	}
+ 
+
+//	- LEFT -	//
+
+menuDef 
+	{
+    	name "Left"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+ 	rect 0 432 288 48
+
+	itemDef
+		{
+ 		name "metalback"
+		rect 0 0 288 48
+		visible 1
+		style 1
+		backcolor 1 1 1 1
+		background "ui/assets/ns_hud_4_back1.tga"
+		decoration
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef
+		{
+ 		name "metalcamo"
+		rect 0 0 288 48
+		visible 1
+		style 1
+		backcolor 1 1 1 1
+		background "ui/assets/ns_hud_4_back1-camo.tga"
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+
+	itemDef
+		{
+ 		name "Fire Mode back"
+		rect 8 8 96 32
+		visible 1
+		style 1
+		backcolor 0 0 0 0.5
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef 
+		{
+		name "Fire Mode"
+		rect 8 8 96 22
+		style WINDOW_STYLE_FILLED
+		textalign 1
+		textalignx 160
+		textaligny 14
+		textstyle 4
+		type 1
+		textscale .25
+		visible 1
+		ownerdraw CG_PLAYER_WEAPONSTATUS
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+		itemDef
+		{
+ 		name "staminabarback"
+		rect 120 8 160 32
+		visible 1
+		style 1
+		backcolor 0 0 0 0.5
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+		itemDef
+		{
+ 		name "staminabar"
+		rect 120 8 160 32
+		visible 1
+		decoration
+		ownerdraw CG_PLAYER_STAMINABAR_HOR	
+		background "ui/assets/ns_bar_horz"
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+		itemDef
+		{
+ 		name "staminabarborder"
+		rect 120 8 160 32
+		visible 1
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+		itemDef
+		{
+ 		name "staminabartext"
+		rect 120 8 160 32
+		style 0
+		textalign 1
+		textalignx 80
+		textaligny 22
+		textstyle 4
+		text "Stamina"
+		type 1
+		textscale .3
+		visible 1
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+  	}
+
+//	- CENTER -	//
+
+menuDef
+	{
+    	name "health"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+    	rect 288 400 64 80
+
+	itemDef
+		{
+ 		name "metalback"
+		rect 0 0 64 80
+		visible 1
+		style 1
+		backcolor 1 1 1 1
+		background "ui/assets/ns_hud_4_back2.tga"
+		decoration
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef
+		{
+ 		name "metalcamo"
+		rect 0 0 64 80
+		visible 1
+		style 1
+		backcolor 1 1 1 1
+		background "ui/assets/ns_hud_4_back2-camo.tga"
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+		itemDef
+		{
+     		name "locator"
+		rect 14 8 36 64
+		visible 1
+		decoration
+		ownerdraw CG_PLAYER_DAMAGELOC	
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	}
+
+//	- RIGHT -	//
+
+menuDef 
+	{
+    	name "Right"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+ 	rect 352 432 288 48
+
+		itemDef
+		{
+ 		name "metalback"
+		rect 0 0 288 48
+		visible 1
+		style 1
+		backcolor 1 1 1 1
+		background "ui/assets/ns_hud_4_back3.tga"
+		decoration
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef
+		{
+ 		name "metalcamo"
+		rect 0 0 288 48
+		visible 1
+		style 1
+		backcolor 1 1 1 1
+		background "ui/assets/ns_hud_4_back3-camo.tga"
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+		itemDef
+		{
+ 		name "clipbarback"
+		rect 8 8 160 32
+		visible 1
+		style 1
+		backcolor 0 0 0 0.5
+		decoration
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+		itemDef
+		{
+ 		name "clipbar"
+		rect 8 8 160 32
+		visible 1
+		decoration
+		ownerdraw CG_PLAYER_AMMOBAR_HOR	
+		background "ui/assets/ns_bar_horz"
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+		itemDef
+		{
+ 		name "clipbarborder"
+		rect 8 8 160 32
+		visible 1
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+		itemDef
+		{
+		name "clipbartext"
+		rect 8 8 160 32
+		style 0
+		textalign 1
+		textalignx 80
+		textaligny 22
+		textstyle 4
+		text "Ammo in Clip"
+		type 1
+		textscale .3
+		visible 1
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+
+	itemDef
+		{
+ 		name "Clips Count back"
+		rect 184 8 96 32
+		visible 1
+		style 1
+		backcolor 0 0 0 0.5
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef 
+		{
+		name "Clips Text"
+		rect 196 8 45 22
+		style WINDOW_STYLE_FILLED
+		textalign 2
+		textalignx 45
+		textaligny 22
+		textstyle 4
+		type 1
+		textscale .25
+		visible 1
+		text "Clips:"
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef 
+		{
+		name "Clips Count"
+		rect 236 8 40 22
+		style WINDOW_STYLE_FILLED
+		textalign 0
+		textalignx 0
+		textaligny 22
+		textstyle 4
+		type 1
+		textscale .25
+		visible 1
+		ownerdraw CG_PLAYER_AMMO_VALUE
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+	}
+
+// 	- TARGET NAME -	//
+
+menuDef 
+	{
+    	name "Targetedname"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+	rect 275 380 40 24
+	
+	itemDef
+		{
+		name "tragetedname"
+		rect 0 0 40 24
+		style WINDOW_STYLE_FILLED
+		textalign 1
+		textalignx 20
+		textaligny 15
+		textstyle 4
+		type 1
+		textscale .25
+		ownerdraw CG_PLAYER_ENEMY
+
+		visible 1
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+	}
+}

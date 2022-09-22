@@ -1,0 +1,570 @@
+#include "ui/menudef.h"
+
+{
+\\ PLATER SELECTION MENU \\
+menuDef {
+    	name "player_menu"
+    	visible 0
+    	fullscreen 0
+	rect 48 144 544 256
+    	focusColor 1 0 0 1
+    	style 1
+    	border 0
+	onOpen { uiScript update "ui_GetName" ;	hide grpmessage }
+	onEsc { close player_menu ; close setup_menu ; open main }
+	onClose { uiScript update "ui_SetName" }
+
+// GENERAL
+
+itemDef {
+      	name name
+	text "Name:"
+	style 1
+
+      	rect 150 16 232 32 
+
+      	type ITEM_TYPE_EDITFIELD
+	cvar "ui_Name"
+	maxChars 32
+
+      	textalign ITEM_ALIGN_LEFT		
+      	textalignx 8
+      	textaligny 21 
+	textscale .275     
+   
+      	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+
+      	visible 1 
+	mouseEnter { show message_name } 
+	mouseExit { hide message_name } 
+    	}
+ 
+// SEAL
+
+
+itemDef {
+	name seal_face
+	type ITEM_TYPE_MODEL 
+	ownerdraw UI_SEAL_HEADMODEL
+	rect 16 16 128 160
+	backcolor .1 .2 .6 0.5
+	border 1
+	bordercolor 1 1 1 .25
+	style 1
+	decoration 
+	visible 1
+    	}
+itemDef {
+	name seal_face
+	rect 16 16 128 160
+	border 1
+	bordercolor 1 1 1 .25
+	style 1
+	decoration 
+	visible 1
+    	}
+
+itemDef {
+	name seal
+	style 1
+	rect 16 16 128 16
+
+	text "Seal"
+
+    	textalign 0	
+    	textalignx 6
+    	textaligny 14
+	textscale .2    
+
+	decoration 
+	visible 1
+    	}
+
+itemDef {
+	name seal_skin 
+	style 1
+	text ""
+    	rect 16 160 128 16 
+    	textalign 0	
+    	textalignx 2
+    	textaligny 12
+	textscale .25    
+
+	type ITEM_TYPE_MULTI	
+	cvar "ui_s_skin"
+	cvarStrList 
+		{ 	
+			"Bruce", 		"bruce", 
+			"Bruce Camo", 		"bruce_camo", 
+			"Bruce Mask", 		"bruce_mask", 
+			"Bruce Special", 	"bruce_special", 
+			"Chris", 		"chris", 
+			"Chris Camo", 		"chris_camo", 
+			"Chris Mask", 		"chris_mask" , 
+			"Chris Special", 	"chris_special",
+			"Curtis", 		"curtis", 
+			"Curtis Camo", 		"curtis_camo", 
+			"Curtis Mask", 		"curtis_mask" , 
+			"Curtis Special", 	"curtis_special", 
+			"Jose",  		"jose", 
+			"Jose Camo", 		"jose_camo", 
+			"Jose Mask", 		"jose_mask" , 
+			"Jose Special", 	"jose_special" 
+		}
+
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+
+      	visible 1 
+	action { play "ui/assets/menu_yes.wav" }
+	mouseEnter { show message_seal_skin } 
+      	mouseExit { hide message_seal_skin } 
+    	}
+
+itemDef {
+      	name seal_head
+	style 1
+	text "Head:"
+    	rect 16 190 240 16 
+    	textalign 2	
+    	textalignx 60
+    	textaligny 12
+	textscale .25
+   
+	type ITEM_TYPE_MULTI	
+	cvar "ui_s_e_head"
+	cvarStrList { 	"Bandana Jungle", "bandana_camo", 
+			"Bandana Desert", "bandana_camo2", 
+			"Bandana Dark", "bandana_dark", 
+			"Bandana Red", "bandana_red", 
+			"Band Jungle", "band_green", 
+			"Band Desert", "band_brown", 
+			"Band Dark", "band_dark", 
+			"Band Red", "band_red", 
+			"Barett Brown", "barret_brown", 
+			"Barett Dark", "barret_dark",
+			"Barett Green", "barret_green",  
+			"Baseballcap Eagle", "cap_seal_eagle", 
+			"Baseballcap Q3", "cap_seal_q3", 
+			"Sealhat Desert", "sealhat_desert", 
+			"Sealhat Jungle", "sealhat_jungle", 
+			"Sealhat Urban", "sealhat_urban", 
+			"Sealhat2 Brown", "sealhat2_brown", 
+			"Sealhat2 Green", "sealhat2_green", 
+			"Sealhat2 Dark", "sealhat2_dark", 
+			"Woolcap Dark", "cap_seal2_dark", 
+			"Woolcap Green", "cap_seal2_green", 
+			"Woolcap White", "cap_seal2_white", 
+			"None", ""  }
+
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+
+      	visible 1
+	action { play "ui/assets/menu_yes.wav" }
+	mouseEnter { show message_seal_head } 
+	mouseExit { hide message_seal_head } 
+    	}
+
+itemDef {
+      	name seal_eyes
+	style 1
+	text "Eyes:"
+    	rect 16 206 240 16 
+    	textalign 2	
+    	textalignx 60
+    	textaligny 12
+	textscale .25
+   
+	type ITEM_TYPE_MULTI	
+	cvar "ui_s_e_eyes"
+	cvarStrList { 	"Storm Goggles", "goggles", 
+			"Sunglasses", "glasses_seal", 
+			"Shooters Glasses", "glasses_seal2", 
+			"None", ""  }
+
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+
+      	visible 1
+	action { play "ui/assets/menu_yes.wav" }
+	mouseEnter { show message_seal_eyes } 
+	mouseExit { hide message_seal_eyes } 
+    	}
+
+itemDef {
+      	name seal_mouth
+	style 1
+	text "Mouth:"
+    	rect 16 222 240 16 
+    	textalign 2	
+    	textalignx 60
+    	textaligny 12
+	textscale .25
+   
+	type ITEM_TYPE_MULTI	
+	cvar "ui_s_e_mouth"
+
+	cvarStrList { 	"Cigar", "cigar",
+			"Cigarette", "cigarette",
+			"None", ""  }
+	
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+
+      	visible 1
+	action { play "ui/assets/menu_yes.wav" }
+	mouseEnter { show message_seal_mouth } 
+	mouseExit { hide message_seal_mouth } 
+    	}
+
+
+
+// 	tango
+
+itemDef {
+	name tango_face
+	type ITEM_TYPE_MODEL 
+	ownerdraw UI_TANGO_HEADMODEL
+	rect 389 16 128 160
+	backcolor .1 .2 .6 0.5
+	border 1
+	bordercolor 1 1 1 .25
+	style 1
+	decoration 
+	visible 1
+    	}
+itemDef {
+	name tango_face
+	rect 389 16 128 160
+	border 1
+	bordercolor 1 1 1 .25
+	style 1
+	decoration 
+	visible 1
+    	}
+
+itemDef {
+	name tango
+	style 1
+	rect 389 16 128 16
+
+	text "Tango"
+
+    	textalign 2
+    	textalignx 122
+    	textaligny 14
+	textscale .2    
+
+	decoration 
+	visible 1
+    	}
+
+itemDef {
+	name tango_skin 
+	style 1
+	text ""
+    	rect 389 160 128 16 
+    	textalign 0	
+    	textalignx 2
+    	textaligny 12
+	textscale .25    
+
+	type ITEM_TYPE_MULTI	
+	cvar "ui_t_skin"
+	cvarStrList 
+		{ 	
+			"Gregor", 		"gregor", 
+			"Gregor Camo", 		"gregor_camo", 
+			"Gregor Mask", 		"gregor_mask", 
+			"Gregor Special", 	"gregor_special", 
+			"Jayant", 		"jayant", 
+			"Jayant Camo", 		"jayant_camo", 
+			"Jayant Mask", 		"jayant_mask" , 
+			"Jayant Special", 	"jayant_special",
+			"Rasul",  		"rasul", 
+			"Rasul Camo", 		"rasul_camo", 
+			"Rasul Mask", 		"rasul_mask" , 
+			"Rasul Special", 	"rasul_special", 
+			"Tu Dinh", 		"tu-dinh", 
+			"Tu Dinh Camo", 	"tu-dinh_camo", 
+			"Tu Dinh Mask", 	"tu-dinh_mask" , 
+			"Tu Dinh Special", 	"tu-dinh_special", 
+		}
+
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	border 2
+	bordercolor 1 1 1 .25
+
+      	visible 1 
+	action { play "ui/assets/menu_yes.wav" }
+	mouseEnter { show message_tango_skin } 
+      	mouseExit { hide message_tango_skin } 
+    	}
+
+itemDef {
+      	name tango_head
+	style 1
+	text "Head:"
+    	rect 280 190 240 16 
+    	textalign 2	
+    	textalignx 60
+    	textaligny 12
+	textscale .25
+   
+	type ITEM_TYPE_MULTI	
+	cvar "ui_t_e_head"
+	cvarStrList { 	"Cap Dark", "cap_tango_dark", 
+			"Cap Desert", "cap_tango_desert", 
+			"Cap Jungle", "cap_tango_jungle", 
+			"Cap Red", "cap_tango_red", 
+			"Tangohat Brown", "tangohat_brown", 
+			"Tangohat Dark", "tangohat_dark", 
+			"Tangohat Green", "tangohat_green", 
+			"Turban Brown", "turban_brown", 
+			"Turban Grey", "turban_grey", 
+			"Turban Pattern", "turban_pattern", 
+			"Turban 2 Brown", "turban2_brown", 
+			"Turban 2 Grey", "turban2_grey", 
+			"Turban 2 Pattern", "turban2_pattern",
+			"Ricehat Dark", "ricehat_dark", 
+			"Ricehat Green", "ricehat_green", 
+			"Wool Cap Dark", "cap_tango2_dark", 
+			"Wool Cap Green", "cap_tango2_green", 
+			"Wool Cap White", "cap_tango2_white", 
+			"None", ""  }
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+
+      	visible 1
+	action { play "ui/assets/menu_yes.wav" }
+	mouseEnter { show message_tango_head } 
+	mouseExit { hide message_tango_head } 
+    	}
+
+itemDef {
+      	name tango_eyes
+	style 1
+	text "Eyes:"
+    	rect 280 206 240 16 
+    	textalign 2	
+    	textalignx 60
+    	textaligny 12
+	textscale .25
+   
+	type ITEM_TYPE_MULTI	
+	cvar "ui_t_e_eyes"
+	cvarStrList { 	"Glasses", "glasses_tango", 
+			"Sunglasses", "glasses_tango2", 
+			"Piercings", "piercings", 
+			"None", ""  }
+
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+
+      	visible 1
+	action { play "ui/assets/menu_yes.wav" }
+	mouseEnter { show message_tango_eyes } 
+	mouseExit { hide message_tango_eyes } 
+    	}
+
+itemDef {
+      	name tango_mouth
+	style 1
+	text "Mouth:"
+    	rect 280 222 240 16 
+    	textalign 2	
+    	textalignx 60
+    	textaligny 12
+	textscale .25
+   
+	type ITEM_TYPE_MULTI	
+	cvar "ui_t_e_mouth"
+	cvarStrList { 	"Joint", "joint", 
+			"Mouthcloth", "mouthcloth", 
+			"None", ""  }
+	
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+
+      	visible 1
+	action { play "ui/assets/menu_yes.wav" }
+	mouseEnter { show message_tango_mouth } 
+	mouseExit { hide message_tango_mouth } 
+    	}
+
+// MESSAGES
+
+itemDef {
+      	name message_name
+	group grpmessage
+	text "Player Name"  
+      	style 1    
+      	rect 0 280 544 28 
+      	textalign 1
+      	textaligny 20
+      	textalignx 272 
+      	textscale .24
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+	visible 0
+      	decoration 
+	}
+itemDef {
+      	name message_dmmodel
+	group grpmessage
+	text "Choose which settings to use in Deathmatch"  
+      	style 1    
+      	rect 0 280 544 28 
+      	textalign 1
+      	textaligny 20
+      	textalignx 272 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+	visible 0
+      	decoration 
+	}
+
+itemDef {
+      	name message_seal_skin
+	group grpmessage
+	text "Select Seal Faceskin"  
+      	style 1    
+      	rect 0 280 544 28 
+      	textalign 1
+      	textaligny 20
+      	textalignx 272 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+	visible 0
+      	decoration 
+	}
+itemDef {
+      	name message_seal_head
+	group grpmessage
+	text "Select Seal Head Accessoire"  
+      	style 1    
+      	rect 0 280 544 28 
+      	textalign 1
+      	textaligny 20
+      	textalignx 272 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+	visible 0
+      	decoration 
+	}
+itemDef {
+      	name message_seal_eyes
+	group grpmessage
+	text "Select Seal Eyes Accessoire"  
+      	style 1    
+      	rect 0 280 544 28 
+      	textalign 1
+      	textaligny 20
+      	textalignx 272 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+	visible 0
+      	decoration 
+	}
+itemDef {
+      	name message_seal_mouth
+	group grpmessage
+	text "Select Seal Mouth Accessoire"  
+      	style 1    
+      	rect 0 280 544 28 
+      	textalign 1
+      	textaligny 20
+      	textalignx 272 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+	visible 0
+      	decoration 
+	}
+
+itemDef {
+      	name message_tango_skin
+	group grpmessage
+	text "Select Tango Faceskin"  
+      	style 1    
+      	rect 0 280 544 28 
+      	textalign 1
+      	textaligny 20
+      	textalignx 272 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+	visible 0
+      	decoration 
+	}
+itemDef {
+      	name message_tango_head
+	group grpmessage
+	text "Select Tango Head Accessoire"  
+      	style 1    
+      	rect 0 280 544 28 
+      	textalign 1
+      	textaligny 20
+      	textalignx 272 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+	visible 0
+      	decoration 
+	}
+itemDef {
+      	name message_tango_eyes
+	group grpmessage
+	text "Select Tango Eyes Accessoire"  
+      	style 1    
+      	rect 0 280 544 28 
+      	textalign 1
+      	textaligny 20
+      	textalignx 272 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+	visible 0
+      	decoration 
+	}
+itemDef {
+      	name message_tango_mouth
+	group grpmessage
+	text "Select Tango Mouth Accessoire"  
+      	style 1    
+      	rect 0 280 544 28 
+      	textalign 1
+      	textaligny 20
+      	textalignx 272 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+	visible 0
+      	decoration 
+	}
+}
+}
+

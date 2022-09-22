@@ -1,0 +1,175 @@
+
+NSQ3 - MAP - TUTORIAL 
+
+by BenB
+
+v. 1.0 - 13.02.02
+
+The different missiontypes in NSQ3:
+
+
+How to make a VIP-S map ?
+
+1. add a info_vip_spawn like a normal player spawn point in ur map
+
+	How to set the team of the VIP ?
+
+	key: team		value: [0/1] ( 0 seals / 1 tangos)	
+
+	How to set the time the VIP has to survive ?
+	
+	key: stayalive 		value: [time in sec] 	
+
+
+	Hint:  - u can add several VIP spawn points to make the matches more different
+
+2. add these lines to ur briefing file:
+
+	[mapspecs]
+	...
+
+	viptype [dealer/arab/diplomat/general/undercover] (here u can set the setting from the VIP)
+
+	missioninfo 
+	{
+		viptime 
+	}
+
+	[end]
+
+
+How to make a VIP-R map ?
+
+1. add a info_vip_spawn like a normal player spawn point in ur map
+
+	How to set the team of the VIP ?
+
+	key: team		value: [0/1] ( 0 seals / 1 tangos)	
+
+	
+	Hint:  - u can add several VIP spawn points to make the matches more different
+
+2. add a info_vip_spawn, which is the rescue point for the VIP
+
+	How to set the team for the rescue point ?
+
+	key: team		value: [0/1] ( 0 seals / 1 tangos)
+
+	How to set the radius for the rescue point?
+
+	key: radius		value: [whole number only, in qu]
+
+3. add these lines to ur briefing file:
+
+	[mapspecs]
+	...
+
+	viptype [dealer/arab/diplomat/general/undercover] (here u can set the setting for the VIP)
+
+	[end]
+
+
+How to make an Assault map ?
+
+1. create one/more brush(es) (texture common/trigger) which should be ur assualt field
+
+2. add a trigger_assaultfield to the brush(es)
+
+	How to set the team for the assault field ?
+
+	key: team		value: [0/1] ( 0 seals / 1 tangos)
+
+	How to set the time a player has to be in the filed to capture it ?
+
+	key: time		value: [sec]	
+
+	How to set the name of the field ?
+
+	key: fieldname		value: [name of the field]
+
+3. add these lines to ur briefing file:
+
+	[mapspecs]
+	...
+
+	missioninfo 
+	{
+	assaultfield assaultfield assaultfield 
+	}
+
+	[end]
+
+	one 'assaultfield' for every assualt field u have in ur map, the maximum is three
+
+
+How to make a BOMB map ?
+
+1. create a info_bomb_disarm which set the place where a team is able to place a bomb
+
+	How to set the team for the assault field ?
+
+	key: team		value: [0/1] ( 0 seals / 1 tangos)
+
+	How to set the radius for the bomb place?
+
+	key: radius		value: [whole number only, in qu]
+
+	If u have more than one bomb place and one team should be able to win the round with 
+	only one blown bomb place, then the other info_bomb_disarm entitys must have:
+
+	key: optinal		value: 1
+
+
+	Hint:	- Its very important that the info_bomb_disarm has a target key
+
+2. create several trigger_explosion(s) which spawn the explosions around the info_bomb_disarm
+
+	How to change the damage of the explosion ?
+
+	key: dmg		value: [damage in whole numbers only]
+
+	How to set the radius for the explosion ?
+
+	key: radius		value: [whole number only, in qu]
+
+	How to set the delay for the explosion ?
+
+	key: delay		value: [sec] (u don't have to use whole numbers here)
+
+	
+	Hint: - Its very important that all trigger_explosion(s) of one info_bomb_disarm have the targetname of the 
+		target from the info_bomb_disarm
+	      - With the delay feature u can create the nice effect that the big explosions 'wanders' through the
+		room, if u place a lot of trigger_explosion with different delays
+	      - Remember that the explosion is not able to gro through solid. So be sure that the explosions reach 
+		all places u want	 
+
+3. add these lines to ur briefing file:
+
+	[mapspecs]
+	...
+
+	missioninfo 
+	{	
+		blowup
+	}
+
+	[end]
+
+
+
+How to make a CTB map ?
+
+1. create one/more team_briefcase(s) which spawn the briefcases
+
+2. create one/more team_briefcase_return which set the return point for the briefcases
+
+
+Hint: 	- only SEALs can capture the briefcases
+
+
+
+Addinonal notes:
+
+- qu = quake unit
+- 32 qu ~ 1m

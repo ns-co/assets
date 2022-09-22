@@ -1,0 +1,30 @@
+Name of the Map		: ns_oldcity
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Raging Bullgod'
+
+------------------------------------------------------------
+
+Type of Map		: Campain ('Operation Rattelsnake')
+Missionobjective	: BomB
+Number of Players	: 8-16
+
+------------------------------------------------------------
+
+Short description	: - desert
+			  - day
+			  - medium range & some long range		
+			  - the places for the bombs are 
+				  near the green metal 
+				  boxes which are inside of 
+				  an arabian city
+			  - a little bit difficult to understand
+
+------------------------------------------------------------
+
+Additional notices	: - 
+
+------------------------------------------------------------
+
+Special thanks to	: - Graphtalica for their cool 
+				  arab textures
+			  

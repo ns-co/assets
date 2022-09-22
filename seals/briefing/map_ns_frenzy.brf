@@ -1,0 +1,35 @@
+[mapspecs]
+camouflage jungle
+[end]
+
+[seals]
+^4Operation Frenzy: $EOL
+$EOL
+A black operations group has for some time been purchasing weapons illegally by an organisation localized south of Dos Quebradas, Colombia. $EOL 
+The company has threatened to tell the world about their deals, as well as revealing their existance. $EOL
+We have been sent in to clean up the mess. Steal any of the briefcases containing information about the black ops group and their deals.
+$EOL
+$EOL
+^4Mission Summary: $EOL
+^4 - Steal any of the two briefcases $EOL
+[end]
+
+[tangos]
+^1Tango briefing: $EOL
+$EOL
+As a final project before our leader retires, he has extorted our client to pay $1.2 million in gold bullion, or we will reveal their identity and their history with us. 
+You have under the direct orders of Gen.
+Balisani been ordered to protect the information we have on them. 
+$EOL
+$EOL
+^1Mission Summary: $EOL
+^1 - Protect the briefcases $EOL
+[end]
+
+[radar]
+B 1648 2360 432
+B 2784 1668 408
+E -1040 -616 648
+[end]
+
+$EOF

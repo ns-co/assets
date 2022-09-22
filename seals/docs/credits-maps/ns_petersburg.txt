@@ -1,0 +1,20 @@
+Operation: Quixotic
+ns_petersburg
+
+Author: Marcus 'ogun' Jonsson
+E-mail: m.jonsson85@spray.se
+ICQ: 79050523
+
+Tango mission: 	Bomb the SEALs' boat
+			Prevent the SEALs from stealing the briefcase
+SEAL mission: 	Steal the briefcase in the tangos' base
+			Prevent the tangos from bombing the boat
+
+--- Misc stuff
+	Build time: ~3 months
+	Compile time (8 bounces etc, p4 1.3 ghz, 384 rdram): ~2300 secs
+
+Thanks to:
+ydnar for scripting etc
+Hoak for writing the initial mission briefing
+Subverse for textures

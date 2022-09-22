@@ -1,0 +1,35 @@
+Name of the Map		: ns_facility
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Fist Full Of Steel'
+
+------------------------------------------------------------
+
+Type of Map		: Campain ('Operation Rattelsnake')
+Missionobjective	: Bomb
+Number of Players	: 6-16
+
+------------------------------------------------------------
+
+Short description	: - desert
+			  - day
+			  - CQB & medium range		
+			  - the places for the bombs are in 
+				  a decayed, gloomy, 
+				  undergroud toxic gas 
+				  facility
+			  - normal to understand
+
+------------------------------------------------------------
+
+Additional notices	: - my last complete new map for 
+				  operation rattelsnake
+			  - plz don't care about the outdoor 
+				  part he is not very 
+				  important
+
+------------------------------------------------------------
+
+Special thanks to	: - Graphtalica for their cool 
+				  outdoor/urban textures
+			  - Golgotha for their cool metal 
+				  textures

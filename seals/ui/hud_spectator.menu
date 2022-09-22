@@ -1,0 +1,157 @@
+#include "ui/menudef.h"
+ 
+//	- TOP -		//
+
+menuDef
+	{
+    	name "top"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+    	rect 0 0 640 60
+		
+		itemDef
+		{
+     		name "background"
+		rect 0 0 640 60
+		backcolor 0 0 0 0.75
+		style 1
+		visible 1
+		decoration
+
+		ownerdrawflag CG_SHOW_SPECTATOR		  
+		}
+
+//		itemDef
+//		{
+// 		name "isspectator"
+//		rect 0 14 640 20
+//		visible 1
+//		decoration
+//
+//		text "Spectating"
+//		textalign 1
+//		textstyle 5
+//		textscale .4
+//		textalignx 320
+//		textaligny 12
+//
+//		ownerdrawflag CG_SHOW_SPECTATOR			
+//		}
+//
+//		itemDef
+//		{
+//		name "isspectating"
+//		rect 0 36 640 20
+//		visible 1
+//		decoration
+//
+//		text "Freedloating Camera / Chase Camera : Person / InEyes Camera : Person"
+//		textalign 1
+//		textscale .25
+//		textalignx 320
+//		textaligny 12
+//
+//		ownerdrawflag CG_SHOW_SPECTATOR		
+//		}
+	}
+
+
+//	- BOTTOM -	//
+
+menuDef
+	{
+    	name "bottom"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+    	rect 0 420 640 60
+		
+		itemDef
+		{
+     		name "background"
+		rect 0 0 640 60
+		backcolor 0 0 0 0.75
+		style 1
+		visible 1
+		decoration
+
+		ownerdrawflag CG_SHOW_SPECTATOR			
+		}
+
+		itemDef
+		{
+ 		name "teampoints"
+		rect 0 6 640 20
+		visible 1
+		decoration
+	
+		ownerdraw CG_GAME_STATUS
+
+		text ""
+		textalign 1
+		textscale .3
+		textalignx 320
+		textaligny 10
+
+		ownerdrawflag CG_SHOW_SPECTATOR			
+		}
+
+		itemDef
+		{
+ 		name "switchcam"
+		rect 0 28 320 20
+		visible 1
+		decoration
+
+		cvarTest "ui_team"
+		hideCvar { "0" }
+
+		text "press USE to switch camera modes"
+		textalign 1
+		textscale .25
+		textalignx 160
+		textaligny 20
+
+		ownerdrawflag CG_SHOW_SPECTATOR		
+		}
+
+		itemDef
+		{
+ 		name "switchplr"
+		rect 320 28 320 20
+		visible 1
+		decoration
+
+		cvarTest "ui_team"
+		hideCvar { "0" }
+
+		text "press FIRE to switch between players"
+		textalign 1
+		textscale .25
+		textalignx 160
+		textaligny 20
+
+		ownerdrawflag CG_SHOW_SPECTATOR		
+		}
+
+		itemDef
+		{
+ 		name "jointeam"
+		rect 160 28 320 20
+		visible 1
+		decoration
+
+		cvarTest "ui_team"
+		showCvar { "0" }
+
+		text "press ESCAPE and select JOIN to begin playing"
+		textalign 1
+		textscale .25
+		textalignx 160
+		textaligny 20
+
+		ownerdrawflag CG_SHOW_SPECTATOR			
+		}	
+	}
+}
+
+

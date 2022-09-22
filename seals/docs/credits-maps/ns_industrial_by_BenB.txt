@@ -1,0 +1,36 @@
+Name of the Map		: ns_industrial
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Industrial Waste'
+
+------------------------------------------------------------
+
+Type of Map		: Campain ('Operation Rattelsnake')
+Missionobjective	: VIP-S
+Number of Players	: 7-16
+
+------------------------------------------------------------
+
+Short description	: - urban
+			  - day
+			  - CQB & medium range & some long	
+				  range		
+			  - the VIP tries to hide inside an 
+				  old, decayed, industrial 
+				  complex
+			  - a little big difficult to 
+				  understand
+
+------------------------------------------------------------
+
+Additional notices	: 
+
+------------------------------------------------------------
+
+Special thanks to	: - Graphtalica for their cool 
+				  urban textures
+			  - Golgotha for their cool urban 
+				  textures
+			  - Parasie for their cool urban 
+				  textures
+			  - Rungy for his cool urban 
+				  textures

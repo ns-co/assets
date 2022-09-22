@@ -1,0 +1,12 @@
+tag_head,
+tag_torso,
+tag_weapon,
+tag_vitem1,
+tag_vitem3,
+tag_vitem4,
+tag_vitem5,
+u_0arml,models/players/s_medium/arctic_arms.tga
+u_0armr,models/players/s_medium/arctic_arms.tga
+u_0backp,models/players/s_medium/arctic_arms.tga
+u_0bottle,models/players/s_medium/arctic_legs.tga
+u_0chest,models/players/s_medium/arctic_chest.tga

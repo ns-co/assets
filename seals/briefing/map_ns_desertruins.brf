@@ -1,0 +1,45 @@
+[mapspecs]
+camouflage desert
+
+missioninfo 
+{
+assaultfield assaultfield 
+}
+
+[end]
+
+[radar] 
+A 2432 -256 -1423
+A 2336 2624 -992
+[end] 
+
+[seals]
+^4SEAL Briefing: $EOL
+The CIA found out about a small terrorist camp in the mountains 
+of Syria which is hidden inside some old ruins. Normally we 
+do not care about camps of such a small size, but this one could 
+contain very important equipment and information about recent 
+terrorist activities.  $EOL 
+Gain control of the two ruin places in the middle of the area which 
+are used by terrorists. $EOL 
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Gain control of the both two ruin ^4places in the middle. $EOL
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL
+You were chilling in the camp, making some shooting practice when 
+suddenly one of your scouts inform you that the Americans are close
+by and starting an attack. $EOL 
+Prevent that the Amerians get control of the two ruin places. $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Prevent that the SEALs get control of ^1the two ruin places in the middle. $EOL
+[end]
+
+$EOF
+
+

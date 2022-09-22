@@ -1,0 +1,29 @@
+Name of the Map		: ns_desertruins
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Southland Killers' 
+
+------------------------------------------------------------
+
+Type of Map		: Singel Operation
+Missionobjective	: ASSAULT
+Number of Players	: 6-16
+
+------------------------------------------------------------
+
+Short description	: - desert
+			  - day
+			  - medium range & long range		
+			  - the assualtfields are in the 
+				middle of the map
+			  - normal to understand but big
+
+------------------------------------------------------------
+
+Additional notices	: - still beta, report all bugs to 
+				me or write them down in the 
+				forum
+
+------------------------------------------------------------
+
+Special thanks to	: - Graphtalica for their cool 
+				  wood textures

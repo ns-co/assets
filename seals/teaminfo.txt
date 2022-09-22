@@ -1,0 +1,21 @@
+// teaminfo
+
+// Stripped bare
+
+teams 
+{
+//	WAZAA
+}
+
+characters 
+{
+//	WAZAA
+}
+
+aliases 
+{
+//	WAZAA
+}
+
+
+		   

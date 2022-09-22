@@ -1,0 +1,10 @@
+m590, models/weapons/m590/skin.tga
+pump, models/weapons/m590/skin.tga
+trigger, models/weapons/m590/skin.tga
+shell, models/misc/shells/shell_shotgun.tga
+hands, models/weapons/hands/skin.tga
+duckbill, models/weapons/m590/skin.tga
+flashlight, models/weapons/m590/flashlight.tga
+tag_flash
+tag_weapon
+tag_ejection

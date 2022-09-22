@@ -1,0 +1,22 @@
+Name of the Map		: ns_substation
+Leveldesigner		: Schakal (schakal@schakalweb.de)
+Operation 		: 'The Documents'
+
+------------------------------------------------------------
+
+Type of Map		: Singel Operation
+Missionobjective	: CTB
+Number of Players	: 6-16
+
+------------------------------------------------------------
+
+Short description	: - NewYork Substation
+
+
+-----------------------------------------------------------
+some mapobjekt are made by:
+
+turnstile  -   Photos by cisum1, models by fourdee, textures by both
+qkq_beer  -  qkq_beer beta1 mapmodel(visit my page at qkennyq.tripod.com) (c) QkennyQ
+qkq_cigs  -  qkq_cigs beta1 mapmodel(visit my page at qkennyq.tripod.com) (c) QkennyQ
+Defcon.5 Tree-mapmodel (c) GrimReaper 

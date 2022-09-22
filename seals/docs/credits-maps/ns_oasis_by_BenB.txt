@@ -1,0 +1,35 @@
+Name of the Map		: ns_oasis
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Tequila Sunrise'
+
+------------------------------------------------------------
+
+Type of Map		: Campain ('Operation Rattelsnake')
+Missionobjective	: Assault
+Number of Players	: 6-16
+
+------------------------------------------------------------
+
+Short description	: - desert
+			  - night
+			  - CQB & medium range & some long 
+				  range		
+			  - the assault fields are inside 
+				  the big, modern oasis 
+				  complex
+			  - difficult to understand
+
+------------------------------------------------------------
+
+Additional notices	: - 
+
+------------------------------------------------------------
+
+Special thanks to	: - Graphtalica for their cool 
+				  urban textures
+			  - Golgotha for their cool urban 
+				  textures
+			  - Parasie for their cool urban 
+				  textures
+			  - Capt Iglo for his bugreports
+			  

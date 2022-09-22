@@ -1,0 +1,106 @@
+Skill Instruction - Navy Seals: Covert Operations
+============================[team-mirage]========
+
+This document describes each skill category.
+If you've got any questions feel free to email us at: defcon-x@ns-co.net
+Thanks to Mr.Black(terry.dooher@ntlworld.com) for small changes in grammar, 
+sentence structure, captilistation and punctuation.
+
+
+Accuracy Skill 
+======== 
+The accuracy skill allows you to equip your rifle with a scope, this requires an accuracy level of 6 or higher. 
+You can also equip your primary weapon with a laser sight if you have an accuracy level of at 4 or higher. 
+You can also do this for most sidearms, but it requires an accuracy level of at least 3. 
+Accuracy also controls the amount of time the crosshair takes to fade in or out, 
+your player will only be able to fire accurately (pin point accuracy, that is) when the crosshair is visible. 
+
+Stealth Skill 
+======= 
+Stealth allows you to equip most weapons (except rifles, sniper rifles and shotguns) with a silencer. 
+You must have a stealth skill of 3 or higher to enable the silencer for your sidearm,
+ and 5 or higher to enable it for your primary weapon. 
+
+Here's a list of the other abilities that the stealth skill offers you: 
+
+stealth = 9+ Silent wading through water / swimming on the surface. 
+stealth = 8+ Silent movement on special surfaces . 
+stealth = 7+ Silent ladder climbing. 
+stealth = 6+ Silent movement on concrete surfaces. 
+stealth = 6+ No sound when falling a great distance 
+stealth = 5+ No sound when falling a medium distance 
+stealth = 4+ No sound when falling a small distance 
+stealth = 4+ Silent when entering/leaving water (completely) 
+stealth = 4+ Silent door opening. 
+stealth = 3+ No sound when your head rises above / falls below the water level. 
+stealth = 3+ No sound when falling a very small distance / jumping 
+
+Stamina Skill 
+======= 
+The stamina skill allows your character to sprint for a longer period of time. 
+It also helps you regain your actual stamina more quickly. 
+If you are wearing armor and you have a low stamina skill, then your character will start breathing heavily as you sprint.
+Your character will also be able to sustain a little more damage with a higher stamina skill. 
+
+If you have a stamina level of 5 or higher, you can wear armour without any negative effects on your sprinting ability. 
+
+
+Speed skill 
+====== 
+The speed skill allows your character to move faster, this includes crouching, climbing, sprinting, running and walking.
+
+Strength skill 
+======== 
+The strength skill allows your chracter to handle your weapon's recoil much more easily. 
+It also reduces the effects of equipment weight on your overall speed. 
+Strength also enables you to equip your rifle with a bayonet, (at level 4 or higher) 
+or your shotgun with a duckbill, (at level 5 or higher) which control the spread of pellets from the barrel. 
+
+
+Technical skill 
+======== 
+The technical allows you to equip your assault rifle (either the SOCOM M4 or the AK47 ) 
+with an underslung grenade launcher. You must have a technical skill of 7 or higher to enable it. 
+You can also equip your shotgun with a flashlight (at level 4 or higher). 
+A higher technical skill also allows you to throw grenades further and speeds up your bandaging time. 
+You can also throw grenades further if you've got a higher techical skilllevel.
+
+Bomb timing: 
+
+diff = ATTACKER TECHNICAL SKILL - DEFENDER TECH SKILL 
+
+Where the attacker is the player that plants the bomb, and the defender is the player attempting to defuse it. 
+
+Example: An attacker with Tech 7 plants the bomb; but the defusing defender only has tech 2. The resulting diff is 5. 
+
+Here is the time, in milliseconds, it takes to defuse one single wire: 
+(wrong wires turn red). 
+
+( diff = -9 ) - time = 1000 
+( diff = -8 ) - time = 1500 
+( diff = -7, -6 ) - time = 2000 
+( diff = -5 ) - time = 2700 
+( diff = -4 ) - time = 2700 
+( diff = -3, -2 ) - time = 3000 
+( diff = -1 ) - time = 4000 
+( diff = 0 ) - time = 4500 
+( diff = 1 ) - time = 5000 
+( diff = 2,3,4,5 ) - time = 6000 
+( diff = 6,7,8 ) - time = 7000 
+( diff = 9 ) - time = 8000 
+
+The technical skill also allows you to switch weapons more quickly! 
+Here is the chart for weaponspeeds:  
+
+level:  | speed: 
+	|
+tech 1  | Standard switch time 
+tech 2  | 0.8 x Standard switch time 
+tech 3  | 0.8 x Standard switch time 
+tech 4  | 0.7 x Standard switch time 
+tech 5  | 0.6 x Standard switch time 
+tech 6  | 0.6 x Standard switch time 
+tech 7  | 0.5 x Standard switch time 
+tech 8  | 0.5 x Standard switch time 
+tech 9  | 0.5 x Standard switch time 
+tech 10 | 0.4 x Standard switch time 

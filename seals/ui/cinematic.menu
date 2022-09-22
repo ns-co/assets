@@ -1,0 +1,184 @@
+#include "ui/menudef.h"
+
+{
+  menuDef {
+    	name "cinematic"
+    	visible 0
+    	fullscreen 1
+    	rect 0 0 640 480
+	background "ui/assets/ns_menuback-world-blur"	// worldmap
+	focusColor 1 0 0 1	
+    	style 1
+	onEsc { play "ui/assets/menu_no.wav" ; close cinematic ; open main }
+	onOpen { uiScript loadMovies }
+
+
+itemDef {
+	name headline
+	style 0 
+	rect 0 125 640 20
+	textalign 1
+	textalignx 320
+	textaligny 16
+   	textscale .333
+	textstyle 4
+	text "Play Movies"
+	forecolor 1 1 1 1
+	decoration 
+	visible 1
+	}
+
+
+// cinematic
+
+itemDef {
+	name cinematiclist
+	group cinematicselection
+ 	rect 80 160 300 210
+	type ITEM_TYPE_LISTBOX
+	style WINDOW_STYLE_FILLED
+	elementwidth 120
+	elementheight 16
+	textscale .25
+	elementtype LISTBOX_TEXT
+	feeder FEEDER_CINEMATICS
+	doubleclick { uiScript playMovie }
+	textalign 3
+	textaligny 14
+	border 1
+	bordercolor .5 .5 .5 .5
+	forecolor 1 1 1 1
+	backcolor .0 .1 .1 .125
+	outlinecolor 1 1 1 .25
+	visible 1
+	mouseEnter { show message_list ;
+			setitemcolor cinematiclist bordercolor 1 0 0 1 } 
+	mouseExit {  hide message_list ; 
+			setitemcolor cinematiclist bordercolor .5 .5 .5 .5 } 
+  	}
+
+itemDef {
+	name mappreview
+	group cinematicselection
+	ownerdraw UI_PREVIEWCINEMATIC
+	rect 400 176 160 120
+	backcolor .5 .5 .5 .25
+	border 1
+	bordersize 1
+	bordercolor .5 .5 .5 .5
+	decoration
+	visible 1
+	}
+
+itemDef {
+  	name play_button
+	type ITEM_TYPE_BUTTON
+	text "Play Movie"
+    textscale .35
+	style WINDOW_STYLE_FILLED
+	rect 410 322 140 30
+
+	textalign 1
+    textalignx 70
+    textaligny 21
+	forecolor 1 1 1 1
+	backcolor .1 .5 .75 0.5
+	border 1
+	bordercolor 1 1 1 .25
+    visible 1 
+    action { close cinematic ; uiScript playMovie }
+
+	mouseEnter { show message_play ; setitemcolor play_button backcolor .75 .75 .75 0.5 }
+	mouseExit { hide message_play ; setitemcolor play_button backcolor   .1 .5 .75 0.5 }
+    }
+
+
+
+itemDef {
+      	name back_n_quit_button
+	type ITEM_TYPE_BUTTON
+      	rect 40 424 560 28
+
+	mouseEnter { show message_back }
+	mouseExit { hide message_back }
+	action { play "ui/assets/menu_no.wav" ; close cinematic ; open main }
+
+      	visible 1
+	}
+
+// MESSAGES
+
+itemDef {
+      	name message_back
+	group grpmessage
+      	text "Click to return to the main menu"
+      	style 1
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+
+itemDef {
+      	name message_play
+	group grpmessage
+      	text "Click to run the selected movie"
+      	style 1
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+itemDef {
+      	name message_list
+	group grpmessage
+      	text "Select the movie you want to run. Doubleclick starts the selection"
+      	style 1
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+
+
+// Overlay blend Schtuff
+
+itemDef {
+      	name static
+	style 1
+      	background "ui/assets/ns_static.tga"
+      	rect 0 0 640 480
+      	visible 1 
+	decoration
+    	}
+
+itemDef {
+      	name metal
+	style 1
+      	background "ui/assets/ns_menuback-main.tga"
+      	rect 0 0 640 480
+      	visible 1 
+	decoration
+    	}
+
+
+
+}
+}
+}
+}

@@ -1,0 +1,11 @@
+// hud menu defs
+// 
+{  
+	loadMenu { "ui/hud.menu" }
+
+	loadMenu { "ui/hud_spectator.menu" }	// SPECTATOR HUD
+
+	loadMenu { "ui/hud_score.menu" }	// SCOREBOARD for TEAM games
+
+ 	loadMenu { "ui/hud_score-dm.menu" }	// SCOREBOARD for NOTEAM games (remove me!)
+}

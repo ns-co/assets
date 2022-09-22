@@ -1,0 +1,17 @@
+Operation: Finest Hour
+ns_petersburg
+
+Author: Marcus 'ogun' Jonsson
+ICQ: 79050523
+
+Tango mission: 	Protect bomb locations
+SEAL mission: 	Plant a bomb at any of the bomb locations
+
+Thanks to:
+Niclas 'kog' Nordhav for the carpet texture
+Democritus for the well model, gate texture and probably other stuff I forgot about
+Tamara 'Ophelia' Crossley for angel model
+TriDane for armor-statue model and chest model
+The testers
+Everyone else who helped
+Everyone else who deserve thanks

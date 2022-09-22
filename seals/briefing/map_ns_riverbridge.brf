@@ -1,0 +1,39 @@
+[mapspecs]
+camouflage arctic
+
+missioninfo 
+{
+	blowup
+}
+
+[end]
+
+[radar] 
+X 1600 896 -76
+X 2368 896 -76
+X -1472 -384 -176
+X -2240 -384 -176
+[end] 
+
+[seals]
+^4SEAL Briefing: $EOL
+Rebels in the balkan are controlling a strategic important bridge, but the U.S. goverment decided to blow it to slow down any movment in that area. The rest of our troops are not as fast as we want. $EOL 
+Your mission is now to blow one of the piers with your C4 charge. $EOL
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- ^4Place ^4a ^4bomb ^4at ^4one ^4of ^4the ^4the ^4piers. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL
+Thats typical if someone is going outside to smoke a cigaret, everyone wants one, too. Okay now it is time to go back inside. It is damn cold here! Everyone who wants to blow our nice bridge will be an ice lolly before he reach one of the piers! $EOL 
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- ^1Prevent ^1the ^1enemy ^1from ^1blowing ^1up ^1one ^1of ^1the ^1piers. $EOL 
+[end]
+
+$EOF
+
+

@@ -1,0 +1,274 @@
+#include "ui/menudef.h"
+
+// Heads Up Display 2 - Bars
+
+{
+assetGlobalDef 
+	{	
+	cursor "ui/assets/ns_cursor"			
+	gradientBar "ui/assets/gradientbar2.tga"	
+
+    	fadeClamp 1.0					
+	fadeCycle 1					
+	fadeAmount 0.1					
+
+	shadowX  5					
+	shadowY  5					
+	shadowColor 0.1 0.1 0.1 0.25			
+
+    	font "fonts/font" 16				
+    	smallFont "fonts/smallfont" 12			
+    	bigFont "fonts/bigfont" 20	
+
+	sealscolor 0.3 0.3 1 1
+	tangoscolor 1 0.1 0.1 1
+	noteamcolor 1 1 1 1
+	}
+
+//	- HEALTH -	//
+
+menuDef
+	{
+    	name "health"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+    	rect 6 340 71 131
+
+		itemDef
+		{
+     		name "background"
+		rect 0 0 71 131
+		border 1
+		bordercolor .6 .6 .6 1
+		backcolor 1 1 1 1
+		style 1
+		visible 1
+		decoration
+		background "ui/assets/ns_hud_2_back1.tga"
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+			
+
+		itemDef
+		{
+     		name "locator"
+		rect 7 1 58 114
+		visible 1
+		decoration
+		ownerdraw CG_PLAYER_DAMAGELOC	
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+		itemDef
+		{
+ 		name "staminabarback"
+		rect 5 114 61 11
+		border 1
+		bordercolor .6 .6 .6 1
+		backcolor 0 0 0 0.2
+		visible 1
+		style 1
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+		itemDef
+		{
+ 		name "staminabar"
+		rect 5 114 61 11
+		visible 1
+		border 1
+		bordercolor .6 .6 .6 1
+		decoration
+		ownerdraw CG_PLAYER_STAMINABAR_HOR	
+		background "ui/assets/ns_bar_horz"
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+		itemDef
+		{
+ 		name "staminabarborder"
+		rect 5 114 61 11
+		visible 1
+		border 1
+		bordercolor .6 .6 .6 1
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+	}
+
+
+//	- AMMO - 	//
+
+menuDef {
+    	name "Ammo"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+    	rect 500 400 131 71
+
+	itemDef
+		{
+     		name "background"
+		rect 0 0 131 71 
+		border 1
+		bordercolor .6 .6 .6 1
+		backcolor 1 1 1 1
+		style 1
+		visible 1
+		decoration
+		background "ui/assets/ns_hud_2_back2.tga"
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef
+		{
+     		name "seperator"
+		rect 0 53 131 1 
+		border 1
+		bordercolor .6 .6 .6 1
+		visible 1
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef
+		{
+     		name "seperator"
+		rect 0 36 131 1 
+		border 1
+		bordercolor .6 .6 .6 1
+		visible 1
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef 
+		{
+		name "Fire Mode"
+		rect 0 36 131 15
+		style WINDOW_STYLE_FILLED
+		textalign 1
+		textalignx 65
+		textaligny 15
+		textstyle 4
+		type 1
+		textscale .25
+		visible 1
+		ownerdraw CG_PLAYER_WEAPONSTATUS
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef
+		{
+		name "Clip BAR back"
+		rect 5 56 121 12
+		border 1
+		bordercolor .6 .6 .6 1
+		backcolor 0 0 0 0.2
+		visible 1
+		style 1
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+	itemDef
+		{
+		name "Clip BAR"
+		rect 5 56 121 12
+		visible 1
+		border 1
+		bordercolor .6 .6 .6 1
+		decoration
+		ownerdraw CG_PLAYER_AMMOBAR_HOR	
+		background "ui/assets/ns_bar_horz"
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+	itemDef
+		{
+		name "Clip BAR border"
+		rect 5 56 121 12
+		visible 1
+		border 1
+		bordercolor .6 .6 .6 1
+		decoration
+		teamcolor
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef 
+		{
+		name "Clip Icon"
+		rect 98 4 32 32 
+		visible 1
+		ownerdraw CG_PLAYER_CLIPS_ICON	
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	itemDef 
+		{
+		name "Clip Count"
+		rect 50 4 78 32
+		style WINDOW_STYLE_FILLED
+		textalign 3
+		textalignx 76
+		textaligny 30
+		type 1
+		textscale .5
+		visible 1
+		ownerdraw CG_PLAYER_CLIPS_VALUE	
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+
+	}
+
+// 	- TARGET NAME -	//
+
+menuDef 
+	{
+    	name "Targetedname"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+	rect 275 410 40 24
+	
+	itemDef
+		{
+		name "tragetedname"
+		rect 0 0 40 24
+		style WINDOW_STYLE_FILLED
+		textalign 1
+		textalignx 20
+		textaligny 15
+		textstyle 4
+		type 1
+		textscale .25
+		ownerdraw CG_PLAYER_ENEMY
+
+		visible 1
+
+		ownerdrawflag CG_SHOW_NO_SPECTATOR
+		}
+	}
+}
+

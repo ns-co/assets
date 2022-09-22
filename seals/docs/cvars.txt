@@ -1,0 +1,63 @@
+cvars.txt	03.03.02
+
+all new console variables in navy seals: covert operations.
+
+usage:
+
+/set <variable> <value>
+
+---
+
+server variables: 
+
+timelimit		-	sets time in mintues a map is running on the server
+teampointlimit		-	sets number of points a team can score until the game ends
+g_forcerespawn		-	sets the time a player will be able to stay in his death body until he respawns
+g_motd			-	sets message of the day
+com_blood		-	enables 1 / disables 0 the blood
+g_allowVote		-	enables 1 / disables 0 the voting system
+g_logradio		-	log radio messages to logfile/screen
+g_allowKnifes		-	allow melee weapons
+g_maxteamkill		-	set the number of teamkills a player can suffer until he is kicked
+roundtime		-	time in minutes a round lasts
+g_overridegoals		-	overrides mission objectives (1), 0= normal gameplay
+g_inventoryupdatetime	-	time the player have to change the inventory after roundstart in seconds
+g_stopbots		-	stops bots from moving
+g_basexp		-	amount of expierence points the player have when a game begins (default=10)
+g_silentbullets		-	bullets entitys are not sent to the clients - means lower pings (default=0)
+g_reallead		-	bullets are not calculated as entities instead they're rays - means lower pings (default 1)
+g_teamlockcamera	-	locks the camera, so players can only follow their team members.
+g_noprimary		-	removes primary weapons from the game
+g_nosecondary		-	removes secondary weapons from the game
+
+---
+
+client variables:
+
+cg_shadows		-	(1) normal shadows (2) stencil shadows, requires r_stencilbits 8 to bet set (3) polygon fill shadows
+cg_drawfps		-	draws frames per second to screen
+cg_brasstime		-	time in ms brass exists in world
+cg_simpleitems		-	items are drawn as sprites instead of polygons
+cg_marks		-	enables marks on walls (default=1)
+cg_lagometer		-	enables lag0meter
+cg_gunsmoke		-	enables gunsmoke
+cg_enabletimeselect	-	inventory items are selected automatically after X seconds
+cg_enviromentfx		-	enables enviroment effects
+cg_enviromentfx_quality	-	0=default 1=low
+cg_gunsmoketime		-	time in ms gunsmoke exists in world
+cg_particletime		-	time in ms each particle exists in world
+cg_crosshair_r		-	sets red value of crosshair (0.0 = none, 1.0 = full)
+cg_crosshair_g		-	sets green value of crosshair (0.0 = none, 1.0 = full)
+cg_crosshair_b		-	sets blue value of crosshair (0.0 = none, 1.0 = full)
+cg_grenadeSparks	-	enables sparks on grenades (1=enabled/default,2=high quality w/ particles,0=disabled )
+cg_newbeeTime		-	time in seconds newbee messages appear on screen (0=disabled)
+cg_disableheadstuff	-	disables headgear (0=default)
+cg_disableTangoHandSkin	-	disables the load of tangohandskin (0=default)
+cg_chattime		-	time in ms chat msgs stay on screen ,(0=chatmsgs deactivated)
+cg_chatheight		-	amount of lines of chatmsgs appear max on screen
+cg_showconsole		-	log screentext to console
+cg_lightmarks		-	marks on walls get affected by light rendering ( 0=default)
+cg_smallguns		-	enables smaller guns (0=default)
+
+
+last change: 09.03.02 by defcon-x/defcon-x@ns-co.net

@@ -1,0 +1,11 @@
+u_torso, models/players/t_medium/kevlar_vest.tga
+u_radio, models/players/t_medium/urban_arms.tga
+u_arml, models/players/t_medium/urban_arms.tga
+u_armr, models/players/t_medium/urban_arms.tga
+tag_head
+tag_torso
+tag_vitem1
+tag_vitem3
+tag_vitem4
+tag_vitem5
+tag_weapon

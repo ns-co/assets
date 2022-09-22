@@ -1,0 +1,46 @@
+[mapspecs]
+camouflage urban
+
+missioninfo
+{
+  blowup
+}
+
+[end]
+
+[radar]
+E 3206.302734 -1102.702880 614.343750
+B 1497.257080 -626.691223 2.125000
+X 3262.522705 -147.334182 2.125000
+[end]
+
+[seals]
+^4SEAL briefing: $EOL
+A Seals squad lost a briefcase with 
+vital information in the middle of the floor 
+connecting skyscraper ^1A ^7with ^4B^7. You and your 
+team have to steal this briefcase and prepare 
+to be extracted by helicopter on the roof. 
+Watch out, the crazy Tangos could blow up the 
+building. $EOL
+$EOL
+$EOL
+^4Mission Summary: $EOL
+^4- ^4get ^4the ^4briefcase $EOL
+^4- ^4prevent ^4Tangos ^4from ^4planting ^4the ^4bomb $EOL
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL
+Good job team, the seals have been defeated and the 
+briefcase with vital information is almost in our 
+hand. Protect it by all means and try to blow up 
+skyscraper ^4B^7. The Seals shall not escape! $EOL
+$EOL
+$EOL
+^1Mission Summary: $EOL
+^1- ^1prevent ^1Seals ^1from ^1escaping ^1with ^1briefcase $EOL
+^1- ^1plant ^1a ^1bomb ^1at ^1library $EOL
+[end]
+
+$EOF

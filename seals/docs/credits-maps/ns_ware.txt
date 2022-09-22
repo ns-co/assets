@@ -1,0 +1,18 @@
+Name of the Map		: ns_ware
+Leveldesigner		: krOno  finished by schakal
+Operation 		: 'trap'
+
+------------------------------------------------------------
+
+Type of Map		: Singel Operation
+Missionobjective	: V.I.P + bomb
+Number of Players	: 10-12
+
+------------------------------------------------------------
+
+Short description	: - urban
+			  - day
+			  - big indoor complex
+
+
+------------------------------------------------------------

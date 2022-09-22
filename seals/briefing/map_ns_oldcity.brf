@@ -1,0 +1,46 @@
+[mapspecs]
+camouflage desert
+
+missioninfo 
+{
+	blowup
+}
+
+[end]
+
+[radar] 
+X 2464 1312 176 
+X -568 1528 160 
+[end] 
+
+[seals]
+^4SEAL Briefing: $EOL 
+The tangos are hiding in an old, quiet town near 
+the lybian frontier where they are preparing the 
+launch of their long range missiles. You need to 
+stop them at once by destroying the important 
+equipment crates kept in the green metal boxes. $EOL 
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- ^4Place ^4a ^4bomb ^4at ^4one ^4of ^4the ^4two ^4green ^4metal ^4boxes. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+The leader is dead but you will not give up. You and 
+a few remaining brothers are hiding in an old, quiet 
+town near the lybian frontier. There is nothing to loose 
+so you are preparing to launch the missiles at the 
+heathens. $EOL 
+You need to protect the important navigation equipment,
+which is stored within green metal boxes, with your life. $EOL 
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- ^1Prevent ^1that ^1the ^1SEALs ^1place ^1a ^1bomb ^1at ^1one ^1of ^1the ^1two ^1green ^1metal ^1boxes. $EOL 
+[end]
+
+$EOF
+
+

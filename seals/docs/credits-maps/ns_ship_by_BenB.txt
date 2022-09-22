@@ -1,0 +1,29 @@
+Name of the Map		: ns_ship
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Seabird'
+
+------------------------------------------------------------
+
+Type of Map		: Campain ('Operation Rattelsnake')
+Missionobjective	: Assault
+Number of Players	: 6-16
+
+------------------------------------------------------------
+
+Short description	: - urban
+			  - night
+			  - CQB
+			  - the assault fields are inside 
+				  of a big freighter
+			  - very difficult to understand
+
+------------------------------------------------------------
+
+Additional notices	: - my first real q3a map, during 
+				  the time i overworked it i 
+				  started to hate this damn 
+				  map ;)
+
+------------------------------------------------------------
+
+Special thanks to	: - 

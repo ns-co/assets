@@ -1,0 +1,48 @@
+Name of the Map		: ns_ghetto
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Urine Specimen'
+
+------------------------------------------------------------
+
+Type of Map		: Single Operation
+Missionobjective	: CTB
+Number of Players	: 4-16
+
+------------------------------------------------------------
+
+Short description	: - urban
+			  - night
+			  - CQB & medium range		
+			  - the briefcases are in the 
+				  decayed building in the 
+				  middle of the map
+			  - normal to understand
+
+------------------------------------------------------------
+
+Additional notices	: - this version is still beta !!
+			  - the map was planned for a 
+				  campain but the map 
+				  already made so much fun 
+				  that we decided to include 
+				  it in b1 as a beta single 
+				  operation map
+			  - this map needs a lot of texture 
+				  work, a new sky, some 
+				  objects&textures don't 
+				  have the right seize, the 
+				  performance is still not 
+				  perfect and some other 
+				  small details and fixing.
+
+------------------------------------------------------------
+
+Special thanks to	: - Graphtalica for their cool 
+				  urban textures
+			  - Golgotha for their cool urban 
+				  textures
+			  - Parasie for their cool urban 
+				  textures
+			  - Rungy for his cool urban 
+				  textures
+			  

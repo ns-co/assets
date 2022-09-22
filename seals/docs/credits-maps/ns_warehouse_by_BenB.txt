@@ -1,0 +1,36 @@
+Name of the Map		: ns_warehouse
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Blue Boxes'
+
+------------------------------------------------------------
+
+Type of Map		: Campain ('Operation Rattelsnake')
+Missionobjective	: CTB
+Number of Players	: 4-16
+
+------------------------------------------------------------
+
+Short description	: - urban
+			  - night
+			  - some CQB & medium range		
+			  - the briefcase inside a bigger 
+				  warehouse with an office
+			  - normal to understand
+
+------------------------------------------------------------
+
+Additional notices	: - the ship which u can see is the 
+				  ship is a part from 
+				  ns_ship
+
+------------------------------------------------------------
+
+Special thanks to	: - Graphtalica for their cool 
+				  urban textures
+			  - Golgotha for their cool urban 
+				  textures
+			  - Parasie for their cool urban 
+				  textures
+			  - Rungy for his cool urban 
+				  textures
+			 

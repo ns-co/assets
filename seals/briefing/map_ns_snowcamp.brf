@@ -1,0 +1,49 @@
+[mapspecs]
+camouflage arctic
+
+missioninfo 
+{
+assaultfield assaultfield
+}
+[end]
+
+[radar]
+X -1586.874389 -30.439271 50.164978
+A -619.626953 -174.214263 -173.875000
+X 698.611511 253.874847 -173.798553
+A 574.285888 -302.425415 182.125000
+X 1224.125122 -28.529254 50.125000
+[end]
+
+[seals]
+^4SEAL briefing: $EOL
+Our spotters have located a Tango camp in western 
+Siberia. We suspect that it is holding some stolen 
+rockets. $EOL
+Your mission is to enter the camp via the main front gate, 
+the rear roll gate, or through the mine. Then secure the Weapons and the Computer Room. $EOL
+The Tangos may well be aware of your approach, so expect extreme resistance. $EOL 
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- take control of the Weapons $EOL
+^4  and the Computer Room $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+We have word that a Seal team is approaching our camp. $EOL
+There are only three ways into the camp: The front gate, 
+the rear roll gate and through the mine. $EOL
+Defend these entrances and guard 
+the Weapons and the Computer Room. Failure is certain death. 
+These guys don't take prisoners! $EOL 
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Prevent the enemy from gaining $EOL
+^1  control of the Weapons and the $EOL
+^1  Computer Room. $EOL 
+[end]
+
+$EOF

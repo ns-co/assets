@@ -1,0 +1,24 @@
+Name of the Map		: ns_trainstation
+Leveldesigner		: Schakal (schakal@schakalweb.de)
+Operation 		: 'trainstation'
+
+------------------------------------------------------------
+
+Type of Map		: Singel Operation
+Missionobjective	: bc + bomb
+Number of Players	: 6-10
+
+------------------------------------------------------------
+
+Short description	: - urban
+			  - night
+
+------------------------------------------------------------
+
+some mapobjekt are made by:
+
+1967 Chevrolet Chevelle SS 427	:	Modern Muscle Design 2001  Acdesign396@msn.com
+
+------------------------------------------------------------
+
+Special thanks to	: Hoak for the briefing

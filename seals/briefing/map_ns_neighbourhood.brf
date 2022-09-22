@@ -1,0 +1,47 @@
+[mapspecs]
+camouflage urban
+viptype dealer
+
+missioninfo 
+{
+	viptime 
+}
+
+[end]
+
+[radar] 
+E -2144 -2480 -88
+E 672 -2480 8
+B 48 776 312 
+[end] 
+
+[seals]
+^4SEAL Briefing: $EOL 
+While you're gathering intelligence somewhere in 
+Eastern Europe the weapons dealer arrives. This 
+is your chance to eliminate the dealer and grab 
+the briefcase with all his contacts and suppliers. $EOL  
+The house he's in is guarded heavily so use caution. $EOL 
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Neutralize the VIP. $EOL 
+^4- Capture the briefcase and carry it to one ^4of the extraction ^4zones. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+Just as the boss arrived at the house the foreign 
+soldiers attack. Protect the boss and his important 
+briefcase while fighting off the enemy. $EOL 
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Protect the VIP. $EOL 
+^1- Prevent that the SEALs steal the ^1briefcase. $EOL 
+
+[end]
+
+$EOF
+
+

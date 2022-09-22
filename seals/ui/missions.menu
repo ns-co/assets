@@ -1,0 +1,177 @@
+#include "ui/menudef.h"
+
+{
+  menuDef {
+    name "missions"
+    visible 0
+    fullscreen 1
+    rect 0 0 640 480
+	background "ui/assets/ns_menuback-world-blur"	// worldmap
+	focusColor 1 0 0 1	
+    style 1
+	onEsc { play "ui/assets/menu_no.wav" ; close missions ; open main }
+
+itemDef {
+	name headline
+	style 0 
+	rect 0 125 640 20
+	textalign 1
+	textalignx 320
+	textaligny 16
+   	textscale .333
+	textstyle 4
+	text "View Mission Briefings"
+	forecolor 1 1 1 1
+	decoration 
+	visible 1
+	}
+
+// mission
+
+itemDef {
+	name missionlist
+ 	rect 80 160 300 210
+	type ITEM_TYPE_LISTBOX
+	style WINDOW_STYLE_FILLED
+	elementwidth 120
+	elementheight 16
+	textscale .25
+	elementtype LISTBOX_TEXT
+//	feeder FEEDER_MISSIONS
+	doubleclick { uiScript ShowMission }
+	textalign 3
+	textaligny 14
+	border 1
+	bordercolor .5 .5 .5 .5
+	forecolor 1 1 1 1
+	backcolor .0 .1 .1 .125
+	outlinecolor 1 1 1 .25
+	visible 1
+	mouseEnter { show message_list ; 
+			setitemcolor missionlist bordercolor 1 0 0 1 } 
+	mouseExit { hide message_list ; 
+			setitemcolor missionlist bordercolor .5 .5 .5 .5 } 
+  	}
+
+itemDef {
+    name mappreview
+    style 1	
+// 	ownerdraw UI_BRIEFINGMAPCINEMATIC
+	background "levelshots/ns_canyon"	// TEMPORARY
+	rect 400 176 160 120
+	border 1
+	bordercolor 1 1 1 .25
+	backcolor 1 1 1 1
+	forecolor 1 1 1 1
+    visible 1 
+	decoration
+    }
+
+itemDef {
+  	name play_button
+	type ITEM_TYPE_BUTTON
+	text "View Briefing"
+    textscale .35
+	style WINDOW_STYLE_FILLED
+	rect 410 322 140 30
+
+	textalign 1
+    textalignx 70
+    textaligny 21
+	forecolor 1 1 1 1
+	backcolor .1 .5 .75 0.5
+	border 1
+	bordercolor 1 1 1 .25
+    visible 1 
+    action { close missions ; uiScript ShowMission }
+
+	mouseEnter { show message_play ; setitemcolor play_button backcolor .75 .75 .75 0.5 }
+	mouseExit { hide message_play ; setitemcolor play_button backcolor   .1 .5 .75 0.5 }
+    }
+
+itemDef {
+      	name back_n_quit_button
+	type ITEM_TYPE_BUTTON
+      	rect 40 424 560 28
+
+	mouseEnter { show message_back }
+	mouseExit { hide message_back }
+	action { play "ui/assets/menu_no.wav" ; close missions ; open main }
+
+      	visible 1
+	}
+
+// MESSAGES
+
+itemDef {
+      	name message_back
+	group grpmessage
+      	text "Click to return to the main menu"
+      	style 1
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+itemDef {
+      	name message_play
+	group grpmessage
+      	text "Click to show the selected mission briefing"
+      	style 1
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+itemDef {
+      	name message_list
+	group grpmessage
+      	text "Select the briefing you want to view. Doubleclick displays the selection"
+      	style 1
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+
+
+// OVERLAY STUFF
+
+itemDef {
+      	name static
+	style 1
+      	background "ui/assets/ns_static.tga"
+      	rect 0 0 640 480
+      	visible 1 
+	decoration
+    	}
+
+itemDef {
+      	name metal
+	style 1
+      	background "ui/assets/ns_menuback-main.tga"
+      	rect 0 0 640 480
+      	visible 1 
+	decoration
+    	}
+
+
+}
+}
+}
+}

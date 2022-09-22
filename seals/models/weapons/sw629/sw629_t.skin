@@ -1,0 +1,13 @@
+sw629body, models/weapons/sw629/skin.tga
+sw629drum, models/weapons/sw629/skin2.tga
+trigger, models/weapons/sw629/skin.tga
+button, models/weapons/sw629/skin.tga
+bolt, models/weapons/sw629/skin.tga
+cock, models/weapons/sw629/skin.tga
+sled, models/weapons/sw629/skin.tga
+shells, models/weapons/sw629/speedloader.tga
+mag, models/weapons/sw629/speedloader.tga
+hands, models/weapons/hands/skin_t.tga
+tag_flash
+tag_weapon
+tag_ejection

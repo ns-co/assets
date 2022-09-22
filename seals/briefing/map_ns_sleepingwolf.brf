@@ -1,0 +1,50 @@
+[mapspecs]
+camouflage arctic
+
+missioninfo 
+{
+	blowup
+}
+
+$enviroment
+{
+type snow
+basetimes 5 10
+timetomove 1 2
+gusttimes 0 3
+basevector 0 0
+gustvector 50 100
+weight 0.3 0.4
+impacteffects true true
+num_drops 1700 2200
+height	10
+}
+
+[end]
+
+[radar]
+X 245.679351 1492.812011 50.125000
+X 453.022186 -410.125366 48.598060
+[end]
+
+[seals]
+^4SEAL briefing: $EOL
+ Intelligence sources have revealed that the Russians are building a binary chemical weapon launch support facility in a remote location in Western Siberia. Your mission is to locate, detonate and displace the chemical weapons contaminating the area making the facility useless; putting our "hosts" in the embarrassing circumstance of admitting an "industrial accident".  $EOL 
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Bomb one of the two green $EOL
+^4   metal boxes. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+Secrecy and defense of the our new launch support facility is of the utmost importance to or National strategic interests. Any attempts at espionage or sabotage must be prevented at all costs at this very vulnerable time, as a weapons "accident" would be a catastrophe. Defend and protect the construction of the installation with your life as the facility is un-hardened and vulnerable. $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Prevent the green metal boxes from $EOL
+^1   being destroyed. $EOL 
+[end]
+
+$EOF

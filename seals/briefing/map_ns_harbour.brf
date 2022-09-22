@@ -1,0 +1,60 @@
+[mapspecs]
+camouflage urban
+
+viptype undercover
+
+missioninfo 
+{
+	viptime 
+}
+
+$enviroment
+{
+type rain
+basetimes 5 10
+timetomove 1 1
+gusttimes 0 3
+basevector 0 0
+gustvector 50 100
+weight 0.5 0.7
+impacteffects true true
+num_drops 1000 2000
+height	50
+}
+[end]
+
+[seals]
+^4SEAL Briefing: $EOL 
+An office in the harbour area of West Istanbul is 
+a facade for the world wide operations of a known 
+terrorist organization. Recently one of their leaders 
+has left his hideout to coordinate the actions within 
+that office. $EOL 
+Your mission is to assault the office and the surrounding 
+areas and neutralize the leader, as well as any other 
+hostile tangos you might encounter. Be careful as they 
+might have been warned. $EOL
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Neutralize the VIP. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+The Leader recently appeared at the office to oversee your 
+activities there. He's already planning another big attack 
+against the dreaded Americans. You have been assigned to 
+protect him at all costs, even if you have to sacrifice your 
+own life. $EOL 
+At night one of the scouts reported some suspicious activity 
+in the area and now you're out to intercept the trespassers. $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Protect the VIP. $EOL 
+[end]
+
+$EOF
+
+

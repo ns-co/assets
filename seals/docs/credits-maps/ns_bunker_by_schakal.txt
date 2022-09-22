@@ -1,0 +1,18 @@
+Name of the Map		: ns_bunker
+Leveldesigner		: Schakal (schakal@schakalweb.de)
+Operation 		: 'Diving Death'
+
+------------------------------------------------------------
+
+Type of Map		: Singel Operation
+Missionobjective	: BomB
+Number of Players	: 8-16
+
+------------------------------------------------------------
+
+Short description	: - U-Boot Bunker
+
+
+-----------------------------------------------------------
+
+

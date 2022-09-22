@@ -1,0 +1,45 @@
+// menu defs - main menu
+// 
+{	
+   loadMenu { "ui/main.menu" }					// main menu (map)
+
+   loadMenu { "ui/popmenu_startmission.menu" }		// popup: start mission
+    loadMenu { "ui/joinserver.menu" }				// join a game server 
+		loadMenu { "ui/password.menu" }				// enter a password
+		loadMenu { "ui/serverinfo.menu" }			// info about a server
+		loadMenu { "ui/findplayer.menu" }			// find player on server
+		loadMenu { "ui/createfavorite.menu" }		// create fav server
+    loadMenu { "ui/createserver.menu" }				// create game server
+	 	loadMenu { "ui/serversettings.menu" }		// advanced settings
+
+
+   loadMenu { "ui/popmenu_training.menu" }			// popup: training	
+ 	loadMenu { "ui/missions.menu" }					// Training Mission List
+ 	loadMenu { "ui/help.menu" }						// Training Help
+
+   loadMenu { "ui/popmenu_setup.menu" }				// popup: setup	
+	loadMenu { "ui/default.menu" }					// reset defaults
+ 	loadMenu { "ui/setup.menu" }					// setup top bar	
+		loadMenu { "ui/system.menu" }				// setup system	
+			loadMenu { "ui/vid_restart.menu" }		// setup popup: apply vid 
+			loadMenu { "ui/punkbuster.menu" }		// setup popup: punkbuster
+		loadMenu { "ui/options.menu" }				// setup game options
+		loadMenu { "ui/controls.menu" }				// setup controls
+ 		loadMenu { "ui/player.menu" }				// setup looks
+	
+   loadMenu { "ui/popmenu_misc.menu" }				// popup: misc options
+ 	loadMenu { "ui/mod.menu" }						// choose q3 mod
+	loadMenu { "ui/credit.menu" }					// show ns-co credits
+
+   loadMenu { "ui/popmenu_media.menu" }				// popup: media
+ 	loadMenu { "ui/cinematic.menu" }				// cinematic list
+	loadMenu { "ui/demo.menu" }						// demo list
+
+   loadMenu { "ui/popmenu_quit.menu" }				// popup: quit
+	loadMenu { "ui/quitcredit.menu" }				// quit credits
+
+   loadMenu { "ui/connect.menu" }					// connection screen
+
+   loadMenu { "ui/error.menu" }						// error	
+ 	
+}

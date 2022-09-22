@@ -1,0 +1,29 @@
+commands.txt	09.03.02
+
+all new commands in navy seals: covert operations.
+
+usage:
+
+/<command> <parmeterer1> <paramter2> <...>
+
+---
+
+server commands:
+
+restartround	-	restart the current running round
+forceteam	-	usage: forceteam <player> <team>
+killplayer	-	usage: killplayer <player> 
+
+---
+
+client commands:
+(	note: action buttons like attack are not listed.	)
+
+gesture			-	player gesture, usage: gesture <number>
+radiopower		-	turn on/off the radio
+radiochannel		-	switch active radio channel
+dropweapon		-	drops current weapon
+dropmissionobjective	-	drops mission objective
+nsecho			-	replaces old "echo" command  
+
+last change: 09.03.02 by defcon-x/defcon-x@ns-co.net

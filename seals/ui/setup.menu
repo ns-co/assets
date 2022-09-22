@@ -1,0 +1,196 @@
+#include "ui/menudef.h"
+
+{
+\\ SETUP MENU \\
+
+menuDef {
+    	name "setup_menu"
+	background "ui/assets/ns_menuback-world-blur"	// worldmap
+    	fullscreen 1
+    	rect 0 0 640 480
+    	visible 0
+	focusColor 1 0 0 1	
+    	style 1
+	onOpen { }
+	onEsc {  close setup_menu ;
+//		 close control_menu ; 
+//		 close system_menu ;
+//		 close options_menu ;   
+//		 close player_menu ;    
+		 open main }
+
+
+
+
+itemDef {
+      	name setup_box
+      	style 1 
+	rect 32 96 560 48
+      	border 1 
+      	bordersize 1
+      	bordercolor .5 .5 .5 .5
+      	backcolor 0 0 .75 .25
+      	visible 1 
+      	decoration 
+	}
+
+
+itemDef {
+	name controls
+	text "Keys"
+	type 1
+	textscale .25
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+	rect 168 120 64 16
+	textalign 1
+	textalignx 31
+	textaligny 13
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 close control_menu ; 
+		 close system_menu ;
+		 close options_menu ; 
+		 close player_menu ;   
+		 open control_menu }
+	mouseEnter { setitemcolor controls backcolor .75 .75 .75 0.5 } 
+	mouseExit { setitemcolor controls backcolor .1 .2 .6 0.5 } 		
+	}
+	
+
+itemDef {
+	name system
+	text "System"
+	type 1
+	textscale .25
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+	rect 248 120 64 16
+	textalign 1
+	textalignx 31
+	textaligny 13
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 close control_menu ; 
+		 close system_menu ;
+		 close options_menu ; 
+		 close player_menu ;  
+		 open system_menu }
+	mouseEnter { setitemcolor system backcolor .75 .75 .75 0.5 } 
+	mouseExit { setitemcolor system backcolor .1 .2 .6 0.5 } 		
+	}
+
+itemDef {
+	name options
+	text "Options"
+	type 1
+	textscale .25
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+	rect 328 120 64 16
+	textalign 1
+	textalignx 31
+	textaligny 13
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 close control_menu ; 
+		 close system_menu ;
+		 close options_menu ;    
+		 close player_menu ; 
+		 open options_menu }
+	mouseEnter { setitemcolor options backcolor .75 .75 .75 0.5 } 
+	mouseExit { setitemcolor options backcolor .1 .2 .6 0.5 } 		
+	}
+
+itemDef {
+	name Player
+	text "Head-Stuff"
+	type 1
+	textscale .25
+	style WINDOW_STYLE_FILLED
+	border 1
+	bordercolor 1 1 1 .25
+	rect 408 120 64 16
+	textalign 1
+	textalignx 31
+	textaligny 13
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 0.5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 close control_menu ; 
+	  	 close system_menu ;
+		 close options_menu ; 
+		 close player_menu ; 
+		 open player_menu }
+	mouseEnter { setitemcolor player backcolor .75 .75 .75 0.5 } 
+	mouseExit { setitemcolor player backcolor .1 .2 .6 0.5 } 		
+	}
+
+
+
+itemDef {
+      	name back_n_quit_button
+	type ITEM_TYPE_BUTTON
+      	rect 40 424 560 28
+
+	mouseEnter { show message_back }
+	mouseExit { hide message_back }
+	action  { play "ui/assets/menu_no.wav" ;
+		close setup_menu ; open main }
+      	visible 1
+	}
+
+// MESSAGES
+
+itemDef {
+      	name message_back
+	group grpmessage
+      	text "Click to return to the main menu"
+      	style 1
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 2 
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+
+itemDef {
+      	name static
+	style 1
+      	background "ui/assets/ns_static.tga"
+      	rect 0 0 640 480
+      	visible 1 
+	decoration
+    	}
+
+itemDef {
+      	name metal
+	style 1
+      	background "ui/assets/ns_menuback-main.tga"
+      	rect 0 0 640 480
+      	visible 1 
+	decoration
+    	}
+
+
+
+
+
+}
+
+
+}

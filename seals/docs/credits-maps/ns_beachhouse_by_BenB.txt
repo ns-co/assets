@@ -1,0 +1,29 @@
+Name of the Map		: ns_beachhouse
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Psychodelic Vision'
+
+------------------------------------------------------------
+
+Type of Map		: Singel Operation
+Missionobjective	: CTB
+Number of Players	: 6-32
+
+------------------------------------------------------------
+
+Short description	: - jungle
+			  - evening
+			  - medium range & CQB & some 
+				long range		
+			  - easy to understand
+
+------------------------------------------------------------
+
+Additional notices	: - this map takes the basic version 
+				from ns_junglebeach
+
+------------------------------------------------------------
+
+Special thanks to	: - Hawkstyle for his pictures
+			  - http://www.a1freesoundeffects.com/
+			    for their cool free sounds
+			  - hoak for improving the ambient sounds 	

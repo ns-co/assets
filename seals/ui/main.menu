@@ -1,0 +1,437 @@
+#include "ui/menudef.h"
+
+{
+  assetGlobalDef {
+    	font "fonts/font" 18				// font
+    	smallFont "fonts/smallfont" 14			// font
+    	bigFont "fonts/bigfont" 22			// font
+	
+	cursor "ui/assets/ns_cursor"	
+	itemFocusSound "ui/assets/menu_focus.wav"	// sound for item getting focus (via keyboard or mouse )
+
+    	fadeClamp 1.0					// sets the fadeup alpha
+	fadeCycle 1					// how often fade happens in milliseconds
+	fadeAmount 0.1					// amount to adjust alpha per cycle
+
+	shadowColor 0.1 0.1 0.1 0.25			// shadow color
+  	}
+							   
+menuDef {
+    	name "main"
+	background "ui/assets/ns_menuback-world"	// worldmap
+    	fullScreen MENU_TRUE				
+	rect 0 0 640 480				// Size and position of the menu
+    	visible MENU_TRUE				// Visible on open
+	focusColor 1 0 0 1				// Menu focus color for text and items
+						
+	onOpen { hide grpmessage ;
+		 show message_copyright ; 
+		 uiScript "stopRefresh" }
+		
+	onESC { play "ui/assets/menu_no.wav" ; 
+		open quit_popmenu }
+
+
+//	STARTGAME	//
+
+itemDef {
+      	name start_area
+	group grpStart_area
+      	rect 101 158 127 43
+	type ITEM_TYPE_BUTTON
+      	style 0
+	mouseEnter { show start1 ; fadein message_start }
+	mouseExit { hide start1 ; fadeout message_start }
+      	action { play "ui/assets/menu_yes.wav" ; 
+			open startmission_popmenu }
+      	visible 1
+    	}
+
+itemDef {
+      	name start_area
+	group grpStart_area
+      	rect 149 201 93 65
+	type ITEM_TYPE_BUTTON
+      	style 0
+	mouseEnter { show start1 ; fadein message_start }
+	mouseExit { hide start1 ;  fadeout message_start }
+      	action { play "ui/assets/menu_yes.wav" ; 
+			open startmission_popmenu }
+      	visible 1
+    	}
+
+itemDef {
+      	name start1
+      	rect 100 141 145 145
+	type ITEM_TYPE_BUTTON
+	style 3
+      	background "ui/assets/map_start1"
+      	backcolor 0 0 0 0
+      	forecolor 1 1 1 1
+	decoration 
+      	visible 0 
+    	}
+
+itemDef {
+	name message_start
+      	rect 183 200 50 50
+	type ITEM_TYPE_BUTTON
+	style 0 
+	textalign 1
+	textstyle 4
+	textalignx 0
+	textaligny 25
+	textscale 0.5
+	text "Start Mission"
+	forecolor 1 1 1 1
+	visible 0
+	decoration 
+	}
+
+
+//	TRAINING	//
+
+itemDef {
+      	name train_area
+	group grpTrain_area
+      	style 0
+	type ITEM_TYPE_BUTTON
+      	rect 201 266 69 63
+      	visible 1
+	mouseEnter { show train1 ; fadein message_train }
+	mouseExit { hide train1 ; fadeout message_train }
+      	action { play "ui/assets/menu_yes.wav" ; 
+			close main ; open help }
+    	}
+
+itemDef {
+      	name train_area
+	group grpTrain_area
+      	style 0
+	type ITEM_TYPE_BUTTON
+      	rect 213 329 35 50
+      	visible 1
+	mouseEnter { show train1 ; fadein message_train }
+	mouseExit { hide train1 ; fadeout message_train }
+      	action { play "ui/assets/menu_yes.wav" ; 
+			close main ; open help }
+    	}
+
+itemDef {
+      	name train1
+      	style 3
+	type ITEM_TYPE_BUTTON
+      	background "ui/assets/map_train1"
+      	rect 205 264 65 115
+      	backcolor 0 0 0 0
+      	forecolor 1 1 1 1
+	type ITEM_TYPE_BUTTON
+	decoration 
+      	visible 0 
+    	}
+
+
+itemDef {
+	name message_train
+	text "Help"
+	type ITEM_TYPE_BUTTON
+	style 0 
+	textstyle 4
+      	rect 230 320 20 20
+	textscale 0.5
+	textalignx 0
+	textaligny 0
+	textalign 1
+	backcolor 0 0 0 0
+ 	forecolor 1 1 1 1
+//	forecolor 0.4 0.4 0.4 1
+	visible 0
+	decoration 
+	}
+
+
+//	Demos/Cinematics	//
+
+itemDef {
+      	name media_area
+	group grpmedia_area
+      	style 0
+	type ITEM_TYPE_BUTTON
+      	rect 203 115 70 36
+      	visible 1
+	mouseEnter { show media1 ; fadein message_media }
+	mouseExit { hide media1 ; fadeout message_media }
+      	action { play "ui/assets/menu_yes.wav" ; open media_popmenu }
+    	}
+
+itemDef {
+      	name media_area
+	group grpmedia_area
+      	style 0
+	type ITEM_TYPE_BUTTON
+      	rect 236 151 35 40
+      	visible 1
+	mouseEnter { show media1 ; fadein message_media }
+	mouseExit { hide media1 ; fadeout message_media }
+      	action { play "ui/assets/menu_yes.wav" ; open media_popmenu }
+    	}
+
+itemDef {
+      	name media1
+	style 3
+	type ITEM_TYPE_BUTTON
+      	background "ui/assets/map_demos1"
+      	rect 206 115 80 80
+      	backcolor 0 0 0 0
+      	forecolor 1 1 1 1
+	type ITEM_TYPE_BUTTON
+      	visible 0 
+	decoration 
+    	}
+
+
+itemDef {
+	name message_media
+	style 0
+	type ITEM_TYPE_BUTTON
+      	rect 247 138 20 20
+	textalign 1
+	textstyle 4
+	textalignx 0
+	textaligny 25
+	textscale 0.5
+	text "Media"
+	forecolor 1 1 1 1
+	decoration 
+	visible 0
+	}
+
+//	MODS //
+
+itemDef {
+      	name misc_area
+	group grpMisc_area
+      	style 0
+	type ITEM_TYPE_BUTTON
+      	rect 281 244 71 41
+      	visible 1
+	mouseEnter { show misc1 ; fadein message_misc }
+	mouseExit { hide misc1 ; fadeout message_misc }
+	action { play "ui/assets/menu_yes.wav" ; open misc_popmenu }
+    	}
+
+itemDef {
+      	name misc_area
+	group grpMisc_area
+      	style 0
+	type ITEM_TYPE_BUTTON
+      	rect 323 285 57 54
+      	visible 1
+	mouseEnter { show misc1 ; fadein message_misc }
+	mouseExit { hide misc1 ; fadeout message_misc }
+	action { play "ui/assets/menu_yes.wav" ; open misc_popmenu }
+    	}
+
+itemDef {
+      	name misc1
+	style 3
+	type ITEM_TYPE_BUTTON
+      	background "ui/assets/map_mods1"
+      	rect 284 239 89 97
+      	backcolor 0 0 0 0
+      	forecolor 1 1 1 1
+	type ITEM_TYPE_BUTTON
+      	visible 0
+	decoration 
+    	}
+
+
+itemDef {
+	name message_misc
+	style 0
+	type ITEM_TYPE_BUTTON
+      	rect 337 268 20 20
+	textalign 1
+	textstyle 4
+	textalignx 0
+	textaligny 25
+	textscale 0.5
+	text "Misc"
+	forecolor 1 1 1 1
+	decoration 
+	visible 0
+	}
+
+
+//	SETUP	//
+
+itemDef {
+      	name setup_area
+	group grpSetup_area
+      	style 0
+	type ITEM_TYPE_BUTTON
+      	rect 297 170 62 71
+      	visible 1
+	mouseEnter { show setup1 ; fadein message_setup }
+	mouseExit { hide setup1 ; fadeout message_setup }
+      	action { play "ui/assets/menu_yes.wav" ; open setup_popmenu }
+    	}
+
+itemDef {
+      	name setup_area
+	group grpSetup_area
+      	style 0
+	type ITEM_TYPE_BUTTON
+      	rect 359 138 171 134
+      	visible 1
+	mouseEnter { show setup1 ; fadein message_setup }
+	mouseExit { hide setup1 ; fadeout message_setup }
+      	action { play "ui/assets/menu_yes.wav" ; open setup_popmenu }
+    	}
+
+itemDef {
+      	name setup1
+	style 3
+	type ITEM_TYPE_BUTTON
+      	background "ui/assets/map_setup1"
+      	rect 292 132 240 167
+      	backcolor 0 0 0 0
+      	forecolor 1 1 1 1
+	type ITEM_TYPE_BUTTON
+      	visible 0 
+	decoration 
+    	}
+
+
+itemDef {
+	name message_setup
+	style 0
+	type ITEM_TYPE_BUTTON
+      	rect 410 195 20 20
+	textalign 1
+	textstyle 4
+	textalignx 0
+	textaligny 25
+	textscale 0.5
+	text "Setup"
+	forecolor 1 1 1 1
+	decoration 
+	visible 0
+	}
+
+//	QUIT	//
+
+itemDef {
+      	name quit_area
+      	style 0
+	type ITEM_TYPE_BUTTON
+      	rect 439 302 57 47
+      	visible 1
+	mouseEnter { show quit1 ; fadein message_quit }
+	mouseExit { hide quit1 ; fadeout message_quit }
+  	action { play "ui/assets/menu_no.wav" ; open quit_popmenu }
+    	}
+
+itemDef {
+      	name quit1
+	style 3
+	type ITEM_TYPE_BUTTON
+      	background "ui/assets/map_quit1"
+      	rect 439 289 80 80
+      	backcolor 0 0 0 0
+      	forecolor 1 1 1 1
+	type ITEM_TYPE_BUTTON
+      	visible 0
+	decoration 
+    	}
+
+
+itemDef {
+	name message_quit
+	style 0
+	type ITEM_TYPE_BUTTON
+      	rect  466 312 20 20
+	textalign 1
+	textstyle 4
+	textalignx 0
+	textaligny 25
+	textscale 0.5
+	text "Quit"
+	forecolor 1 1 1 1
+	decoration 
+	visible 0
+	}
+
+
+itemDef {
+      	name back_n_quit_button
+	type ITEM_TYPE_BUTTON
+      	rect 40 424 560 28
+
+	mouseEnter { hide message_copyright ; show message_back } 
+	mouseExit { show message_copyright ; hide message_back }
+  	action { play "ui/assets/menu_no.wav" ; open quit_popmenu }
+
+      	visible 1
+	}
+
+// MESSAGES
+
+itemDef {
+      	name message_back
+	group grpmessage
+      	text "Click To Leave"
+      	style 0
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280
+      	textscale .25
+	textstyle 0
+      	forecolor 1 1 1 0.5
+      	visible 0
+      	decoration 
+	}
+
+itemDef {
+      	name message_copyright
+	group grpmessage
+      	text "Navy Seals: Covert Operations - Copyright 2001-2003 by Team Mirage"
+      	style 0
+      	rect 40 424 560 28
+      	textalign 1
+      	textaligny 20
+      	textalignx 280 
+      	textscale .25
+	textstyle 0
+      	forecolor 1 1 1 0.5
+      	visible 0 
+      	decoration 
+	}
+
+
+// OVERLAY STUFF
+
+itemDef {
+      	name static
+	style 3
+      	background "ui/assets/ns_static.tga"
+      	rect 0 0 640 480
+      	visible 1 
+	decoration
+    	}
+
+itemDef {
+      	name metal
+	style 3
+      	background "ui/assets/ns_menuback-main.tga"
+      	rect 0 0 640 480
+      	visible 1 
+	decoration
+    	}
+
+
+
+
+}
+}

@@ -1,0 +1,30 @@
+Name of the Map		: ns_junglecomplex
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Full Metal Contact'
+
+------------------------------------------------------------
+
+Type of Map		: Single Operation
+Missionobjective	: BOMB
+Number of Players	: 6-32
+
+------------------------------------------------------------
+
+Short description	: - jungle&urban
+			  - day
+			  - some CQB & medium range		
+			  - the SEALs have to blow the 
+			    weapon storage or the drug lab
+			  - easy/medium to understand
+
+------------------------------------------------------------
+
+Additional notices	: - 
+
+------------------------------------------------------------
+
+Special thanks to	: - demo&cyte for doing the modells 
+			    and exporting them
+			  - hoak for overworking the sounds
+			  - demo for helping me with some 
+			    shaders

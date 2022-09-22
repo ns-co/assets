@@ -1,0 +1,126 @@
+
+
+
+	How To: Add Clientside Entities To The GPS
+
+
+
+------------------------------------------------------------
+
+Navy Seals: Covert Operations ( www.ns-co.net ) - Beta 1.45
+
+	Author: Manfred 'Defcon-X' Nerurkar 
+	Email: Defcon-X@ns-co.net
+	Date: 18th August 2002
+
+------------------------------------------------------------
+
+Introduction to GPS Entity Placement
+--------------------------------------
+
+There are two different ways to manipulate the amount/type 
+of entities in the GPS display.
+
+	- Using the built-in ingame Radar Entity Placer
+	- Editing the briefing file manually.
+
+We'll start in this tutorial with the more common, and of 
+course easier way to place entities.
+
+There are 5 built-in types you can place.
+
+	- Assaultfield marker
+	- Bombspot marker
+	- Vip rescue marker
+	- Briefcase marker
+	- Briefcase returnpoint marker
+
+
+Using the built-in GPS Entity Placer
+--------------------------------------
+
+Loadup your map with the "devmap" command, and join as a 
+player (The team you join does not matter ). 
+Walk up to the point where you want to place your marker, 
+type /editradar in the console and push enter. Leave the 
+console, as you should know notice a radar menu popped up. 
+Use your mouse to control it, and select the marker point 
+to place.
+Once you are finsihed, select the save/write out function 
+in the same menu.
+
+You should have the briefing file NOT IN A PAK FILE placed 
+in briefing/, then it will append the [RADAR] entry 
+including all it's entities to your file.
+If you haven't placed it out of a pak file, it will simply 
+create a file called MAPNAME.brf in briefing/ with the 
+[RADAR] contents.
+Simply cut & paste this entire selection to YOUR briefing 
+file.
+
+Save the briefing file, and fire up NS:CO. 
+The markers should be visible.
+
+
+Editing the Briefing file manually
+--------------------------------------
+
+Open your briefing file for your map with notepad or a 
+similar text editor of your choice.
+Go to the end of the file (just before $EOF, this is the 
+end of file marker) and type:
+
+	[RADAR]
+
+after this entry you can add your entities in this format
+
+	<TYPE, one character> <X> <Y> <Z>
+
+And then end the GPS entity entry by adding :
+
+	[END]
+
+here are a few examples:
+
+	[RADAR]
+	E 2608.466797 -2506.415039 276.206848
+	B -190.720078 784.729187 226.125000
+	[END]
+
+The built-in valid types are:
+
+	A - Assaultfield marker
+	X - Bombspot marker
+	V - Vip rescue marker
+	B - Briefcase marker
+	E - Briefcase returnpoint marker
+
+You could add even more markers, if these don't suite your 
+map. If you need, for example, a marker that shows you that 
+you have to destroy a func_explosive.
+You could add a new type, make sure that the char you use 
+is not used by another OFFICIAL MAP:
+
+Z = Func Explosive
+
+Then you would also have to create a new shader:
+
+gfx/radar/radar_Z
+
+See our shaders in scripts/nsq3_radar.scripts - Then you will 
+also have to create a graphic that is used by the shader, see 
+gfx/radar/ for our built in radar graphics.
+
+After you've done all this you can add your new type to the 
+briefing file, i.e.:
+
+	[RADAR]
+	Z 2608.466797 -2506.415039 276.206848 
+	[END]
+
+Save your briefing file and start NS:CO to verify everything 
+worked correctly. 
+
+Problems? Email the author of this document.
+
+

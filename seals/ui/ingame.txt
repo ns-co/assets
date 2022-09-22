@@ -1,0 +1,32 @@
+// menu defs - ingame
+// 
+{	
+ 	loadMenu { "ui/ingame.menu" }		// ingame menu bar (at top of screen)
+
+	loadMenu { "ui/ingame_info.menu" }	// Bots add / kick menu
+
+	loadMenu { "ui/ingame_scripts.menu" }	
+
+	loadMenu { "ui/ingame_vote.menu" }	// Vote Popdown menu
+	loadMenu { "ui/ingame_votecall.menu" } 	// Call a vote
+
+	loadMenu { "ui/ingame_char.menu" }	// Setup Character
+	loadMenu { "ui/ingame_char_primary_seals.menu" }
+	loadMenu { "ui/ingame_char_primary_tangos.menu" }
+	loadMenu { "ui/ingame_char_sidearm_seals.menu" }
+	loadMenu { "ui/ingame_char_sidearm_tangos.menu" }
+	loadMenu { "ui/ingame_char_looks.menu" }
+
+	loadMenu { "ui/ingame_join.menu" }	// Join Selected Team
+
+	loadMenu { "ui/ingame_radio.menu" }	// Select Radio Command
+
+	loadMenu { "ui/ingame_controls.menu" }	// change Keys (Controls)
+
+	loadMenu { "ui/ingame_options.menu" }	// change Game Options
+
+	loadMenu { "ui/ingame_system.menu" }	// change SystemSetup
+
+	loadMenu { "ui/ingame_quit.menu" }	// Quit Popdown menu
+
+}

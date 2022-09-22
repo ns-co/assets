@@ -1,0 +1,36 @@
+Name of the Map		: ns_snowcamp
+Leveldesigner		: Schakal (schakal@schakalweb.de)
+Operation 		: 'White Devil'
+
+------------------------------------------------------------
+
+Type of Map		: Singel Operation
+Missionobjective	: 2 assaultfields
+Number of Players	: 6-16
+
+------------------------------------------------------------
+
+Short description	: - snow
+			  - night
+			  - Sibirien Camp
+			  - Blow up the backdoor, mine ore the front fence
+			    then capture the 2 assaultfields
+			  - not easy
+
+------------------------------------------------------------
+
+Additional notices	: - still beta, report all bugs to 
+				me or write them down in the 
+				forum
+
+------------------------------------------------------------
+
+some mapobjekt are made by:
+
+Wachturm  -   by Gorlem
+Truck     -   by Schakal
+
+
+------------------------------------------------------------
+
+Special thanks to	: - Team Mirage for they cool MOD

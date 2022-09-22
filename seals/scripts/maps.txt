@@ -1,0 +1,172 @@
+// 
+// 	This file defines the NS-CO maps.
+//
+//	Custom files have to use the .map extension
+//
+//
+// ffa		// free for all
+// team		// team deathmatch
+// ops		// Operations (Last Team Standing)
+//
+
+{
+map		"ns_beachhouse"
+longname	"beachhouse"
+type		"ffa team ops"
+}
+{
+map		"ns_bunker"
+longname	"bunker"
+type		"ffa team ops"
+}
+{
+map		"ns_canyon"
+longname	"canyon"
+type		"ffa team ops"
+}
+{
+map		"ns_desertruins"
+longname	"desertruins"
+type		"ffa team ops"
+}
+{
+map		"ns_facility"
+longname	"facility"
+type		"ffa team ops"
+}
+{
+map		"ns_fogassault"
+longname	"fogassault"
+type		"ffa team ops"
+}
+{
+map		"ns_frenzy"
+longname	"frenzy"
+type		"ffa team ops"
+}
+{
+map		"ns_ghetto"
+longname	"ghetto"
+type		"ffa team ops"
+}
+{
+map		"ns_ghettoship"
+longname	"ghettoship"
+type		"ffa team ops"
+}
+{
+map		"ns_harbour"
+longname	"harbour"
+type		"ffa team ops"
+}
+{
+map		"ns_hideout"
+longname	"hideout"
+type		"ffa team ops"
+}
+{
+map		"ns_industrial"
+longname	"industrial"
+type		"ffa team ops"
+}
+{
+map		"ns_junglechessna"
+longname	"junglechessna"
+type		"ffa team ops"
+}
+{
+map		"ns_junglecomplex"
+longname	"junglecomplex"
+type		"ffa team ops"
+}
+{
+map		"ns_neighbourhood"
+longname	"neighbourhood"
+type		"ffa team ops"
+}
+{
+map		"ns_nsa"
+longname	"nsa"
+type		"ffa team ops"
+}
+{
+map		"ns_oasis"
+longname	"oasis"
+type		"ffa team ops"
+}
+{
+map		"ns_oldcity"
+longname	"oldcity"
+type		"ffa team ops"
+}
+{
+map		"ns_petersburg"
+longname	"petersburg"
+type		"ffa team ops"
+}
+{
+map		"ns_riverbridge"
+longname	"riverbridge"
+type		"ffa team ops"
+}
+{
+map		"ns_ship"
+longname	"ship"
+type		"ffa team ops"
+}
+{
+map		"ns_sleepingwolf"
+longname	"sleepingwolf"
+type		"ffa team ops"
+}
+{
+map		"ns_snowcamp"
+longname	"snowcamp"
+type		"ffa team ops"
+}
+{
+map		"ns_trainstation"
+longname	"trainstation"
+type		"ffa team ops"
+}
+{
+map		"ns_urban_assault"
+longname	"urban assault"
+type		"ffa team ops"
+}
+{
+map		"ns_warehouse"
+longname	"warehouse"
+type		"ffa team ops"
+}
+{
+map   "ns_castle"
+longname  "castle"
+type   "ffa team ops"
+}
+{
+map   "ns_elmstreet"
+longname  "elmstreet"
+type    "ffa team ops"
+}
+{
+map  "ns_skyscraperB"
+longname "skyscraperB"
+type    "ffa team ops"
+}
+{
+map   "ns_substation"
+longname  "substation"
+type    "ffa team ops"
+}
+{
+map   "ns_manor"
+longname  "manor"
+type   "ffa team ops"
+}
+{
+map    "ns_ware"
+longname  "ware"
+type   "ffa team ops"
+}
+

@@ -1,0 +1,21 @@
+// Game type info 
+
+gametypes 
+{
+  { "Squad Assault" 1 }
+  { "Operations" 3 }
+}
+
+maps 
+{ 
+}										  
+
+joingametypes 
+{
+  { "All" -1 } 
+  { "Squad Assault" 1 }
+  { "Operations" 3 }
+}
+
+  
+

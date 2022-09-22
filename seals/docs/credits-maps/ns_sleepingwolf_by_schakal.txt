@@ -1,0 +1,27 @@
+Name of the Map		: ns_sleepingwolf
+Leveldesigner		: Schakal (schakal@schakalweb.de)
+Operation 		: 'Sleeping Wolf'
+
+------------------------------------------------------------
+
+Type of Map		: Singel Operation
+Missionobjective	: Bomb
+Number of Players	: 8-16
+
+------------------------------------------------------------
+
+Short description	: 
+
+
+-----------------------------------------------------------
+
+
+credits:
+
+audi  	:	Model created in Milkshape 3D by me "Psionic" at http://www.psionic.pwp.blueyonder.co.uk
+7Up	:	Provided by {R-C}Gusher  http://www.planetunreal.com/prefablab/  converted to md3 for Q3 by Joe mauke - |NV|S
+snaks	:	Provided by {R-C}Gusher  http://www.planetunreal.com/prefablab/  converted to m3d for q3 by joe mauke - |NV|S
+porsche	:	Ben Trapp (and Felixx for dash texture)  bmwbig6@aol.com
+Phone	:	Browser [ICE]  Browser_ICE@hotmail.com  http://www.icetronic.net/FPS/FPS.htm
+
+some layout ideas are take from the map 'Deadly X-mas' from the Mod 'True Combat'

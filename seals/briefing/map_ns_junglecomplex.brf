@@ -1,0 +1,48 @@
+[mapspecs]
+camouflage jungle
+
+missioninfo 
+{
+	blowup
+}
+
+[end]
+
+[radar] 
+X -924 760 908
+X 1028 712 780
+[end] 
+
+[seals]
+^4SEAL Briefing: $EOL
+You and your platoon were able to sneak through 
+the columbian jungle close to the decayed industrial 
+complex. $EOL 
+This is the hideout of a small number of tangos as 
+well as a secret weapons storage and drug laboratory.
+You mission is to render the facilities useless by 
+strategically bombing them. $EOL
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- ^4Place ^4a ^4bomb ^4at ^4the ^4weapon ^4storage ^4or ^4the ^4drug ^4lab ^4(blue ^4lamps ^4mark ^4the ^4bomb ^4areas). $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL
+Standing around in this decayed complex all day 
+can really get boring. Especially as no one is so
+foolish as to even try to get close to the lab
+and weapon storage. $EOL 
+Damn those mosquitos everywhere. $EOL 
+Okay now you better get back to patrol before the 
+boss shows up. $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- ^1Prevent ^1the ^1enemy ^1from ^1blowing ^1up ^1the ^1weapon ^1storage ^1or ^1the ^1drug ^1lab ^1(blue ^1lamps ^1mark ^1the ^1bomb ^1areas). $EOL 
+[end]
+
+$EOF
+
+

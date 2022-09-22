@@ -1,0 +1,316 @@
+#include "ui/menudef.h"
+{
+
+  assetGlobalDef {
+    	font "fonts/font" 18				// font
+    	smallFont "fonts/smallfont" 14			// font
+    	bigFont "fonts/bigfont" 22			// font		
+	
+	cursor "ui/assets/ns_cursor"			
+
+	gradientBar "ui/assets/gradientbar2.tga"	
+
+	itemFocusSound "ui/assets/menu_focus.wav"	
+	
+    	fadeClamp 1.0					
+	fadeCycle 1					
+	fadeAmount 0.1					
+	shadowColor 0.1 0.1 0.1 0.25	
+  	}
+							   
+
+\\ INGAME MENU \\
+
+  menuDef {
+    	name "ingame"
+    	visible 0
+    	fullScreen 0
+	border 0
+	outOfBoundsClick		
+    	rect 0 0 640 40
+	focusColor 1 0 0 1
+	disableColor .5 .5 .5 1
+
+itemDef {
+      	name static
+	type 1
+	style 1
+      	background "ui/assets/ns_static.tga"
+      	rect 0 40 640 440
+      	visible 1 
+	decoration
+	
+	cvarTest "cg_enviromentFX_quality"
+	hideCvar { "1" }
+    	}
+
+itemDef {
+	name window
+	rect 0 0 640 40
+	style 1
+	backcolor .1 .1 .37 1
+      	background "ui/assets/ns_ingame_top_back.tga"
+      	visible 1 
+      	decoration
+	}
+
+itemDef {
+	name window
+	rect -1 -1 640 40
+	style 0
+	border 1
+  	bordercolor .6 .6 .6 1
+      	visible 1 
+     	decoration
+	}
+
+itemdef
+	{
+	name scripts
+	text "Scripts"	
+	rect 7 7 64 24
+	type 1
+	style WINDOW_STYLE_FILLED
+	textalign 1
+	textalignx 32
+	textaligny 17
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 open ingame_scripts }
+	mouseEnter { setitemcolor scripts backcolor 1 1 1 0.75 }
+      	mouseExit { setitemcolor scripts backcolor .1 .2 .6 .5 }
+
+	border 1
+	bordercolor 1 1 1 .25
+	}
+
+
+itemdef
+	{
+	name bots
+	text "Bots"	
+	rect 77 7 64 24
+	type 1
+	style WINDOW_STYLE_FILLED
+	textalign 1
+	textalignx 32
+	textaligny 17
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 open ingame_bots }
+	mouseEnter { setitemcolor bots backcolor 1 1 1 0.75 }
+      	mouseExit { setitemcolor bots backcolor .1 .2 .6 .5 }
+
+	border 1
+	bordercolor 1 1 1 .25
+	}
+
+
+itemdef
+	{
+	name vote
+	text "Vote"	
+	rect 147 7 64 24
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	cvarTest "g_allowvote"
+	disableCvar { "0" }
+
+	cvarTest "ui_team"
+	disableCvar { "0" }
+	
+	textalign 1
+	textalignx 32
+	textaligny 17
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 open ingame_vote }
+	mouseEnter { setitemcolor vote backcolor 1 1 1 0.75 }
+      	mouseExit { setitemcolor vote backcolor .1 .2 .6 .5 }
+
+	border 1
+	bordercolor 1 1 1 .25
+	}
+
+itemDef {
+      	name character
+      	text "Player"
+	rect 217 7 64 24
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	cvarTest "ui_team"
+	hideCvar { "0" }
+	
+	textalign 1
+	textalignx 32
+	textaligny 17
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		uiScript "copyCharacter";
+		 open ingame_char }
+	mouseEnter { setitemcolor character backcolor 1 1 1 0.75 }
+      	mouseExit { setitemcolor character backcolor .1 .2 .6 .5 }
+
+	border 1
+	bordercolor 1 1 1 .25
+	}
+
+itemDef {
+      	name character
+      	text "Join"
+	rect 217 7 64 24
+	type 1
+	style WINDOW_STYLE_FILLED
+
+	cvarTest "ui_team"
+	showCvar { "0" }
+	
+	textalign 1
+	textalignx 32
+	textaligny 17
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 open ingame_join }
+	mouseEnter { setitemcolor character backcolor 1 1 1 0.75 }
+      	mouseExit { setitemcolor character backcolor .1 .2 .6 .5 }
+
+	border 1
+	bordercolor 1 1 1 .25
+	}
+
+itemdef
+	{
+	name radio
+	text "Radio"	
+	rect 287 7 64 24
+	type 1
+	style WINDOW_STYLE_FILLED
+	textalign 1
+	textalignx 32
+	textaligny 17
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 open ingame_radio }
+	mouseEnter { setitemcolor radio backcolor 1 1 1 0.75 }
+      	mouseExit { setitemcolor radio backcolor .1 .2 .6 .5 }
+
+	cvarTest "ui_team"
+	disableCvar { "0" }	
+
+	border 1
+	bordercolor 1 1 1 .25
+	}
+
+
+itemDef {
+      	name controls
+      	text "Keys"
+	rect 357 7 64 24
+	type 1
+	style WINDOW_STYLE_FILLED
+	textalign 1
+	textalignx 32
+	textaligny 17
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 open ingame_controls }
+	mouseEnter { setitemcolor controls backcolor 1 1 1 0.75 }
+      	mouseExit { setitemcolor controls backcolor .1 .2 .6 .5 }
+
+	border 1
+	bordercolor 1 1 1 .25
+	}
+
+
+itemDef {
+      	name options
+      	text "Options"
+	rect 427 7 64 24
+	type 1
+	style WINDOW_STYLE_FILLED
+	textalign 1
+	textalignx 32
+	textaligny 17
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 open ingame_options }
+	mouseEnter { setitemcolor options backcolor 1 1 1 0.75 }
+      	mouseExit { setitemcolor options backcolor .1 .2 .6 .5 }
+
+	border 1
+	bordercolor 1 1 1 .25
+	}
+
+
+itemDef {
+      	name system
+      	text "System"
+	rect 497 7 64 24
+	type 1
+	style WINDOW_STYLE_FILLED
+	textalign 1
+	textalignx 32
+	textaligny 17
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 open ingame_system }
+	mouseEnter { setitemcolor system backcolor 1 1 1 0.75 }
+      	mouseExit { setitemcolor system backcolor .1 .2 .6 .5 }
+
+	border 1
+	bordercolor 1 1 1 .25
+	}
+
+
+itemDef {
+      	name quit
+      	text "Quit"
+	rect 567 7 64 24
+	type 1
+	style WINDOW_STYLE_FILLED
+	textalign 1
+	textalignx 32
+	textaligny 17
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	visible 1
+	action { play "ui/assets/menu_yes.wav" ; 
+		 open ingame_quit }
+	mouseEnter { setitemcolor quit backcolor 1 1 1 0.75 }
+      	mouseExit { setitemcolor quit backcolor .1 .2 .6 .5 }
+
+	border 1
+	bordercolor 1 1 1 .25
+	}
+
+}

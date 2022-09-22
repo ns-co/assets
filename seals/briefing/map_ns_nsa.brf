@@ -1,0 +1,61 @@
+[mapspecs]
+camouflage urban
+
+missioninfo 
+{
+assaultfield assaultfield assaultfield 
+}
+
+[end]
+
+$enviroment
+{
+type rain
+basetimes 5 10
+timetomove 1 1
+gusttimes 0 3
+basevector 0 0
+gustvector 50 100
+weight 0.5 0.7
+impacteffects true true
+num_drops 600 1000
+height	50
+}
+
+[seals]
+^4SEAL Briefing: $EOL
+The triads have been made aware of the list containing the identity of american 
+informers inside their organization. We have the list divided onto three computers 
+inside of the NSA complex. The triads are expected to make an attempt to 
+retrieve the list tonight, this must be prevented at all costs. Do not let them 
+take control of the three computers. $EOL  
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Secure the laboratory. $EOL 
+^4- Secure the office. $EOL 
+^4- Secure the computer room. $EOL
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL
+Time has come to uncover the identity of the infiltrators in our organisation. 
+The NSA has stored a list divided on three computers inside their building complex 
+which contains the identities and photos of all their moles. Secure the computers 
+and transfer the list. $EOL
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Take control of the computer ^1room. $EOL 
+^1- Take control of the office. $EOL 
+^1- Take control of the ^1laboratory. $EOL
+[end]
+
+[radar]
+A -564.096740 352.544250 -117.875000
+A -307.050506 1137.583740 50.125000
+A 175.552154 909.658325 170.125000
+[end]
+$EOF
+
+

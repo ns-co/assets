@@ -1,0 +1,61 @@
+[mapspecs]
+camouflage jungle
+
+$enviroment
+{
+type rain
+basetimes 2 5
+timetomove 1 1
+gusttimes 0 1
+basevector 0 0.5
+gustvector 50 100
+weight 0.5 0.7
+impacteffects true true
+num_drops 300 500
+height	40
+}
+[end]
+
+[radar] 
+E 4248 3240 -40 
+E -2760 1248 272
+E 3944 2616 -24
+E 3840 2016 0
+E -2440 1136 272
+B 1176 3560 528
+B -488 2704 536 
+[end] 
+
+[seals]
+^4Seal Briefing: $EOL 
+You mission is to attack the villa from two
+sides. Team Alpha has made it's approach through
+the jungle while team Beta arrives from the sea.
+There are two briefcases being kept on different
+locations on the second floor of the mansion. 
+Your goal is to acquire and retrieve both of them $EOL 
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Retrieve two ^4briefcases ^4and ^4bring ^4them ^4out ^4of ^4the ^4danger ^4zone. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+You just came back from dinner in the kitchen and 
+you'd better hurry back to patrol around the mansion. $EOL 
+There's no sense in walking around the house all day.
+This mansion is like a fortress, with only two sides being
+accessible. And even if anyone should be able to make it 
+into the house, he would never have the chance to steal 
+the two briefcases at the second floor. $EOL 
+Yeah! Patrol sucks! $EOL 
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Protect the two ^1briefcases. $EOL 
+[end]
+
+$EOF
+
+

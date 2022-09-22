@@ -1,0 +1,37 @@
+[mapspecs]
+camouflage urban
+viptype general
+missioninfo 
+{
+	viptime 
+}
+[end]
+
+[seals]
+^4SEAL Briefing: $EOL 
+Intelligence reports indicate that the leader of 
+the tangos is hiding in an old and decayed industrial 
+complex near Western Istanbul. You are sent in to 
+neutralize him immediately. $EOL 
+Be aware that he has armed guards ready to fend off 
+intruders at all costs. Stay alert. $EOL
+ $EOL
+ $EOL
+^4Mission Summary: $EOL
+^4- Neutralize the VIP. $EOL 
+[end]
+
+[tangos]
+^1Tango Briefing: $EOL 
+You and the leader are hiding in an old and decayed 
+industrial complex near Western Istanbul. You have to 
+protect him with your life, because the Americans won't 
+give up that easily. $EOL 
+ $EOL
+ $EOL
+^1Mission Summary: $EOL
+^1- Protect the VIP. $EOL 
+[end]
+
+$EOF
+

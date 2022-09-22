@@ -1,0 +1,37 @@
+[mapspecs]
+camouflage urban
+	
+missioninfo 
+{
+	blowup
+}
+
+[end]
+
+[seals]
+^4Operation Finest Hour: $EOL
+$EOL
+Our internal sources have pinpointed the intelligence. It is located in an underground complex built beneath a manor in Vejbystrand, Sweden. You have been give instructions on possible entry points to this complex. $EOL
+Blow your way in! $EOL
+$EOL
+$EOL
+^4Mission Summary: $EOL
+^4 - Plant a bomb to get to the complex $EOL
+[end]
+
+[tangos]
+^1Tango briefing: $EOL
+$EOL
+Guard the surface, soldiers! It's time for your shift. Don't let any intruders get to us! We have both information and merchandise to protect. $EOL
+$EOL
+$EOL
+^1Mission Summary: $EOL
+^1 - Keep the enemy from gaining entrance to ^1our complex $EOL
+[end]
+
+[radar]
+X 0 -416 -104
+X -1088 896 136
+[end]
+$EOF
+

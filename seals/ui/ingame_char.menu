@@ -1,0 +1,1702 @@
+	#include "ui/menudef.h"
+	{
+	\\ INGAME_JOIN MENU \\
+	menuDef {
+	name "ingame_char"
+	visible 0
+	fullScreen 0
+	outOfBoundsClick			
+	rect 64 48 512 368
+	focusColor 1 0 0 1
+	border 0
+	onOpen { uiScript update "ui_GetName" ;
+	hide grpmessage }
+	onClose { uiScript update "ui_SetName" }
+	onEsc { uiScript update "ui_SetName" }
+	// MAIN WINDOW
+itemDef {
+	name window
+	style WINDOW_STYLE_FILLED
+	rect -1 349 512 20
+	backcolor .1 .1 .37 1
+	visible 1 
+	border 1
+	bordercolor 1 1 1 .125
+	decoration
+	background "ui/assets/ns_ingame_back.tga"
+}
+itemDef {
+	name window
+	style WINDOW_STYLE_FILLED
+	rect -1 -1 512 368
+	backcolor .1 .1 .37 1
+	visible 1 
+	border 1
+	bordercolor 1 1 1 .125
+	decoration
+	background "ui/assets/ns_ingame_back.tga"
+}
+itemDef {
+	name windowlines
+	style WINDOW_STYLE_FILLED
+	rect 0 0 512 368
+	backcolor 1 1 1 1
+	background "ui/assets/ns_char_lines.tga"
+	visible 1
+	decoration
+}
+	// LEFT COLUMN
+	//	primary weapon
+itemDef {
+	name primary
+	style 0
+	rect 16 16 144 16
+	text "Primary Weapon"	
+	textalign 0
+	textalignx 8
+	textaligny 14
+	textscale .25
+	forecolor 1 1 1 1
+	visible 1 
+	decoration
+	mouseEnter { show message_primary } 
+	mouseExit { hide grpmessage } 
+}
+itemDef {
+	name primary
+	style 1
+	rect 32 40 156 16
+	text ""
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	action { open ingame_char_primary_seals }
+	cvarTest "ui_team"
+	hideCvar { "0" , "2" }
+	ownerdraw UI_TEXT_PRIMARY
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_primaryname ; setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+}
+itemDef {
+	name primary
+	style 1
+	rect 32 40 156 16
+	text ""
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	action { open ingame_char_primary_tangos }
+	cvarTest "ui_team"
+	hideCvar { "0" , "1" }
+	ownerdraw UI_TEXT_PRIMARY
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_primaryname ; setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+}
+itemDef {
+	name primary
+	style 1
+	rect 32 56 156 16
+	text "Clips:"
+	type ITEM_TYPE_MULTI	
+	cvar "inven_ammo_primary"
+	cvarFloatList { "0/6" 0 "1/6" 1 "2/6" 2 "3/6" 3 "4/6" 4 "5/6" 5 "6/6" 6 }
+	action { play "ui/assets/menu_yes.wav" }
+	cvarTest "inven_primary"
+	hideCvar { "19" ; "20" ; "23" }
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_primaryammo ; setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	 
+}
+itemDef {
+	name primary
+	style 1
+	rect 32 56 156 16
+	text "Shells:"
+	type ITEM_TYPE_MULTI	
+	cvar "inven_ammo_primary"
+	cvarFloatList { "00/42" 0 "07/42" 1 "14/42" 2 "21/42" 3 "28/42" 4 "35/42" 5 "42/42" 6 }
+	action { play "ui/assets/menu_yes.wav" }
+	cvarTest "inven_primary"
+	showCvar { "19" ; "20" }
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_primaryammo ; setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	 
+}
+itemDef {
+	name primary
+	style 1
+	rect 32 56 156 16
+	text "Boxes:"
+	type ITEM_TYPE_MULTI	
+	cvar "inven_ammo_primary"
+	cvarFloatList { "0/1" 0 "1/1" 1 }
+	action { play "ui/assets/menu_yes.wav" }
+	cvarTest "inven_primary"
+	showCvar { "23" }
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_primaryammo ; setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	 
+}
+itemDef {
+	name primary
+	style 1
+	rect 32 72 156 16
+	text ""
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	ownerdraw UI_PRIMARY_ADDON1		
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_primaryaddon1 ; setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+}
+itemDef {
+	name primary
+	style 1
+	rect 32 88 156 16
+	text ""
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	ownerdraw UI_PRIMARY_ADDON2
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_primaryaddon2 ; setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+}
+itemDef {
+	name primary
+	style 1
+	rect 32 104 156 16
+	text ""
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	ownerdraw UI_PRIMARY_ADDON3	
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_primaryaddon3 ; setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+}
+	//	sidearm weapon
+itemDef {
+	name sidearm
+	style 0
+	rect 16 128 144 16
+	text "Sidearm"	
+	textalign 0
+	textalignx 8
+	textaligny 14
+	textscale .25
+	forecolor 1 1 1 1
+	visible 1 
+	decoration
+	mouseEnter { show message_sidearm } 
+	mouseExit { hide grpmessage } 
+}
+itemDef {
+	name sidearm
+	style 1
+	rect 32 152 156 16
+	text ""
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	action { open ingame_char_sidearm_seals }
+	cvarTest "ui_team"
+	hideCvar { "0" , "2" }
+	ownerdraw UI_TEXT_SIDEARM
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_sidearmname ; setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+}
+itemDef {
+	name sidearm
+	style 1
+	rect 32 152 156 16
+	text ""
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	action { open ingame_char_sidearm_tangos }
+	cvarTest "ui_team"
+	hideCvar { "0" , "1" }
+	ownerdraw UI_TEXT_SIDEARM
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_sidearmname ; setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+}
+itemDef {
+	name sidearm
+	style 1
+	rect 32 168 156 16
+	text "Clips:"
+	type ITEM_TYPE_MULTI	
+	cvar "inven_ammo_secondary"
+	cvarFloatList { "0/4" 0 "1/4" 1 "2/4" 2 "3/4" 3 "4/4" 4 }
+	action { play "ui/assets/menu_yes.wav" }
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_sidearmammo ; setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+}
+itemDef {
+	name sidearm
+	style 1
+	rect 32 184 156 16
+	text ""
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	ownerdraw UI_SIDEARM_ADDON1
+	mouseEnter { show message_sidearmaddon1 ; setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+}
+itemDef {
+	name sidearm
+	style 1
+	rect 32 200 156 16
+	text ""
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	ownerdraw UI_SIDEARM_ADDON2
+	mouseEnter { show message_sidearmaddon2 ; setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+}
+	//	melee weapon
+itemDef {
+	name melee
+	style 0
+	rect 16 224 144 16
+	text "Melee weapon"	
+	textalign 0
+	textalignx 8
+	textaligny 14
+	textscale .25
+	forecolor 1 1 1 1
+	visible 1 
+	decoration
+	mouseEnter { show message_melee } 
+	mouseExit { hide grpmessage } 
+}
+itemDef {
+	name melee
+	style 0
+	rect 32 248 156 16
+	text "Multi Purpose Knife"	
+	cvarTest "ui_team"
+	hideCvar { "0" , "2" }
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+	mouseEnter { show message_meleename } 
+	mouseExit { hide grpmessage } 
+}
+itemDef {
+	name melee
+	style 0
+	rect 32 248 156 16
+	text "Ghurka Khukuri Knife"	
+	cvarTest "ui_team"
+	hideCvar { "0" , "1" }
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+	mouseEnter { show message_meleename } 
+	mouseExit { hide grpmessage } 
+}
+	//	grenades
+itemDef {
+	name grenades
+	style 0
+	rect 16 272 144 16
+	text "Grenades"	
+	textalign 0
+	textalignx 8
+	textaligny 14
+	textscale .25
+	forecolor 1 1 1 1
+	visible 1 
+	decoration
+	mouseEnter { show message_grenades } 
+	mouseExit { hide grpmessage } 
+}
+itemDef {
+	name grenades
+	style 1
+	rect 32 296 156 16
+	text "Frag Grenades:"
+	type ITEM_TYPE_TEXT
+	ownerdraw CG_INVEN_AMMO_MK26
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_grenadesfrag ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name grenades
+	style 0
+	rect 32 296 128 16
+	text ""
+	type ITEM_TYPE_MULTI
+	cvar "inven_ammo_mk26"
+	cvarFloatList { "0/2" 0 "1/2" 1 "2/2" 2 }
+	textalign 0
+	textalignx 100
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+}
+itemDef {
+	name grenades
+	style 1
+	rect 32 312 156 16
+	text "Flash Grenades:"
+	type ITEM_TYPE_TEXT
+	ownerdraw CG_INVEN_AMMO_FLASH
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_grenadesflash ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name grenades
+	style 0
+	rect 32 312 128 16
+	text ""
+	type ITEM_TYPE_MULTI
+	cvar "inven_ammo_flash"
+	cvarFloatList { "0/2" 0 "1/2" 1 "2/2" 2 }
+	textalign 0
+	textalignx 100
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+}
+itemDef {
+	name grenades
+	style 1
+	rect 32 328 156 16
+	text "Smoke Grenades:"
+	type ITEM_TYPE_TEXT
+	ownerdraw CG_INVEN_AMMO_SMOKE
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_grenadessmoke ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name grenades
+	style 0
+	rect 32 328 128 16
+	text ""
+	type ITEM_TYPE_MULTI
+	cvar "inven_ammo_smoke"
+	cvarFloatList { "0/2" 0 "1/2" 1 "2/2" 2 }
+	textalign 0
+	textalignx 100
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+}
+itemDef {
+	name grenades
+	style 1
+	rect 32 344 156 16
+	text "40mm Grenades:"
+	type ITEM_TYPE_TEXT
+	ownerdraw CG_INVEN_AMMO_40MM
+	textalign 0
+	textalignx 4
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_grenades40mm ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name grenades
+	style 0
+	rect 32 344 128 16
+	text ""
+	type ITEM_TYPE_MULTI
+	cvar "inven_ammo_40mmgren"
+	cvarFloatList { "0/2" 0 "1/2" 1 "2/2" 2 }
+	textalign 0
+	textalignx 100
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+}
+	// CENTER COLUMN
+	//	Team Picture
+itemDef {
+	name seal_face
+	//	ownerdraw UI_SEAL_PLAYERMODEL
+	ownerdraw UI_SEAL_HEADMODEL
+	rect 192 16 128 152
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+	visible 1 
+	style 1
+	decoration 
+	cvarTest "ui_team"
+	hideCvar { "0" , "2" }
+}
+itemDef {
+	name tango_face
+	//	ownerdraw UI_TANGO_PLAYERMODEL
+	ownerdraw UI_TANGO_HEADMODEL
+	rect 192 16 128 152
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+	visible 1 
+	style 1
+	decoration 
+	cvarTest "ui_team"
+	hideCvar { "0" , "1" }
+}
+itemDef {
+	name border_face
+	rect 192 16 128 152
+	visible 1 
+	border 1
+	bordercolor 1 1 1 .25
+	style 1
+	decoration 
+	cvarTest "ui_team"
+	hideCvar { "0"  }
+}
+	//	Looks
+itemDef {
+	name but_changelooks
+	rect 192 176 128 20
+	type 1
+	style WINDOW_STYLE_FILLED
+	text "Head-Stuff"
+	textalign 1
+	textalignx 64
+	textaligny 15
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+	visible 1 
+	action { close ingame_char ; open ingame_char_looks }
+	mouseEnter { show message_looks ;
+	setitemcolor but_changelooks backcolor .75 .75 .75 1 }
+	mouseExit { hide grpmessage ;
+	setitemcolor but_changelooks backcolor .1 .2 .6 .5 }
+}
+	//	Free XP
+itemDef {
+	name but_freexp
+	rect 192 204 128 20
+	type 1
+	style WINDOW_STYLE_FILLED
+	text "Free XP"
+	textalign 1
+	textalignx 64
+	textaligny 15
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+	visible 1 
+	action { play "ui/assets/menu_yes.wav" ; uiScript "freexp" }
+	mouseEnter { show message_freexp ;
+	setitemcolor but_freexp backcolor .75 .75 .75 1 }
+	mouseExit { hide grpmessage ;
+	setitemcolor but_freexp backcolor .1 .2 .6 .5 }
+}
+	//	Team
+itemDef {
+	name but_changeteam
+	rect 192 232 128 20
+	type 1
+	style WINDOW_STYLE_FILLED
+	text "Change Team"	
+	textalign 1
+	textalignx 64
+	textaligny 15
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+	visible 1 
+	action { close ingame_char ; open ingame_join }
+	mouseEnter { show message_changeteam ;
+	setitemcolor but_changeteam backcolor .75 .75 .75 1 }
+	mouseExit { hide grpmessage ;
+	setitemcolor but_changeteam backcolor .1 .2 .6 .5 }
+}
+	//	Missioninfo
+itemDef {
+	name but_missioninfo
+	rect 192 260 128 20
+	type 1
+	style WINDOW_STYLE_FILLED
+	text "Mission Info"	
+	textalign 1
+	textalignx 64
+	textaligny 15
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+	visible 1 
+	action { close ingame_char ; exec "missioninfo" }
+	mouseEnter { show message_missioninfo ;
+	setitemcolor but_missioninfo backcolor .75 .75 .75 1 }
+	mouseExit { hide grpmessage ;
+	setitemcolor but_missioninfo backcolor .1 .2 .6 .5 }
+}
+	//	Cancel
+itemDef {
+	name but_cancel
+	rect 192 288 128 20
+	type 1
+	style WINDOW_STYLE_FILLED
+	text "Cancel"	
+	textalign 1
+	textalignx 64
+	textaligny 15
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+	visible 1 
+	action { uiScript closeingame ; }
+	mouseEnter { show message_cancel ;
+	setitemcolor but_cancel backcolor .75 .75 .75 1 }
+	mouseExit { hide grpmessage ;
+	setitemcolor but_cancel backcolor .1 .2 .6 .5 }
+}
+	//	Accept
+itemDef {
+	name but_accept
+	rect 192 316 128 20
+	type 1
+	style WINDOW_STYLE_FILLED
+	text "Accept"	
+	textalign 1
+	textalignx 64
+	textaligny 15
+	textscale .25
+	forecolor 1 1 1 1
+	backcolor .1 .2 .6 .5
+	border 1
+	bordercolor 1 1 1 .25
+	visible 1 
+	action { uiScript closeingame ;
+	uiScript "updateCharacter" ; 
+	uiScript "updateInventory" ; 
+	writeteamconfig autoteam }
+	mouseEnter { show message_accept ;
+	setitemcolor but_accept backcolor .75 .75 .75 1 }
+	mouseExit { hide grpmessage ;
+	setitemcolor but_accept backcolor .1 .2 .6 .5 }
+}
+	// RIGHT COLUMN
+	//	logo
+itemDef {
+	name window
+	style WINDOW_STYLE_FILLED
+	rect 366 16 115 96
+	backcolor 1 1 1 1
+	visible 1 
+	decoration
+	background "ui/assets/logo_nsco.tga"
+}
+	/*
+	//	equipment
+itemDef {
+	name equipment
+	style 0
+	rect 352 16 144 16
+	text "Equipment"
+	textalign 2
+	textalignx 136
+	textaligny 14
+	textscale .25
+	forecolor 1 1 1 1
+	visible 1 
+	decoration
+	mouseEnter { show message_equipment } 
+	mouseExit { hide grpmessage }
+}
+itemDef {
+	name equipment
+	style 1
+	rect 324 40 156 16
+	text "Equipment Slot 1"
+	textalign 2
+	textalignx 152
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+	mouseEnter { show message_equipment1 ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name equipment
+	style 1
+	rect 324 56 156 16
+	text "Equipment Slot 2"
+	textalign 2
+	textalignx 152
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+	mouseEnter { show message_equipment2 ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name equipment
+	style 1
+	rect 324 72 156 16
+	text "Equipment Slot 3"
+	textalign 2
+	textalignx 152
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+	mouseEnter { show message_equipment3 ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name equipment
+	style 1
+	rect 324 88 156 16
+	text "Equipment Slot 4"
+	textalign 2
+	textalignx 152
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+	mouseEnter { show message_equipment4 ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+	*/
+	//	armor
+itemDef {
+	name armor
+	style 0
+	rect 352 112 144 16
+	text "Armor"
+	textalign 2
+	textalignx 136
+	textaligny 14
+	textscale .25
+	forecolor 1 1 1 1
+	visible 1 
+	decoration
+	mouseEnter { show message_armor } 
+	mouseExit { hide grpmessage }
+}
+itemDef {
+	name armor
+	style 1
+	rect 324 136 156 16
+	text "Kevlar Vest:"
+	type ITEM_TYPE_MULTI	
+	cvar "inven_kevlar"
+	cvarFloatList { "Yes" 1 "No" 0 }
+	action { play "ui/assets/menu_yes.wav" }
+	textalign 2
+	textalignx 124
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_armorvest ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name armor
+	style 1
+	rect 324 152 156 16
+	text "Helmet:"
+	type ITEM_TYPE_MULTI	
+	cvar "inven_helmet"
+	cvarFloatList { "Yes" 1 "No" 0 }
+	action { play "ui/assets/menu_yes.wav" }
+	textalign 2
+	textalignx 124
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_armorhelmet ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+	//	skills
+itemDef {
+	name skills
+	style 0
+	rect 352 176 144 16
+	text "Experience:"
+	type ITEM_TYPE_EDITFIELD
+	cvar "ui_char_xp"
+	textalign 2
+	textalignx 112
+	textaligny 14
+	textscale .25
+	forecolor 1 1 1 1
+	visible 1 
+	decoration
+	mouseEnter { show message_skillxp } 
+	mouseExit { hide grpmessage }
+}
+itemDef {
+	name skills
+	style 1
+	rect 324 200 156 16
+	text "Accuracy:"
+	type ITEM_TYPE_TEXT
+	ownerdraw CG_CHARACTER_ACCURACY
+	textalign 2
+	textalignx 132
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_skillaccuracy ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name skills
+	style 0
+	rect 352 200 128 16
+	text ""
+	type ITEM_TYPE_NUMERICFIELD
+	cvar "ui_char_accuracy"
+	textalign 2
+	textalignx 108
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+}
+itemDef {
+	name skills
+	style 1
+	rect 324 216 156 16
+	text "Speed:"
+	type ITEM_TYPE_TEXT
+	ownerdraw CG_CHARACTER_SPEED
+	textalign 2
+	textalignx 132
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_skillspeed ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name skills
+	style 0
+	rect 352 216 128 16
+	text ""
+	type ITEM_TYPE_NUMERICFIELD
+	cvar "ui_char_speed"
+	textalign 2
+	textalignx 108
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+}
+itemDef {
+	name skills
+	style 1
+	rect 324 232 156 16
+	text "Strength:"
+	type ITEM_TYPE_TEXT
+	ownerdraw CG_CHARACTER_STRENGTH
+	textalign 2
+	textalignx 132
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_skillstrength ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name skills
+	style 0
+	rect 352 232 128 16
+	text ""
+	type ITEM_TYPE_NUMERICFIELD
+	cvar "ui_char_strength"
+	textalign 2
+	textalignx 108
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+}
+itemDef {
+	name skills
+	style 1
+	rect 324 248 156 16
+	text "Stamina:"
+	type ITEM_TYPE_TEXT
+	ownerdraw CG_CHARACTER_STAMINA
+	textalign 2
+	textalignx 132
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_skillstamina ;
+	setcolor backcolor .1 .2 .6 0.25 } 
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name skills
+	style 0
+	rect 352 248 128 16
+	text ""
+	type ITEM_TYPE_NUMERICFIELD
+	cvar "ui_char_stamina"
+	textalign 2
+	textalignx 108
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+}
+itemDef {
+	name skills
+	style 1
+	rect 324 264 156 16
+	text "Stealth:"
+	type ITEM_TYPE_TEXT
+	ownerdraw CG_CHARACTER_STEALTH
+	textalign 2
+	textalignx 132
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_skillstealth ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name skills
+	style 0
+	rect 352 264 128 16
+	text ""
+	type ITEM_TYPE_NUMERICFIELD
+	cvar "ui_char_stealth"
+	textalign 2
+	textalignx 108
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+}
+itemDef {
+	name skills
+	style 1
+	rect 324 282 156 16
+	text "Technical:"
+	type ITEM_TYPE_TEXT
+	ownerdraw CG_CHARACTER_TECHINCAL		
+	textalign 2
+	textalignx 132
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	mouseEnter { show message_skilltechnical ;
+	setcolor backcolor .1 .2 .6 0.25 }  
+	mouseExit { hide grpmessage ;
+	setcolor backcolor 0 0 0 0 }
+}
+itemDef {
+	name skills
+	style 0
+	rect 352 282 128 16
+	text ""
+	type ITEM_TYPE_NUMERICFIELD
+	cvar "ui_char_technical"
+	textalign 2
+	textalignx 108
+	textaligny 13
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+}
+	//	weight
+itemDef {
+	name weight
+	style 0
+	rect 352 304 144 16
+	text "Total Weight"
+	textalign 2
+	textalignx 136
+	textaligny 14
+	textscale .25
+	forecolor 1 1 1 1
+	visible 1 
+	decoration
+	mouseEnter { show message_weight } 
+	mouseExit { hide grpmessage }
+}
+itemDef {
+	name weight
+	style 0
+	rect 324 328 156 16
+	text ""
+	ownerdraw UI_TOTALWEIGHT
+	textalign 2
+	textalignx 60
+	textaligny 10
+	textscale .22
+	forecolor 1 1 1 .75
+	visible 1 
+	decoration
+	mouseEnter { show message_weighttotal } 
+	mouseExit { hide grpmessage }
+}
+	// MESSAGES
+itemDef {
+	name message_primary
+	group grpmessage
+	text "Primary Weapon Settings"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_primaryname
+	group grpmessage
+	text "This is your current primary weapon"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_primaryammo
+	group grpmessage
+	text "Your current ammo for your primary weapon"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_primaryaddon1
+	group grpmessage
+	text "Primary weapon on muzzle add-on"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_primaryaddon2
+	group grpmessage
+	text "Primary weapon under weapon add-on"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_primaryaddon3
+	group grpmessage
+	text "Primary weapon on weapon add-on"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_sidearm
+	group grpmessage
+	text "Sidearm Weapon Settings"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_sidearmname
+	group grpmessage
+	text "This is your current sidearm weapon"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_sidearmammo
+	group grpmessage
+	text "Your current ammo for your sidearm weapon"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_sidearmaddon1
+	group grpmessage
+	text "Sidearm weapon on muzzle add-on"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_sidearmaddon2
+	group grpmessage
+	text "Sidearm weapon under weapon add-on"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_melee
+	group grpmessage
+	text "Melee Weapon Settings"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_meleename
+	group grpmessage
+	text "This is your current melee weapon"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_grenades
+	group grpmessage
+	text "Grenades Settings (maximum of 4 extra grenades)"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_grenadesfrag 
+	group grpmessage
+	text "Your current fragmentation grenades"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_grenadesflash
+	group grpmessage
+	text "Your current flashbang grenades"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_grenadessmoke
+	group grpmessage
+	text "Your current smoke grenades"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_grenades40mm 
+	group grpmessage
+	text "Your current 40mm grenades"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_looks
+	group grpmessage
+	text "Change your current player Head-Stuff"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_freexp
+	group grpmessage
+	text "Press to free all your spent XP and reset your stats"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_changeteam
+	group grpmessage
+	text "Click to open up Team Selection"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_missioninfo 
+	group grpmessage
+	text "Click to display the mission information"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_cancel
+	group grpmessage
+	text "Click to discard these settings"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_accept
+	group grpmessage
+	text "Click to save these settings"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_equipment
+	group grpmessage
+	text "Equipment settings"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_equipment1
+	group grpmessage
+	text "Your current equipment slot1"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_equipment2
+	group grpmessage
+	text "Your current equipment slot2"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_equipment3
+	group grpmessage
+	text "Your current equipment slot3"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_equipment4
+	group grpmessage
+	text "Your current equipment slot4"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_armor
+	group grpmessage
+	text "Armor settings"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_armorvest
+	group grpmessage
+	text "Your current kevlar vest"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_armorhelmet
+	group grpmessage
+	text "Your current helmet"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_skillxp 
+	group grpmessage
+	text "Your current Experience Points"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_skillaccuracy 
+	group grpmessage
+	text "Your current Accuracy Skill Level"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_skillspeed 
+	group grpmessage
+	text "Your current Speed Skill Level"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_skillstrength
+	group grpmessage
+	text "Your current Strength Skill Level"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_skillstamina 
+	group grpmessage
+	text "Your current Stamina Skill Level"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_skillstealth 
+	group grpmessage
+	text "Your current Stealth Skill Level"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_skilltechnical 
+	group grpmessage
+	text "Your current Technical Skill Level"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_weight 
+	group grpmessage
+	text "Weight statistics"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+itemDef {
+	name message_weighttotal 
+	group grpmessage
+	text "Your current weight total"
+	style 0
+	rect 0 352 512 16
+	textalign 1
+	textaligny 14
+	textalignx 256
+	textscale .25
+	textstyle 0
+	forecolor 1 1 1 0.5
+	visible 0 
+	decoration 
+}
+}
+}

@@ -1,0 +1,29 @@
+Name of the Map		: ns_hideout
+Leveldesigner		: BenB (benb@telefragged.com)
+Operation 		: 'Red Gecko'
+
+------------------------------------------------------------
+
+Type of Map		: Campain ('Operation Rattelsnake')
+Missionobjective	: VIP-S
+Number of Players	: 7-16
+
+------------------------------------------------------------
+
+Short description	: - desert
+			  - day
+			  - some CQB & medium range & long 
+				  range		
+			  - the VIP starts in one of the 
+				buildings 
+			  - a little bit difficult to 
+				understand
+
+------------------------------------------------------------
+
+Additional notices	: 
+
+------------------------------------------------------------
+
+Special thanks to	: - Graphtalica for their cool 
+				  outdoor/arab textures
