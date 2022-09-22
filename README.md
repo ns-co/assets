@@ -1,4 +1,4 @@
-NAVY SEALS: COVERT OPERATIONS - GOLD | GAME ASSETS - October 2022
+NS:CO GOLD - Game Assets Readme - October 2022
 ==================================================================
 
 Usage
@@ -9,20 +9,20 @@ Covert Operations GOLD. This includes textures, sounds, 3d models
 and various scripts.
 
 You can play the game using the unpacked assets by setting the
-variable sv_pure to 0 when starting the game.
+variable sv_pure to 0 when starting the game. An game exe and 
+a .bat file is included to facilitate this.
 
 A Windows Powershell script (and a .bat to start it) is included.
 Once started it zips the appropriate folders and creates the 
 various needed PK3 files for distribution:
 
-pak0-vm: QVM files only (easy to replace)
-pak1-ui: Menu files, GFX files
-pak2-maps: Briefings, levelshots, maps
-pak3-models: Models
-pak4-media: Sound, video
-pak5-textures: Textures, shaders, lights
-pak6-gpl: all GPL content from the Open Arena project
-
+- pak0-vm: QVM files only (easy to replace)
+- pak1-ui: Menu files, GFX files
+- pak2-maps: Briefings, levelshots, maps
+- pak3-models: Models
+- pak4-media: Sound, video
+- pak5-textures: Textures, shaders, lights
+- pak6-gpl: all GPL content from the Open Arena project
 
 License
 ------------------------------------------------------------------
