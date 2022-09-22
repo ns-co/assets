@@ -1,9 +1,6 @@
 NS:CO GOLD - Game Assets Readme - October 2022
 ==================================================================
 
-Usage
-------------------------------------------------------------------
-
 This repository contains the assets needed to play Navy Seals:
 Covert Operations GOLD. This includes textures, sounds, 3d models
 and various scripts.
