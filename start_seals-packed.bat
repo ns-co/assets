@@ -1,0 +1,1 @@
+openarena.exe +set fs_game seals-packed +set vm_game 2 +set vm_cgame 2 +set vm_ui 2 +set sv_pure 0 +set g_gametype 3 +set dedicated 0 +set com_hunkmegs 512 +set com_zonemegs 64 +set com_soundmegs 64
