@@ -9,14 +9,14 @@ menuDef {
     	fullscreen 1
     	rect 0 0 640 480
     	visible 0
-	focusColor 1 0 0 1	
+	focusColor 1 0 0 1
     	style 1
 	onOpen { }
 	onEsc {  close setup_menu ;
-//		 close control_menu ; 
+//		 close control_menu ;
 //		 close system_menu ;
-//		 close options_menu ;   
-//		 close player_menu ;    
+//		 close options_menu ;
+//		 close player_menu ;
 		 open main }
 
 
@@ -24,14 +24,14 @@ menuDef {
 
 itemDef {
       	name setup_box
-      	style 1 
+      	style 1
 	rect 32 96 560 48
-      	border 1 
+      	border 1
       	bordersize 1
       	bordercolor .5 .5 .5 .5
       	backcolor 0 0 .75 .25
-      	visible 1 
-      	decoration 
+      	visible 1
+      	decoration
 	}
 
 
@@ -50,16 +50,16 @@ itemDef {
 	forecolor 1 1 1 1
 	backcolor .1 .2 .6 0.5
 	visible 1
-	action { play "ui/assets/menu_yes.wav" ; 
-		 close control_menu ; 
+	action { play "ui/assets/menu_yes.wav" ;
+		 close control_menu ;
 		 close system_menu ;
-		 close options_menu ; 
-		 close player_menu ;   
+		 close options_menu ;
+		 close player_menu ;
 		 open control_menu }
-	mouseEnter { setitemcolor controls backcolor .75 .75 .75 0.5 } 
-	mouseExit { setitemcolor controls backcolor .1 .2 .6 0.5 } 		
+	mouseEnter { setitemcolor controls backcolor .75 .75 .75 0.5 }
+	mouseExit { setitemcolor controls backcolor .1 .2 .6 0.5 }
 	}
-	
+
 
 itemDef {
 	name system
@@ -76,14 +76,14 @@ itemDef {
 	forecolor 1 1 1 1
 	backcolor .1 .2 .6 0.5
 	visible 1
-	action { play "ui/assets/menu_yes.wav" ; 
-		 close control_menu ; 
+	action { play "ui/assets/menu_yes.wav" ;
+		 close control_menu ;
 		 close system_menu ;
-		 close options_menu ; 
-		 close player_menu ;  
+		 close options_menu ;
+		 close player_menu ;
 		 open system_menu }
-	mouseEnter { setitemcolor system backcolor .75 .75 .75 0.5 } 
-	mouseExit { setitemcolor system backcolor .1 .2 .6 0.5 } 		
+	mouseEnter { setitemcolor system backcolor .75 .75 .75 0.5 }
+	mouseExit { setitemcolor system backcolor .1 .2 .6 0.5 }
 	}
 
 itemDef {
@@ -101,14 +101,14 @@ itemDef {
 	forecolor 1 1 1 1
 	backcolor .1 .2 .6 0.5
 	visible 1
-	action { play "ui/assets/menu_yes.wav" ; 
-		 close control_menu ; 
+	action { play "ui/assets/menu_yes.wav" ;
+		 close control_menu ;
 		 close system_menu ;
-		 close options_menu ;    
-		 close player_menu ; 
+		 close options_menu ;
+		 close player_menu ;
 		 open options_menu }
-	mouseEnter { setitemcolor options backcolor .75 .75 .75 0.5 } 
-	mouseExit { setitemcolor options backcolor .1 .2 .6 0.5 } 		
+	mouseEnter { setitemcolor options backcolor .75 .75 .75 0.5 }
+	mouseExit { setitemcolor options backcolor .1 .2 .6 0.5 }
 	}
 
 itemDef {
@@ -126,14 +126,14 @@ itemDef {
 	forecolor 1 1 1 1
 	backcolor .1 .2 .6 0.5
 	visible 1
-	action { play "ui/assets/menu_yes.wav" ; 
-		 close control_menu ; 
+	action { play "ui/assets/menu_yes.wav" ;
+		 close control_menu ;
 	  	 close system_menu ;
-		 close options_menu ; 
-		 close player_menu ; 
+		 close options_menu ;
+		 close player_menu ;
 		 open player_menu }
-	mouseEnter { setitemcolor player backcolor .75 .75 .75 0.5 } 
-	mouseExit { setitemcolor player backcolor .1 .2 .6 0.5 } 		
+	mouseEnter { setitemcolor player backcolor .75 .75 .75 0.5 }
+	mouseExit { setitemcolor player backcolor .1 .2 .6 0.5 }
 	}
 
 
@@ -160,12 +160,12 @@ itemDef {
       	rect 40 424 560 28
       	textalign 1
       	textaligny 20
-      	textalignx 280 
+      	textalignx 280
       	textscale .25
-	textstyle 2 
+	textstyle 2
       	forecolor 1 1 1 0.5
-      	visible 0 
-      	decoration 
+      	visible 0
+      	decoration
 	}
 
 itemDef {
@@ -173,7 +173,7 @@ itemDef {
 	style 1
       	background "ui/assets/ns_static.tga"
       	rect 0 0 640 480
-      	visible 1 
+      	visible 1
 	decoration
     	}
 
@@ -182,7 +182,7 @@ itemDef {
 	style 1
       	background "ui/assets/ns_menuback-main.tga"
       	rect 0 0 640 480
-      	visible 1 
+      	visible 1
 	decoration
     	}
 

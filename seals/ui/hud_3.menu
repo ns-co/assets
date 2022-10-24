@@ -3,22 +3,22 @@
 // Heads Up Display 3 - Small
 
 {
-assetGlobalDef 
-	{	
-	cursor "ui/assets/ns_cursor"			
-	gradientBar "ui/assets/gradientbar2.tga"	
+assetGlobalDef
+	{
+	cursor "ui/assets/ns_cursor"
+	gradientBar "ui/assets/gradientbar2.tga"
 
-    	fadeClamp 1.0					
-	fadeCycle 1					
-	fadeAmount 0.1					
+    	fadeClamp 1.0
+	fadeCycle 1
+	fadeAmount 0.1
 
-	shadowX  5					
-	shadowY  5					
-	shadowColor 0.1 0.1 0.1 0.25			
+	shadowX  5
+	shadowY  5
+	shadowColor 0.1 0.1 0.1 0.25
 
-    	font "fonts/font" 16				
-    	smallFont "fonts/smallfont" 12			
-    	bigFont "fonts/bigfont" 20	
+    	font "fonts/font" 16
+    	smallFont "fonts/smallfont" 12
+    	bigFont "fonts/bigfont" 20
 
 	sealscolor 0.3 0.3 1 1
 	tangoscolor 1 0.1 0.1 1
@@ -33,7 +33,7 @@ menuDef
     	fullScreen MENU_FALSE
     	visible MENU_TRUE
     	rect 4 346 80 130
-		
+
 		itemDef
 		{
      		name "background"
@@ -73,7 +73,7 @@ menuDef
 		border 1
 		bordercolor .6 .6 .6 1
 		decoration
-		ownerdraw CG_PLAYER_STAMINABAR_VERT	
+		ownerdraw CG_PLAYER_STAMINABAR_VERT
 		background "ui/assets/ns_bar_vert"
 		teamcolor
 
@@ -99,7 +99,7 @@ menuDef
 		rect 16 0 48 96
 		visible 1
 		decoration
-		ownerdraw CG_PLAYER_DAMAGELOC	
+		ownerdraw CG_PLAYER_DAMAGELOC
 
 		ownerdrawflag CG_SHOW_NO_SPECTATOR
 		}
@@ -151,7 +151,7 @@ menuDef
 	itemDef
 		{
      		name "seperator"
-		rect 0 95 80 1 
+		rect 0 95 80 1
 		border 1
 		bordercolor .6 .6 .6 1
 		visible 1
@@ -161,7 +161,7 @@ menuDef
 		ownerdrawflag CG_SHOW_NO_SPECTATOR
 		}
 
-	itemDef 
+	itemDef
 		{
 		name "Fire Mode"
 		rect 3 97 77 12
@@ -181,7 +181,7 @@ menuDef
 	itemDef
 		{
      		name "seperator"
-		rect 0 111 80 1 
+		rect 0 111 80 1
 		border 1
 		bordercolor .6 .6 .6 1
 		visible 1
@@ -191,7 +191,7 @@ menuDef
 		ownerdrawflag CG_SHOW_NO_SPECTATOR
 		}
 
-	itemDef 
+	itemDef
 		{
 		name "Clip Text"
 		rect 7 114 40 12
@@ -203,12 +203,12 @@ menuDef
 		type 1
 		textscale .22
 		visible 1
-		text "Clips:"
+		text "Magazines:"
 
 		ownerdrawflag CG_SHOW_NO_SPECTATOR
 		}
 
-	itemDef 
+	itemDef
 		{
 		name "Clip Count"
 		rect 42 114 40 12
@@ -228,13 +228,13 @@ menuDef
 
 // 	- TARGET NAME -	//
 
-menuDef 
+menuDef
 	{
     	name "Targetedname"
     	fullScreen MENU_FALSE
     	visible MENU_TRUE
 	rect 275 410 40 24
-	
+
 	itemDef
 		{
 		name "tragetedname"

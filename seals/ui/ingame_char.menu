@@ -5,7 +5,7 @@
 	name "ingame_char"
 	visible 0
 	fullScreen 0
-	outOfBoundsClick			
+	outOfBoundsClick
 	rect 64 48 512 368
 	focusColor 1 0 0 1
 	border 0
@@ -19,7 +19,7 @@ itemDef {
 	style WINDOW_STYLE_FILLED
 	rect -1 349 512 20
 	backcolor .1 .1 .37 1
-	visible 1 
+	visible 1
 	border 1
 	bordercolor 1 1 1 .125
 	decoration
@@ -30,7 +30,7 @@ itemDef {
 	style WINDOW_STYLE_FILLED
 	rect -1 -1 512 368
 	backcolor .1 .1 .37 1
-	visible 1 
+	visible 1
 	border 1
 	bordercolor 1 1 1 .125
 	decoration
@@ -51,16 +51,16 @@ itemDef {
 	name primary
 	style 0
 	rect 16 16 144 16
-	text "Primary Weapon"	
+	text "Primary Weapon"
 	textalign 0
 	textalignx 8
 	textaligny 14
 	textscale .25
 	forecolor 1 1 1 1
-	visible 1 
+	visible 1
 	decoration
-	mouseEnter { show message_primary } 
-	mouseExit { hide grpmessage } 
+	mouseEnter { show message_primary }
+	mouseExit { hide grpmessage }
 }
 itemDef {
 	name primary
@@ -76,9 +76,9 @@ itemDef {
 	hideCvar { "0" , "2" }
 	ownerdraw UI_TEXT_PRIMARY
 	forecolor 1 1 1 .75
-	visible 1 
-	mouseEnter { show message_primaryname ; setcolor backcolor .1 .2 .6 0.25 } 
-	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+	visible 1
+	mouseEnter { show message_primaryname ; setcolor backcolor .1 .2 .6 0.25 }
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }
 }
 itemDef {
 	name primary
@@ -94,16 +94,16 @@ itemDef {
 	hideCvar { "0" , "1" }
 	ownerdraw UI_TEXT_PRIMARY
 	forecolor 1 1 1 .75
-	visible 1 
-	mouseEnter { show message_primaryname ; setcolor backcolor .1 .2 .6 0.25 } 
-	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+	visible 1
+	mouseEnter { show message_primaryname ; setcolor backcolor .1 .2 .6 0.25 }
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }
 }
 itemDef {
 	name primary
 	style 1
 	rect 32 56 156 16
-	text "Clips:"
-	type ITEM_TYPE_MULTI	
+	text "Magazines:"
+	type ITEM_TYPE_MULTI
 	cvar "inven_ammo_primary"
 	cvarFloatList { "0/6" 0 "1/6" 1 "2/6" 2 "3/6" 3 "4/6" 4 "5/6" 5 "6/6" 6 }
 	action { play "ui/assets/menu_yes.wav" }
@@ -114,16 +114,16 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
-	mouseEnter { show message_primaryammo ; setcolor backcolor .1 .2 .6 0.25 }  
-	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	 
+	visible 1
+	mouseEnter { show message_primaryammo ; setcolor backcolor .1 .2 .6 0.25 }
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }
 }
 itemDef {
 	name primary
 	style 1
 	rect 32 56 156 16
 	text "Shells:"
-	type ITEM_TYPE_MULTI	
+	type ITEM_TYPE_MULTI
 	cvar "inven_ammo_primary"
 	cvarFloatList { "00/42" 0 "07/42" 1 "14/42" 2 "21/42" 3 "28/42" 4 "35/42" 5 "42/42" 6 }
 	action { play "ui/assets/menu_yes.wav" }
@@ -134,16 +134,16 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
-	mouseEnter { show message_primaryammo ; setcolor backcolor .1 .2 .6 0.25 }  
-	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	 
+	visible 1
+	mouseEnter { show message_primaryammo ; setcolor backcolor .1 .2 .6 0.25 }
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }
 }
 itemDef {
 	name primary
 	style 1
 	rect 32 56 156 16
 	text "Boxes:"
-	type ITEM_TYPE_MULTI	
+	type ITEM_TYPE_MULTI
 	cvar "inven_ammo_primary"
 	cvarFloatList { "0/1" 0 "1/1" 1 }
 	action { play "ui/assets/menu_yes.wav" }
@@ -154,9 +154,9 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
-	mouseEnter { show message_primaryammo ; setcolor backcolor .1 .2 .6 0.25 }  
-	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	 
+	visible 1
+	mouseEnter { show message_primaryammo ; setcolor backcolor .1 .2 .6 0.25 }
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }
 }
 itemDef {
 	name primary
@@ -167,11 +167,11 @@ itemDef {
 	textalignx 4
 	textaligny 13
 	textscale .22
-	ownerdraw UI_PRIMARY_ADDON1		
+	ownerdraw UI_PRIMARY_ADDON1
 	forecolor 1 1 1 .75
-	visible 1 
-	mouseEnter { show message_primaryaddon1 ; setcolor backcolor .1 .2 .6 0.25 }  
-	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+	visible 1
+	mouseEnter { show message_primaryaddon1 ; setcolor backcolor .1 .2 .6 0.25 }
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }
 }
 itemDef {
 	name primary
@@ -184,9 +184,9 @@ itemDef {
 	textscale .22
 	ownerdraw UI_PRIMARY_ADDON2
 	forecolor 1 1 1 .75
-	visible 1 
-	mouseEnter { show message_primaryaddon2 ; setcolor backcolor .1 .2 .6 0.25 } 
-	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+	visible 1
+	mouseEnter { show message_primaryaddon2 ; setcolor backcolor .1 .2 .6 0.25 }
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }
 }
 itemDef {
 	name primary
@@ -197,27 +197,27 @@ itemDef {
 	textalignx 4
 	textaligny 13
 	textscale .22
-	ownerdraw UI_PRIMARY_ADDON3	
+	ownerdraw UI_PRIMARY_ADDON3
 	forecolor 1 1 1 .75
-	visible 1 
-	mouseEnter { show message_primaryaddon3 ; setcolor backcolor .1 .2 .6 0.25 }  
-	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+	visible 1
+	mouseEnter { show message_primaryaddon3 ; setcolor backcolor .1 .2 .6 0.25 }
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }
 }
 	//	sidearm weapon
 itemDef {
 	name sidearm
 	style 0
 	rect 16 128 144 16
-	text "Sidearm"	
+	text "Sidearm"
 	textalign 0
 	textalignx 8
 	textaligny 14
 	textscale .25
 	forecolor 1 1 1 1
-	visible 1 
+	visible 1
 	decoration
-	mouseEnter { show message_sidearm } 
-	mouseExit { hide grpmessage } 
+	mouseEnter { show message_sidearm }
+	mouseExit { hide grpmessage }
 }
 itemDef {
 	name sidearm
@@ -233,9 +233,9 @@ itemDef {
 	hideCvar { "0" , "2" }
 	ownerdraw UI_TEXT_SIDEARM
 	forecolor 1 1 1 .75
-	visible 1 
-	mouseEnter { show message_sidearmname ; setcolor backcolor .1 .2 .6 0.25 }  
-	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+	visible 1
+	mouseEnter { show message_sidearmname ; setcolor backcolor .1 .2 .6 0.25 }
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }
 }
 itemDef {
 	name sidearm
@@ -251,16 +251,16 @@ itemDef {
 	hideCvar { "0" , "1" }
 	ownerdraw UI_TEXT_SIDEARM
 	forecolor 1 1 1 .75
-	visible 1 
-	mouseEnter { show message_sidearmname ; setcolor backcolor .1 .2 .6 0.25 }  
-	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+	visible 1
+	mouseEnter { show message_sidearmname ; setcolor backcolor .1 .2 .6 0.25 }
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }
 }
 itemDef {
 	name sidearm
 	style 1
 	rect 32 168 156 16
-	text "Clips:"
-	type ITEM_TYPE_MULTI	
+	text "Magazines:"
+	type ITEM_TYPE_MULTI
 	cvar "inven_ammo_secondary"
 	cvarFloatList { "0/4" 0 "1/4" 1 "2/4" 2 "3/4" 3 "4/4" 4 }
 	action { play "ui/assets/menu_yes.wav" }
@@ -269,9 +269,9 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
-	mouseEnter { show message_sidearmammo ; setcolor backcolor .1 .2 .6 0.25 } 
-	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+	visible 1
+	mouseEnter { show message_sidearmammo ; setcolor backcolor .1 .2 .6 0.25 }
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }
 }
 itemDef {
 	name sidearm
@@ -283,10 +283,10 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	ownerdraw UI_SIDEARM_ADDON1
-	mouseEnter { show message_sidearmaddon1 ; setcolor backcolor .1 .2 .6 0.25 }  
-	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+	mouseEnter { show message_sidearmaddon1 ; setcolor backcolor .1 .2 .6 0.25 }
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }
 }
 itemDef {
 	name sidearm
@@ -298,32 +298,32 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	ownerdraw UI_SIDEARM_ADDON2
-	mouseEnter { show message_sidearmaddon2 ; setcolor backcolor .1 .2 .6 0.25 }  
-	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }	
+	mouseEnter { show message_sidearmaddon2 ; setcolor backcolor .1 .2 .6 0.25 }
+	mouseExit { hide grpmessage ; setcolor backcolor 0 0 0 0 }
 }
 	//	melee weapon
 itemDef {
 	name melee
 	style 0
 	rect 16 224 144 16
-	text "Melee weapon"	
+	text "Melee weapon"
 	textalign 0
 	textalignx 8
 	textaligny 14
 	textscale .25
 	forecolor 1 1 1 1
-	visible 1 
+	visible 1
 	decoration
-	mouseEnter { show message_melee } 
-	mouseExit { hide grpmessage } 
+	mouseEnter { show message_melee }
+	mouseExit { hide grpmessage }
 }
 itemDef {
 	name melee
 	style 0
 	rect 32 248 156 16
-	text "Multi Purpose Knife"	
+	text "Multi Purpose Knife"
 	cvarTest "ui_team"
 	hideCvar { "0" , "2" }
 	textalign 0
@@ -331,16 +331,16 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
-	mouseEnter { show message_meleename } 
-	mouseExit { hide grpmessage } 
+	mouseEnter { show message_meleename }
+	mouseExit { hide grpmessage }
 }
 itemDef {
 	name melee
 	style 0
 	rect 32 248 156 16
-	text "Ghurka Khukuri Knife"	
+	text "Ghurka Khukuri Knife"
 	cvarTest "ui_team"
 	hideCvar { "0" , "1" }
 	textalign 0
@@ -348,26 +348,26 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
-	mouseEnter { show message_meleename } 
-	mouseExit { hide grpmessage } 
+	mouseEnter { show message_meleename }
+	mouseExit { hide grpmessage }
 }
 	//	grenades
 itemDef {
 	name grenades
 	style 0
 	rect 16 272 144 16
-	text "Grenades"	
+	text "Grenades"
 	textalign 0
 	textalignx 8
 	textaligny 14
 	textscale .25
 	forecolor 1 1 1 1
-	visible 1 
+	visible 1
 	decoration
-	mouseEnter { show message_grenades } 
-	mouseExit { hide grpmessage } 
+	mouseEnter { show message_grenades }
+	mouseExit { hide grpmessage }
 }
 itemDef {
 	name grenades
@@ -381,9 +381,9 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	mouseEnter { show message_grenadesfrag ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -400,7 +400,7 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 }
 itemDef {
@@ -415,9 +415,9 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	mouseEnter { show message_grenadesflash ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -434,7 +434,7 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 }
 itemDef {
@@ -449,9 +449,9 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	mouseEnter { show message_grenadessmoke ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -468,7 +468,7 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 }
 itemDef {
@@ -483,9 +483,9 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	mouseEnter { show message_grenades40mm ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -502,7 +502,7 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 }
 	// CENTER COLUMN
@@ -515,9 +515,9 @@ itemDef {
 	backcolor .1 .2 .6 .5
 	border 1
 	bordercolor 1 1 1 .25
-	visible 1 
+	visible 1
 	style 1
-	decoration 
+	decoration
 	cvarTest "ui_team"
 	hideCvar { "0" , "2" }
 }
@@ -529,20 +529,20 @@ itemDef {
 	backcolor .1 .2 .6 .5
 	border 1
 	bordercolor 1 1 1 .25
-	visible 1 
+	visible 1
 	style 1
-	decoration 
+	decoration
 	cvarTest "ui_team"
 	hideCvar { "0" , "1" }
 }
 itemDef {
 	name border_face
 	rect 192 16 128 152
-	visible 1 
+	visible 1
 	border 1
 	bordercolor 1 1 1 .25
 	style 1
-	decoration 
+	decoration
 	cvarTest "ui_team"
 	hideCvar { "0"  }
 }
@@ -561,7 +561,7 @@ itemDef {
 	backcolor .1 .2 .6 .5
 	border 1
 	bordercolor 1 1 1 .25
-	visible 1 
+	visible 1
 	action { close ingame_char ; open ingame_char_looks }
 	mouseEnter { show message_looks ;
 	setitemcolor but_changelooks backcolor .75 .75 .75 1 }
@@ -574,7 +574,7 @@ itemDef {
 	rect 192 204 128 20
 	type 1
 	style WINDOW_STYLE_FILLED
-	text "Free XP"
+	text "Reset XP"
 	textalign 1
 	textalignx 64
 	textaligny 15
@@ -583,7 +583,7 @@ itemDef {
 	backcolor .1 .2 .6 .5
 	border 1
 	bordercolor 1 1 1 .25
-	visible 1 
+	visible 1
 	action { play "ui/assets/menu_yes.wav" ; uiScript "freexp" }
 	mouseEnter { show message_freexp ;
 	setitemcolor but_freexp backcolor .75 .75 .75 1 }
@@ -596,7 +596,7 @@ itemDef {
 	rect 192 232 128 20
 	type 1
 	style WINDOW_STYLE_FILLED
-	text "Change Team"	
+	text "Change Team"
 	textalign 1
 	textalignx 64
 	textaligny 15
@@ -605,7 +605,7 @@ itemDef {
 	backcolor .1 .2 .6 .5
 	border 1
 	bordercolor 1 1 1 .25
-	visible 1 
+	visible 1
 	action { close ingame_char ; open ingame_join }
 	mouseEnter { show message_changeteam ;
 	setitemcolor but_changeteam backcolor .75 .75 .75 1 }
@@ -618,7 +618,7 @@ itemDef {
 	rect 192 260 128 20
 	type 1
 	style WINDOW_STYLE_FILLED
-	text "Mission Info"	
+	text "Mission Info"
 	textalign 1
 	textalignx 64
 	textaligny 15
@@ -627,7 +627,7 @@ itemDef {
 	backcolor .1 .2 .6 .5
 	border 1
 	bordercolor 1 1 1 .25
-	visible 1 
+	visible 1
 	action { close ingame_char ; exec "missioninfo" }
 	mouseEnter { show message_missioninfo ;
 	setitemcolor but_missioninfo backcolor .75 .75 .75 1 }
@@ -640,7 +640,7 @@ itemDef {
 	rect 192 288 128 20
 	type 1
 	style WINDOW_STYLE_FILLED
-	text "Cancel"	
+	text "Cancel"
 	textalign 1
 	textalignx 64
 	textaligny 15
@@ -649,7 +649,7 @@ itemDef {
 	backcolor .1 .2 .6 .5
 	border 1
 	bordercolor 1 1 1 .25
-	visible 1 
+	visible 1
 	action { uiScript closeingame ; }
 	mouseEnter { show message_cancel ;
 	setitemcolor but_cancel backcolor .75 .75 .75 1 }
@@ -662,7 +662,7 @@ itemDef {
 	rect 192 316 128 20
 	type 1
 	style WINDOW_STYLE_FILLED
-	text "Accept"	
+	text "Accept"
 	textalign 1
 	textalignx 64
 	textaligny 15
@@ -671,10 +671,10 @@ itemDef {
 	backcolor .1 .2 .6 .5
 	border 1
 	bordercolor 1 1 1 .25
-	visible 1 
+	visible 1
 	action { uiScript closeingame ;
-	uiScript "updateCharacter" ; 
-	uiScript "updateInventory" ; 
+	uiScript "updateCharacter" ;
+	uiScript "updateInventory" ;
 	writeteamconfig autoteam }
 	mouseEnter { show message_accept ;
 	setitemcolor but_accept backcolor .75 .75 .75 1 }
@@ -688,7 +688,7 @@ itemDef {
 	style WINDOW_STYLE_FILLED
 	rect 366 16 115 96
 	backcolor 1 1 1 1
-	visible 1 
+	visible 1
 	decoration
 	background "ui/assets/logo_nsco.tga"
 }
@@ -704,9 +704,9 @@ itemDef {
 	textaligny 14
 	textscale .25
 	forecolor 1 1 1 1
-	visible 1 
+	visible 1
 	decoration
-	mouseEnter { show message_equipment } 
+	mouseEnter { show message_equipment }
 	mouseExit { hide grpmessage }
 }
 itemDef {
@@ -719,10 +719,10 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 	mouseEnter { show message_equipment1 ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -736,10 +736,10 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 	mouseEnter { show message_equipment2 ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -753,10 +753,10 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 	mouseEnter { show message_equipment3 ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -770,10 +770,10 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 	mouseEnter { show message_equipment4 ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -789,9 +789,9 @@ itemDef {
 	textaligny 14
 	textscale .25
 	forecolor 1 1 1 1
-	visible 1 
+	visible 1
 	decoration
-	mouseEnter { show message_armor } 
+	mouseEnter { show message_armor }
 	mouseExit { hide grpmessage }
 }
 itemDef {
@@ -799,7 +799,7 @@ itemDef {
 	style 1
 	rect 324 136 156 16
 	text "Kevlar Vest:"
-	type ITEM_TYPE_MULTI	
+	type ITEM_TYPE_MULTI
 	cvar "inven_kevlar"
 	cvarFloatList { "Yes" 1 "No" 0 }
 	action { play "ui/assets/menu_yes.wav" }
@@ -808,9 +808,9 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	mouseEnter { show message_armorvest ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -819,7 +819,7 @@ itemDef {
 	style 1
 	rect 324 152 156 16
 	text "Helmet:"
-	type ITEM_TYPE_MULTI	
+	type ITEM_TYPE_MULTI
 	cvar "inven_helmet"
 	cvarFloatList { "Yes" 1 "No" 0 }
 	action { play "ui/assets/menu_yes.wav" }
@@ -828,9 +828,9 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	mouseEnter { show message_armorhelmet ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -847,9 +847,9 @@ itemDef {
 	textaligny 14
 	textscale .25
 	forecolor 1 1 1 1
-	visible 1 
+	visible 1
 	decoration
-	mouseEnter { show message_skillxp } 
+	mouseEnter { show message_skillxp }
 	mouseExit { hide grpmessage }
 }
 itemDef {
@@ -864,9 +864,9 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	mouseEnter { show message_skillaccuracy ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -882,7 +882,7 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 }
 itemDef {
@@ -897,9 +897,9 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	mouseEnter { show message_skillspeed ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -915,7 +915,7 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 }
 itemDef {
@@ -930,9 +930,9 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	mouseEnter { show message_skillstrength ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -948,7 +948,7 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 }
 itemDef {
@@ -963,9 +963,9 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	mouseEnter { show message_skillstamina ;
-	setcolor backcolor .1 .2 .6 0.25 } 
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -981,7 +981,7 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 }
 itemDef {
@@ -996,9 +996,9 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	mouseEnter { show message_skillstealth ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -1014,7 +1014,7 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 }
 itemDef {
@@ -1023,15 +1023,15 @@ itemDef {
 	rect 324 282 156 16
 	text "Technical:"
 	type ITEM_TYPE_TEXT
-	ownerdraw CG_CHARACTER_TECHINCAL		
+	ownerdraw CG_CHARACTER_TECHINCAL
 	textalign 2
 	textalignx 132
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	mouseEnter { show message_skilltechnical ;
-	setcolor backcolor .1 .2 .6 0.25 }  
+	setcolor backcolor .1 .2 .6 0.25 }
 	mouseExit { hide grpmessage ;
 	setcolor backcolor 0 0 0 0 }
 }
@@ -1047,7 +1047,7 @@ itemDef {
 	textaligny 13
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
 }
 	//	weight
@@ -1061,9 +1061,9 @@ itemDef {
 	textaligny 14
 	textscale .25
 	forecolor 1 1 1 1
-	visible 1 
+	visible 1
 	decoration
-	mouseEnter { show message_weight } 
+	mouseEnter { show message_weight }
 	mouseExit { hide grpmessage }
 }
 itemDef {
@@ -1077,9 +1077,9 @@ itemDef {
 	textaligny 10
 	textscale .22
 	forecolor 1 1 1 .75
-	visible 1 
+	visible 1
 	decoration
-	mouseEnter { show message_weighttotal } 
+	mouseEnter { show message_weighttotal }
 	mouseExit { hide grpmessage }
 }
 	// MESSAGES
@@ -1095,8 +1095,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_primaryname
@@ -1110,8 +1110,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_primaryammo
@@ -1125,13 +1125,13 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_primaryaddon1
 	group grpmessage
-	text "Primary weapon on muzzle add-on"
+	text "Primary weapon muzzle add-on"
 	style 0
 	rect 0 352 512 16
 	textalign 1
@@ -1140,8 +1140,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_primaryaddon2
@@ -1155,13 +1155,13 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_primaryaddon3
 	group grpmessage
-	text "Primary weapon on weapon add-on"
+	text "Primary weapon weapon add-on"
 	style 0
 	rect 0 352 512 16
 	textalign 1
@@ -1170,8 +1170,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_sidearm
@@ -1185,8 +1185,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_sidearmname
@@ -1200,8 +1200,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_sidearmammo
@@ -1215,13 +1215,13 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_sidearmaddon1
 	group grpmessage
-	text "Sidearm weapon on muzzle add-on"
+	text "Sidearm weapon muzzle add-on"
 	style 0
 	rect 0 352 512 16
 	textalign 1
@@ -1230,8 +1230,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_sidearmaddon2
@@ -1245,8 +1245,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_melee
@@ -1260,8 +1260,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_meleename
@@ -1275,8 +1275,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_grenades
@@ -1290,11 +1290,11 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
-	name message_grenadesfrag 
+	name message_grenadesfrag
 	group grpmessage
 	text "Your current fragmentation grenades"
 	style 0
@@ -1305,8 +1305,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_grenadesflash
@@ -1320,8 +1320,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_grenadessmoke
@@ -1335,11 +1335,11 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
-	name message_grenades40mm 
+	name message_grenades40mm
 	group grpmessage
 	text "Your current 40mm grenades"
 	style 0
@@ -1350,8 +1350,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_looks
@@ -1365,8 +1365,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_freexp
@@ -1380,8 +1380,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_changeteam
@@ -1395,11 +1395,11 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
-	name message_missioninfo 
+	name message_missioninfo
 	group grpmessage
 	text "Click to display the mission information"
 	style 0
@@ -1410,8 +1410,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_cancel
@@ -1425,8 +1425,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_accept
@@ -1440,8 +1440,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_equipment
@@ -1455,8 +1455,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_equipment1
@@ -1470,8 +1470,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_equipment2
@@ -1485,8 +1485,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_equipment3
@@ -1500,8 +1500,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_equipment4
@@ -1515,8 +1515,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_armor
@@ -1530,8 +1530,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_armorvest
@@ -1545,8 +1545,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_armorhelmet
@@ -1560,11 +1560,11 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
-	name message_skillxp 
+	name message_skillxp
 	group grpmessage
 	text "Your current Experience Points"
 	style 0
@@ -1575,11 +1575,11 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
-	name message_skillaccuracy 
+	name message_skillaccuracy
 	group grpmessage
 	text "Your current Accuracy Skill Level"
 	style 0
@@ -1590,11 +1590,11 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
-	name message_skillspeed 
+	name message_skillspeed
 	group grpmessage
 	text "Your current Speed Skill Level"
 	style 0
@@ -1605,8 +1605,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
 	name message_skillstrength
@@ -1620,11 +1620,11 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
-	name message_skillstamina 
+	name message_skillstamina
 	group grpmessage
 	text "Your current Stamina Skill Level"
 	style 0
@@ -1635,11 +1635,11 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
-	name message_skillstealth 
+	name message_skillstealth
 	group grpmessage
 	text "Your current Stealth Skill Level"
 	style 0
@@ -1650,11 +1650,11 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
-	name message_skilltechnical 
+	name message_skilltechnical
 	group grpmessage
 	text "Your current Technical Skill Level"
 	style 0
@@ -1665,11 +1665,11 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
-	name message_weight 
+	name message_weight
 	group grpmessage
 	text "Weight statistics"
 	style 0
@@ -1680,11 +1680,11 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 itemDef {
-	name message_weighttotal 
+	name message_weighttotal
 	group grpmessage
 	text "Your current weight total"
 	style 0
@@ -1695,8 +1695,8 @@ itemDef {
 	textscale .25
 	textstyle 0
 	forecolor 1 1 1 0.5
-	visible 0 
-	decoration 
+	visible 0
+	decoration
 }
 }
 }

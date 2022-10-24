@@ -3,32 +3,32 @@
 // Heads Up Display 4 - Metal
 
 {
-assetGlobalDef 
-	{	
-	cursor "ui/assets/ns_cursor"			
-	gradientBar "ui/assets/gradientbar2.tga"	
+assetGlobalDef
+	{
+	cursor "ui/assets/ns_cursor"
+	gradientBar "ui/assets/gradientbar2.tga"
 
-    	fadeClamp 1.0					
-	fadeCycle 1					
-	fadeAmount 0.1					
+    	fadeClamp 1.0
+	fadeCycle 1
+	fadeAmount 0.1
 
-	shadowX  5					
-	shadowY  5					
-	shadowColor 0.1 0.1 0.1 0.25			
+	shadowX  5
+	shadowY  5
+	shadowColor 0.1 0.1 0.1 0.25
 
-    	font "fonts/font" 16				
-    	smallFont "fonts/smallfont" 12			
-    	bigFont "fonts/bigfont" 20	
+    	font "fonts/font" 16
+    	smallFont "fonts/smallfont" 12
+    	bigFont "fonts/bigfont" 20
 
 	sealscolor 0.3 0.3 1 1
 	tangoscolor 1 0.1 0.1 1
 	noteamcolor 1 1 1 1
 	}
- 
+
 
 //	- LEFT -	//
 
-menuDef 
+menuDef
 	{
     	name "Left"
     	fullScreen MENU_FALSE
@@ -76,7 +76,7 @@ menuDef
 		ownerdrawflag CG_SHOW_NO_SPECTATOR
 		}
 
-	itemDef 
+	itemDef
 		{
 		name "Fire Mode"
 		rect 8 8 96 22
@@ -113,7 +113,7 @@ menuDef
 		rect 120 8 160 32
 		visible 1
 		decoration
-		ownerdraw CG_PLAYER_STAMINABAR_HOR	
+		ownerdraw CG_PLAYER_STAMINABAR_HOR
 		background "ui/assets/ns_bar_horz"
 		teamcolor
 
@@ -194,7 +194,7 @@ menuDef
 		rect 14 8 36 64
 		visible 1
 		decoration
-		ownerdraw CG_PLAYER_DAMAGELOC	
+		ownerdraw CG_PLAYER_DAMAGELOC
 
 		ownerdrawflag CG_SHOW_NO_SPECTATOR
 		}
@@ -203,7 +203,7 @@ menuDef
 
 //	- RIGHT -	//
 
-menuDef 
+menuDef
 	{
     	name "Right"
     	fullScreen MENU_FALSE
@@ -255,7 +255,7 @@ menuDef
 		rect 8 8 160 32
 		visible 1
 		decoration
-		ownerdraw CG_PLAYER_AMMOBAR_HOR	
+		ownerdraw CG_PLAYER_AMMOBAR_HOR
 		background "ui/assets/ns_bar_horz"
 		teamcolor
 
@@ -306,7 +306,7 @@ menuDef
 		ownerdrawflag CG_SHOW_NO_SPECTATOR
 		}
 
-	itemDef 
+	itemDef
 		{
 		name "Clips Text"
 		rect 196 8 45 22
@@ -318,12 +318,12 @@ menuDef
 		type 1
 		textscale .25
 		visible 1
-		text "Clips:"
+		text "Magazines:"
 
 		ownerdrawflag CG_SHOW_NO_SPECTATOR
 		}
 
-	itemDef 
+	itemDef
 		{
 		name "Clips Count"
 		rect 236 8 40 22
@@ -343,13 +343,13 @@ menuDef
 
 // 	- TARGET NAME -	//
 
-menuDef 
+menuDef
 	{
     	name "Targetedname"
     	fullScreen MENU_FALSE
     	visible MENU_TRUE
 	rect 275 380 40 24
-	
+
 	itemDef
 		{
 		name "tragetedname"
